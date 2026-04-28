@@ -1021,14 +1021,69 @@ footer[id] {
 }
 
 .reservation-form {
-  background: var(--bg-soft);
+  background: linear-gradient(150deg, #fff8ee 0%, var(--bg-accent) 100%);
   padding: 3rem 2.4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.reservation-form::before {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(240, 172, 35, 0.12);
+  pointer-events: none;
+}
+
+.reservation-form::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: rgba(214, 58, 47, 0.06);
+  pointer-events: none;
+}
+
+.reservation-form > * {
+  position: relative;
+  z-index: 1;
 }
 
 .reservation-form h3 {
   font-family: "Fraunces", serif;
   font-size: 1.6rem;
   color: var(--brand-dark);
+}
+
+.reservation-form .form-label {
+  font-weight: 600;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--brand-dark);
+  opacity: 0.8;
+}
+
+.reservation-form .form-control,
+.reservation-form .form-select {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(127, 36, 48, 0.22);
+  border-radius: 0.6rem;
+  color: var(--text-main);
+}
+
+.reservation-form .form-control:focus,
+.reservation-form .form-select:focus {
+  background: #fff;
+  border-color: var(--brand-gold);
+  box-shadow: 0 0 0 0.22rem rgba(240, 172, 35, 0.25);
 }
 
 .btn-brand-dark {
