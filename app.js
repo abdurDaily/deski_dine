@@ -91,7 +91,11 @@ syncNavbarState();
   const prevBtn = slider.querySelector(".menu-slider-prev");
   const nextBtn = slider.querySelector(".menu-slider-next");
   const dotsEl = slider.querySelector(".menu-slider-dots");
+  const swipeThreshold = 42;
   let currentIndex = 0;
+  let touchStartX = 0;
+  let touchCurrentX = 0;
+  let touchActive = false;
 
   function getVisible() {
     if (window.innerWidth >= 992) return 3;
@@ -126,12 +130,69 @@ syncNavbarState();
     const cardWidth = viewport.offsetWidth / getVisible();
     track.style.transform = "translateX(-" + currentIndex * cardWidth + "px)";
     syncDots();
-    prevBtn.disabled = currentIndex === 0;
-    nextBtn.disabled = currentIndex >= getMax();
+    if (prevBtn) {
+      prevBtn.disabled = currentIndex === 0;
+    }
+    if (nextBtn) {
+      nextBtn.disabled = currentIndex >= getMax();
+    }
   }
 
-  prevBtn.addEventListener("click", () => goTo(currentIndex - 1));
-  nextBtn.addEventListener("click", () => goTo(currentIndex + 1));
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => goTo(currentIndex - 1));
+  }
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => goTo(currentIndex + 1));
+  }
+
+  function handleSwipeEnd() {
+    const deltaX = touchCurrentX - touchStartX;
+    if (Math.abs(deltaX) < swipeThreshold) {
+      return;
+    }
+
+    if (deltaX < 0) {
+      goTo(currentIndex + 1);
+    } else {
+      goTo(currentIndex - 1);
+    }
+  }
+
+  viewport.addEventListener(
+    "touchstart",
+    (event) => {
+      if (event.touches.length !== 1) {
+        return;
+      }
+      touchStartX = event.touches[0].clientX;
+      touchCurrentX = touchStartX;
+      touchActive = true;
+    },
+    { passive: true },
+  );
+
+  viewport.addEventListener(
+    "touchmove",
+    (event) => {
+      if (!touchActive || event.touches.length !== 1) {
+        return;
+      }
+      touchCurrentX = event.touches[0].clientX;
+    },
+    { passive: true },
+  );
+
+  viewport.addEventListener("touchend", () => {
+    if (!touchActive) {
+      return;
+    }
+    handleSwipeEnd();
+    touchActive = false;
+  });
+
+  viewport.addEventListener("touchcancel", () => {
+    touchActive = false;
+  });
 
   window.addEventListener("resize", () => {
     if (currentIndex > getMax()) currentIndex = getMax();

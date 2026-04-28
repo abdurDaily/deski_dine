@@ -45,6 +45,9 @@ h4,
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(127, 36, 48, 0.18);
   box-shadow: 0 2px 16px rgba(127, 36, 48, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1030;
   animation: mobileNavSlide 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
   transition:
     box-shadow 0.3s ease,
@@ -489,6 +492,7 @@ footer[id] {
   display: flex;
   transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
+  touch-action: pan-y;
 }
 
 .menu-slide-item {
@@ -570,6 +574,18 @@ footer[id] {
   border: 1px solid rgba(240, 172, 35, 0.95);
   color: #ffe7bf;
   font-size: 1.2rem;
+}
+
+.menu-swipe-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.6rem;
+  color: rgba(127, 36, 48, 0.8);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
 }
 
 .badge-soft {
@@ -1179,6 +1195,18 @@ footer[id] {
 
 /* ── Tablet (≤991px) ──────────────────────────────────────── */
 @media (max-width: 991.98px) {
+  body {
+    padding-top: 82px;
+  }
+
+  .mobile-topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+
   .nav-logo-img {
     height: 50px;
   }
@@ -1236,7 +1264,7 @@ footer[id] {
 @media (max-width: 767.98px) {
   section[id],
   footer[id] {
-    scroll-margin-top: 72px;
+    scroll-margin-top: 92px;
   }
 
   .hero {
@@ -1313,6 +1341,38 @@ footer[id] {
     width: 36px;
     height: 36px;
     font-size: 1rem;
+  }
+
+  .menu-slider-btn {
+    display: none;
+  }
+
+  .menu-card {
+    border-radius: 1.1rem;
+    overflow: hidden;
+    border: 1px solid rgba(127, 36, 48, 0.18);
+    background: linear-gradient(180deg, #fffdf9 0%, #fff4e6 100%);
+    box-shadow: 0 14px 28px rgba(127, 36, 48, 0.14);
+  }
+
+  .menu-image {
+    height: 198px;
+  }
+
+  .menu-card h5 {
+    font-size: 1.08rem;
+  }
+
+  .menu-card .price-tag {
+    font-size: 0.9rem;
+    padding: 0.22rem 0.55rem;
+    border-radius: 999px;
+    background: rgba(240, 172, 35, 0.18);
+  }
+
+  .menu-card .text-secondary {
+    color: rgba(52, 24, 32, 0.74) !important;
+    line-height: 1.55;
   }
 
   .reservation-form,
