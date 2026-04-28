@@ -1,4 +1,4 @@
-# Maison Verre — Fine Dining Restaurant Website
+# DESKI DINE 
 
 A fully responsive, single-page restaurant website built with **Bootstrap 5**, **vanilla JavaScript**, and custom CSS. Designed with a formal warm color palette and smooth scroll-reveal animations throughout.
 
