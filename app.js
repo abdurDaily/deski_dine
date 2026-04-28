@@ -203,3 +203,35 @@ syncNavbarState();
   buildDots();
   goTo(0);
 })();
+
+/* ── Reels Slider — Slick Carousel ────────────────────────── */
+$(function () {
+  $("#reelsSlider").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: true,
+    infinite: true,
+    speed: 420,
+    swipe: true,
+    touchThreshold: 10,
+    prevArrow:
+      '<button class="slick-prev reels-slick-prev" aria-label="Previous reel">' +
+      '<span class="menu-control-icon"><i class="bi bi-chevron-left"></i></span>' +
+      "</button>",
+    nextArrow:
+      '<button class="slick-next reels-slick-next" aria-label="Next reel">' +
+      '<span class="menu-control-icon"><i class="bi bi-chevron-right"></i></span>' +
+      "</button>",
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: { slidesToShow: 2 },
+      },
+      {
+        breakpoint: 768,
+        settings: { slidesToShow: 1, arrows: false },
+      },
+    ],
+  });
+});

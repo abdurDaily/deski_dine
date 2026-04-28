@@ -129,7 +129,7 @@ h4,
 }
 
 .mobile-logo-img {
-  height: 52px;
+  height: 64px;
   width: auto;
   display: block;
   filter: drop-shadow(0 1px 3px rgba(127, 36, 48, 0.18));
@@ -507,9 +507,27 @@ footer[id] {
   }
 }
 
+/* Medium: ≤1199px — thumbnail height cap */
+@media (max-width: 1199.98px) {
+  .reel-card-thumb {
+    max-height: 260px;
+  }
+}
+
+/* Mobile: ≤767px — smaller thumbnail */
+@media (max-width: 767.98px) {
+  .reel-card-thumb {
+    max-height: 280px;
+  }
+}
+
 @media (max-width: 575.98px) {
   .menu-slide-item {
     flex: 0 0 100%;
+  }
+
+  .reel-card-thumb {
+    max-height: 240px;
   }
 }
 
@@ -586,6 +604,289 @@ footer[id] {
   font-weight: 700;
   letter-spacing: 0.4px;
   text-transform: uppercase;
+}
+
+/* ── Reels Section ─────────────────────────────────────────── */
+.reels-section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.reels-fb-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: linear-gradient(90deg, #1877f2 0%, #0d5fd4 100%);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  padding: 0.32rem 0.88rem;
+  border-radius: 999px;
+  line-height: 1;
+}
+
+.reels-follow-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #1877f2;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.88rem;
+  border: none;
+  border-radius: 999px;
+  padding: 0.55rem 1.3rem;
+  text-decoration: none;
+  transition:
+    background 0.2s,
+    transform 0.18s;
+  flex-shrink: 0;
+}
+
+.reels-follow-btn:hover {
+  background: #0d5fd4;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* Slider shell — Slick handles layout */
+.reels-slick {
+  padding-bottom: 0.5rem;
+}
+
+/* Slide padding so cards don't touch */
+.reel-slide-wrap {
+  padding: 0 0.55rem;
+}
+
+/* ── Individual reel card — phone-frame aesthetic ─────────── */
+.reel-card {
+  display: block;
+  text-decoration: none;
+  border-radius: 1.15rem;
+  overflow: hidden;
+  background: var(--bg-soft);
+  border: 1px solid rgba(127, 36, 48, 0.14);
+  box-shadow: 0 8px 28px rgba(127, 36, 48, 0.1);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+  position: relative;
+}
+
+.reel-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 38px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 0 0 3px 3px;
+  z-index: 3;
+}
+
+.reel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 42px rgba(127, 36, 48, 0.18);
+}
+
+/* Thumbnail wrapper — 9:16 aspect ratio, capped */
+.reel-card-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  max-height: 280px;
+  overflow: hidden;
+  background: #18090d;
+}
+
+.reel-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.reel-card:hover .reel-card-thumb img {
+  transform: scale(1.04);
+}
+
+/* Dark overlay */
+.reel-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(0, 0, 0, 0.15) 0%,
+    rgba(0, 0, 0, 0.06) 40%,
+    rgba(24, 9, 13, 0.72) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s ease;
+}
+
+.reel-card:hover .reel-card-overlay {
+  background: linear-gradient(
+    160deg,
+    rgba(0, 0, 0, 0.28) 0%,
+    rgba(0, 0, 0, 0.12) 30%,
+    rgba(24, 9, 13, 0.82) 100%
+  );
+}
+
+/* Play button */
+.reel-play-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--brand-dark);
+  font-size: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
+  transition:
+    transform 0.2s,
+    background 0.2s;
+  line-height: 1;
+  padding-left: 3px;
+}
+
+.reel-card:hover .reel-play-icon {
+  transform: scale(1.1);
+  background: #fff;
+}
+
+/* "Watch on Facebook" label */
+.reel-watch-label {
+  position: absolute;
+  bottom: 0.8rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(4px);
+  transition:
+    opacity 0.22s ease,
+    transform 0.22s ease;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.reel-card:hover .reel-watch-label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Duration badge */
+.reel-duration-badge {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.65rem;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  letter-spacing: 0.3px;
+  z-index: 2;
+}
+
+/* Card body */
+.reel-card-body {
+  padding: 0.85rem 1rem 0.95rem;
+  background: var(--bg-soft);
+}
+
+.reel-card-title {
+  margin: 0;
+  font-family: "Fraunces", serif;
+  font-weight: 800;
+  font-size: 0.98rem;
+  color: var(--brand-dark);
+  line-height: 1.3;
+}
+
+.reel-card-copy {
+  margin: 0.25rem 0 0.6rem;
+  font-size: 0.8rem;
+  color: rgba(52, 24, 32, 0.65);
+  line-height: 1.45;
+}
+
+.reel-card-cta {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #1877f2;
+  letter-spacing: 0.3px;
+  transition: gap 0.2s;
+}
+
+.reel-card:hover .reel-card-cta {
+  gap: 0.3rem;
+}
+
+/* ── Slick arrow overrides ─────────────────────────────────── */
+.reels-slick-prev,
+.reels-slick-next {
+  background: none;
+  border: none;
+  padding: 0;
+  position: absolute;
+  top: 42%;
+  transform: translateY(-50%);
+  z-index: 5;
+  cursor: pointer;
+}
+
+.reels-slick-prev {
+  left: -0.6rem;
+}
+
+.reels-slick-next {
+  right: -0.6rem;
+}
+
+.reels-slick-prev .menu-control-icon,
+.reels-slick-next .menu-control-icon {
+  background: #fff;
+  border: 1px solid rgba(127, 36, 48, 0.18);
+  box-shadow: 0 4px 14px rgba(127, 36, 48, 0.14);
+}
+
+/* Slick dots */
+.reels-slick .slick-dots {
+  bottom: -2rem;
+}
+
+.reels-slick .slick-dots li button::before {
+  color: var(--brand);
+  opacity: 0.4;
+  font-size: 8px;
+}
+
+.reels-slick .slick-dots li.slick-active button::before {
+  color: var(--brand);
+  opacity: 1;
 }
 
 .badge-soft {
@@ -1196,7 +1497,7 @@ footer[id] {
 /* ── Tablet (≤991px) ──────────────────────────────────────── */
 @media (max-width: 991.98px) {
   body {
-    padding-top: 82px;
+    padding-top: 94px;
   }
 
   .mobile-topbar {
@@ -1264,7 +1565,11 @@ footer[id] {
 @media (max-width: 767.98px) {
   section[id],
   footer[id] {
-    scroll-margin-top: 92px;
+    scroll-margin-top: 104px;
+  }
+
+  .mobile-logo-img {
+    height: 62px;
   }
 
   .hero {
@@ -1396,6 +1701,22 @@ footer[id] {
     height: 280px;
   }
 
+  .reels-section-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .reel-card-thumb {
+    max-height: 280px;
+  }
+
+  .reel-play-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
   .footer-top {
     padding: 3rem 0 2rem;
   }
@@ -1417,6 +1738,10 @@ footer[id] {
 
 /* ── Small phones (≤575px) ────────────────────────────────── */
 @media (max-width: 575.98px) {
+  .mobile-logo-img {
+    height: 58px;
+  }
+
   .hero-content {
     padding-bottom: 4rem;
   }
