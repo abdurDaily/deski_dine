@@ -61,27 +61,34 @@
     </nav>
 
     <nav class="navbar navbar-light mobile-topbar d-lg-none sticky-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#home">
+      <div class="container-fluid px-3 px-sm-4">
+        <a class="navbar-brand mobile-nav-brand" href="#home">
           <img
             src="./images/logo.webp"
             class="mobile-logo-img"
             alt="Restaurant logo"
           />
         </a>
-        <button
-          id="mobileMenuToggle"
-          class="navbar-toggler mobile-menu-toggle"
-          type="button"
-          aria-controls="mobileMenu"
-          aria-label="Open menu"
-        >
-          <iconify-icon
-            class="mobile-menu-icon"
-            icon="solar:hamburger-menu-outline"
-            aria-hidden="true"
-          ></iconify-icon>
-        </button>
+        <div class="d-flex align-items-center gap-2">
+          <a
+            href="#reservation"
+            class="btn mobile-reserve-btn d-none d-sm-inline-flex"
+            >Reserve</a
+          >
+          <button
+            id="mobileMenuToggle"
+            class="navbar-toggler mobile-menu-toggle"
+            type="button"
+            aria-controls="mobileMenu"
+            aria-label="Open menu"
+          >
+            <iconify-icon
+              class="mobile-menu-icon"
+              icon="solar:hamburger-menu-outline"
+              aria-hidden="true"
+            ></iconify-icon>
+          </button>
+        </div>
       </div>
     </nav>
 
@@ -183,8 +190,14 @@
         </div>
 
         <div class="container hero-content px-4 px-lg-5">
-          <h2 class="hero-title">Delightful Experience</h2>
-          <p class="hero-copy mt-3 mb-4">
+          <span class="hero-kicker mb-3 d-inline-block"
+            >Fine Dining &mdash; London</span
+          >
+          <h2 class="hero-title">
+            Delightful<br class="d-sm-none" />
+            Experience
+          </h2>
+          <p class="hero-copy mt-3 mb-4 mx-auto">
             Maison Verre offers a refined dining journey inspired by French
             craftsmanship, seasonal ingredients, and timeless hospitality.
           </p>
