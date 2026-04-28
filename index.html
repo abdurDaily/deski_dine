@@ -1,0 +1,752 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Maison Verre | Fine Dining</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav
+      id="desktopNavbar"
+      class="navbar desktop-navbar d-none d-lg-block sticky-top"
+    >
+      <div class="container px-4 px-xxl-5">
+        <a class="navbar-brand hero-logo" href="#home">
+          <img
+            src="./images/logo.webp"
+            class="nav-logo-img"
+            alt="Restaurant logo"
+          />
+        </a>
+
+        <ul class="navbar-nav flex-row ms-auto me-3 desktop-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#location">Location</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center">
+          <a class="btn hero-reserve-btn" href="#reservation">Reservation</a>
+        </div>
+      </div>
+    </nav>
+
+    <nav class="navbar navbar-light mobile-topbar d-lg-none sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#home">
+          <img
+            src="./images/logo.webp"
+            class="mobile-logo-img"
+            alt="Restaurant logo"
+          />
+        </a>
+        <button
+          id="mobileMenuToggle"
+          class="navbar-toggler mobile-menu-toggle"
+          type="button"
+          aria-controls="mobileMenu"
+          aria-label="Open menu"
+        >
+          <iconify-icon
+            class="mobile-menu-icon"
+            icon="solar:hamburger-menu-outline"
+            aria-hidden="true"
+          ></iconify-icon>
+        </button>
+      </div>
+    </nav>
+
+    <div
+      class="offcanvas offcanvas-start mobile-sidebar"
+      tabindex="-1"
+      id="mobileMenu"
+      aria-labelledby="mobileMenuLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="mobileMenuLabel">
+          <img
+            src="./images/logo.webp"
+            class="offcanvas-logo-img"
+            alt="Restaurant logo"
+          />
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="nav flex-column side-nav">
+          <li class="nav-item">
+            <a data-bs-dismiss="offcanvas" class="nav-link" href="#home"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a data-bs-dismiss="offcanvas" class="nav-link" href="#about"
+              >About</a
+            >
+          </li>
+          <li class="nav-item">
+            <a data-bs-dismiss="offcanvas" class="nav-link" href="#menu"
+              >Menu</a
+            >
+          </li>
+          <li class="nav-item">
+            <a data-bs-dismiss="offcanvas" class="nav-link" href="#testimonials"
+              >Reviews</a
+            >
+          </li>
+          <li class="nav-item">
+            <a data-bs-dismiss="offcanvas" class="nav-link" href="#contact"
+              >Contact</a
+            >
+          </li>
+          <li class="nav-item">
+            <a data-bs-dismiss="offcanvas" class="nav-link" href="#location"
+              >Location</a
+            >
+          </li>
+        </ul>
+
+        <div class="side-footer mt-4 pt-3 border-top">
+          <p class="mb-1">
+            <i class="bi bi-geo-alt me-2"></i>11 Baker Street, London
+          </p>
+          <p class="mb-1">
+            <i class="bi bi-clock me-2"></i>Mon-Sun: 5:00 PM - 11:30 PM
+          </p>
+          <p class="mb-0">
+            <i class="bi bi-telephone me-2"></i>+44 20 1234 5678
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <main class="main-content">
+      <section id="home" class="hero">
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          poster="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1800&q=80"
+        >
+          <source
+            src="https://www.pexels.com/download/video/857149/"
+            type="video/mp4"
+          />
+          <source
+            src="https://cdn.pixabay.com/video/2018/10/04/18490-292165307_large.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-side-rail hero-side-left d-none d-lg-flex">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+        </div>
+
+        <div class="container hero-content px-4 px-lg-5">
+          <h2 class="hero-title">Delightful Experience</h2>
+          <p class="hero-copy mt-3 mb-4">
+            Maison Verre offers a refined dining journey inspired by French
+            craftsmanship, seasonal ingredients, and timeless hospitality.
+          </p>
+          <div class="d-flex flex-wrap gap-3 justify-content-center">
+            <a href="#reservation" class="btn btn-brand btn-lg px-4"
+              >Book a Table</a
+            >
+            <a href="#menu" class="btn btn-outline-light btn-lg px-4"
+              >Explore Menu</a
+            >
+          </div>
+        </div>
+
+        <div class="hero-bottom-bar d-none d-lg-flex">
+          <div>
+            <p class="mb-1">VISIT US : 11 Baker Street, London</p>
+            <p class="mb-1">WE ARE OPEN : Daily - 5:00 pm to 11:30 pm</p>
+            <p class="mb-0">Contact No : +44 20 1234 5678</p>
+          </div>
+          <a class="hero-badge" href="#reservation" aria-label="Reservation">
+            <span>RESERVE</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="section-block" id="about">
+        <div class="container px-4 px-lg-5">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6 reveal-left">
+              <span class="badge badge-soft rounded-pill mb-3">Since 2008</span>
+              <h2 class="section-title">
+                A Formal Dining Legacy with a Modern Soul
+              </h2>
+              <p class="section-lead mt-3">
+                From handcrafted sauces to carefully paired wines, our chefs
+                blend traditional French technique with modern expression. Every
+                seat, scent, and plate is curated for a serene and memorable
+                evening.
+              </p>
+              <div class="row g-3 mt-2">
+                <div class="col-sm-6">
+                  <div class="feature-card">
+                    <p class="feature-icon mb-2"><i class="bi bi-award"></i></p>
+                    <h5 class="mb-1">Michelin Mentioned</h5>
+                    <p class="mb-0 text-secondary">
+                      Recognized for consistency and artistry.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="feature-card">
+                    <p class="feature-icon mb-2">
+                      <i class="bi bi-flower1"></i>
+                    </p>
+                    <h5 class="mb-1">Seasonal Ingredients</h5>
+                    <p class="mb-0 text-secondary">
+                      Locally sourced produce, refreshed weekly.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 reveal-right">
+              <img
+                class="about-image"
+                src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80"
+                alt="Chef preparing a plated dish"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block pt-0" id="menu">
+        <div class="container px-4 px-lg-5">
+          <div class="mb-4 reveal">
+            <h2 class="section-title">Signature Menu</h2>
+            <p class="section-lead">
+              A balanced menu of handcrafted starters, classic mains, and
+              indulgent desserts.
+            </p>
+          </div>
+
+          <div id="menuSlider" class="menu-slider reveal">
+            <div class="menu-slider-viewport">
+              <div class="menu-slider-track">
+                <div class="menu-slide-item">
+                  <article class="menu-card">
+                    <img
+                      class="menu-image"
+                      src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80"
+                      alt="Seared sea bass"
+                    />
+                    <div class="p-3 p-lg-4">
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-2"
+                      >
+                        <h5 class="mb-0">Seared Sea Bass</h5>
+                        <span class="price-tag">$34</span>
+                      </div>
+                      <p class="mb-0 text-secondary">
+                        Lemon beurre blanc, asparagus tips, and confit shallots.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="menu-slide-item">
+                  <article class="menu-card">
+                    <img
+                      class="menu-image"
+                      src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80"
+                      alt="Roasted duck breast"
+                    />
+                    <div class="p-3 p-lg-4">
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-2"
+                      >
+                        <h5 class="mb-0">Roasted Duck Breast</h5>
+                        <span class="price-tag">$41</span>
+                      </div>
+                      <p class="mb-0 text-secondary">
+                        Fig reduction, truffle mash, and glazed baby carrots.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="menu-slide-item">
+                  <article class="menu-card">
+                    <img
+                      class="menu-image"
+                      src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=1200&q=80"
+                      alt="Valrhona chocolate tart"
+                    />
+                    <div class="p-3 p-lg-4">
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-2"
+                      >
+                        <h5 class="mb-0">Valrhona Chocolate Tart</h5>
+                        <span class="price-tag">$16</span>
+                      </div>
+                      <p class="mb-0 text-secondary">
+                        Sea salt caramel, hazelnut praline, and vanilla cream.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="menu-slide-item">
+                  <article class="menu-card">
+                    <img
+                      class="menu-image"
+                      src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1200&q=80"
+                      alt="Herb roasted lamb"
+                    />
+                    <div class="p-3 p-lg-4">
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-2"
+                      >
+                        <h5 class="mb-0">Herb Roasted Lamb</h5>
+                        <span class="price-tag">$38</span>
+                      </div>
+                      <p class="mb-0 text-secondary">
+                        Rosemary jus, garlic pommes puree, and charred
+                        vegetables.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="menu-slider-btn menu-slider-prev"
+              aria-label="Previous"
+            >
+              <span class="menu-control-icon" aria-hidden="true"
+                ><i class="bi bi-chevron-left"></i
+              ></span>
+            </button>
+            <button class="menu-slider-btn menu-slider-next" aria-label="Next">
+              <span class="menu-control-icon" aria-hidden="true"
+                ><i class="bi bi-chevron-right"></i
+              ></span>
+            </button>
+
+            <div class="menu-slider-dots"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block pt-0" id="experience">
+        <div class="container px-4 px-lg-5">
+          <div class="row g-4">
+            <div class="col-lg-4 reveal reveal-delay-1">
+              <div class="feature-card h-100">
+                <h4>Private Dining</h4>
+                <p class="text-secondary mb-0">
+                  Host executive dinners and celebrations in our private lounge
+                  for up to 24 guests.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 reveal reveal-delay-2">
+              <div class="feature-card h-100">
+                <h4>Chef's Table</h4>
+                <p class="text-secondary mb-0">
+                  Seven-course tasting menu served directly from the pass with
+                  curated pairings.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 reveal reveal-delay-3">
+              <div class="feature-card h-100">
+                <h4>Live Piano Evenings</h4>
+                <p class="text-secondary mb-0">
+                  Light classical performances from Thursday to Saturday for a
+                  graceful atmosphere.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block pt-0 reviews-section" id="testimonials">
+        <div class="container px-4 px-lg-5">
+          <div class="mb-5 text-center reveal">
+            <span class="badge badge-soft rounded-pill mb-3"
+              >What Guests Say</span
+            >
+            <h2 class="section-title">Guest Impressions</h2>
+            <p class="section-lead mx-auto">
+              A few words from those who have experienced the Maison Verre
+              table.
+            </p>
+          </div>
+          <div class="row g-4">
+            <div class="col-lg-4 reveal reveal-delay-1">
+              <div class="review-card h-100">
+                <div class="review-quote" aria-hidden="true">&ldquo;</div>
+                <div class="review-stars mb-3">
+                  &#9733;&#9733;&#9733;&#9733;&#9733;
+                </div>
+                <p class="review-text">
+                  &ldquo;The atmosphere is elegant without feeling stiff. Every
+                  course was balanced and beautifully presented.&rdquo;
+                </p>
+                <div class="review-author">
+                  <div class="review-avatar" aria-hidden="true">EW</div>
+                  <div>
+                    <strong class="d-block">Eleanor W.</strong>
+                    <span class="text-muted small">Regular Guest</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 reveal-scale reveal-delay-2">
+              <div class="review-card review-card--featured h-100">
+                <div class="review-quote" aria-hidden="true">&ldquo;</div>
+                <div class="review-stars mb-3">
+                  &#9733;&#9733;&#9733;&#9733;&#9733;
+                </div>
+                <p class="review-text">
+                  &ldquo;From arrival to dessert, service was impeccable. A
+                  perfect venue for formal client dinners.&rdquo;
+                </p>
+                <div class="review-author">
+                  <div class="review-avatar" aria-hidden="true">DC</div>
+                  <div>
+                    <strong class="d-block">Daniel C.</strong>
+                    <span class="text-muted small">Business Dining</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 reveal reveal-delay-3">
+              <div class="review-card h-100">
+                <div class="review-quote" aria-hidden="true">&ldquo;</div>
+                <div class="review-stars mb-3">
+                  &#9733;&#9733;&#9733;&#9733;&#9733;
+                </div>
+                <p class="review-text">
+                  &ldquo;Their seasonal menu is exceptional. The sea bass and
+                  tart are worth every visit.&rdquo;
+                </p>
+                <div class="review-author">
+                  <div class="review-avatar" aria-hidden="true">ML</div>
+                  <div>
+                    <strong class="d-block">Mira L.</strong>
+                    <span class="text-muted small">Seasonal Guest</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block pt-0" id="reservation">
+        <div class="container px-4 px-lg-5">
+          <div class="reservation-wrap">
+            <div class="reservation-info reveal-left">
+              <span
+                class="badge badge-soft-light rounded-pill mb-4 d-inline-block"
+                >Make a Reservation</span
+              >
+              <h2 class="mb-3">Reserve Your<br />Evening</h2>
+              <p class="mb-4" style="opacity: 0.78">
+                Secure your preferred date and let us prepare a graceful dining
+                experience tailored to you.
+              </p>
+              <div class="res-contact-list">
+                <div class="res-contact-item">
+                  <span class="res-contact-icon"
+                    ><i class="bi bi-telephone"></i
+                  ></span>
+                  <div>
+                    <small class="d-block">Phone</small>
+                    <strong>+44 20 1234 5678</strong>
+                  </div>
+                </div>
+                <div class="res-contact-item">
+                  <span class="res-contact-icon"
+                    ><i class="bi bi-envelope"></i
+                  ></span>
+                  <div>
+                    <small class="d-block">Email</small>
+                    <strong>reservations@maisonverre.com</strong>
+                  </div>
+                </div>
+                <div class="res-contact-item">
+                  <span class="res-contact-icon"
+                    ><i class="bi bi-clock"></i
+                  ></span>
+                  <div>
+                    <small class="d-block">Hours</small>
+                    <strong>Daily, 5:00 PM &ndash; 11:30 PM</strong>
+                  </div>
+                </div>
+                <div class="res-contact-item">
+                  <span class="res-contact-icon"
+                    ><i class="bi bi-geo-alt"></i
+                  ></span>
+                  <div>
+                    <small class="d-block">Location</small>
+                    <strong>11 Baker Street, London</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="reservation-form reveal-right">
+              <h3 class="mb-4">Book a Table</h3>
+              <form class="row g-3">
+                <div class="col-sm-6">
+                  <label for="res-name" class="form-label">Full Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="res-name"
+                    placeholder="Your name"
+                  />
+                </div>
+                <div class="col-sm-6">
+                  <label for="res-email" class="form-label"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="res-email"
+                    placeholder="name@example.com"
+                  />
+                </div>
+                <div class="col-sm-6">
+                  <label for="res-phone" class="form-label">Phone Number</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="res-phone"
+                    placeholder="+44 ..."
+                  />
+                </div>
+                <div class="col-sm-6">
+                  <label for="res-guests" class="form-label"
+                    >Number of Guests</label
+                  >
+                  <select id="res-guests" class="form-select">
+                    <option value="1">1 guest</option>
+                    <option value="2" selected>2 guests</option>
+                    <option value="4">4 guests</option>
+                    <option value="6">6 guests</option>
+                    <option value="8">8+ guests</option>
+                  </select>
+                </div>
+                <div class="col-sm-6">
+                  <label for="res-date" class="form-label"
+                    >Preferred Date</label
+                  >
+                  <input type="date" class="form-control" id="res-date" />
+                </div>
+                <div class="col-sm-6">
+                  <label for="res-time" class="form-label"
+                    >Preferred Time</label
+                  >
+                  <input type="time" class="form-control" id="res-time" />
+                </div>
+                <div class="col-12">
+                  <label for="res-notes" class="form-label"
+                    >Special Requests</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="res-notes"
+                    rows="3"
+                    placeholder="Dietary needs, celebrations, seating preferences&hellip;"
+                  ></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-brand-dark w-100 py-3">
+                    <i class="bi bi-calendar-check me-2"></i>Confirm Reservation
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Location Section -->
+      <section class="section-block pt-0" id="location">
+        <div class="container px-4 px-lg-5">
+          <div class="mb-5 text-center reveal">
+            <span class="badge badge-soft rounded-pill mb-3">Find Us</span>
+            <h2 class="section-title">Our Location</h2>
+            <p class="section-lead mx-auto">
+              We are nestled in the heart of the city. Come experience fine
+              dining at its most refined.
+            </p>
+          </div>
+          <div class="location-map-only reveal">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d59042.51440573683!2d91.8115425!3d22.3476943!3m2!1i1024!2i768!4f13.1!2m1!1sdeski%20dine!5e0!3m2!1sen!2sbd!4v1777386382065!5m2!1sen!2sbd"
+              style="border: 0"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Maison Verre location map"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="contact" class="site-footer">
+        <div class="footer-top">
+          <div class="container px-4 px-lg-5">
+            <div class="row g-5">
+              <div class="col-lg-4 col-md-6">
+                <img
+                  src="./images/logo.webp"
+                  alt="Maison Verre"
+                  class="footer-logo mb-3"
+                />
+                <p class="footer-about">
+                  A formal dining experience defined by French technique,
+                  seasonal ingredients, and graceful service in the heart of
+                  London.
+                </p>
+                <div class="footer-socials">
+                  <a href="#" aria-label="Instagram"
+                    ><i class="bi bi-instagram"></i
+                  ></a>
+                  <a href="#" aria-label="Facebook"
+                    ><i class="bi bi-facebook"></i
+                  ></a>
+                  <a href="#" aria-label="Twitter / X"
+                    ><i class="bi bi-twitter-x"></i
+                  ></a>
+                  <a href="#" aria-label="TripAdvisor"
+                    ><i class="bi bi-star"></i
+                  ></a>
+                </div>
+              </div>
+
+              <div class="col-lg-2 col-md-6 col-6">
+                <h6 class="footer-heading">Quick Links</h6>
+                <ul class="footer-links">
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#about">About Us</a></li>
+                  <li><a href="#menu">Menu</a></li>
+                  <li><a href="#testimonials">Reviews</a></li>
+                  <li><a href="#reservation">Reservation</a></li>
+                  <li><a href="#location">Location</a></li>
+                </ul>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-6">
+                <h6 class="footer-heading">Contact Us</h6>
+                <ul class="footer-links">
+                  <li>
+                    <i class="bi bi-geo-alt me-2 text-brand"></i>11 Baker
+                    Street, London
+                  </li>
+                  <li>
+                    <i class="bi bi-telephone me-2 text-brand"></i>+44 20 1234
+                    5678
+                  </li>
+                  <li>
+                    <i class="bi bi-envelope me-2 text-brand"></i
+                    >reservations@maisonverre.com
+                  </li>
+                  <li>
+                    <i class="bi bi-clock me-2 text-brand"></i>Daily, 5:00 PM
+                    &ndash; 11:30 PM
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-lg-3 col-md-6">
+                <h6 class="footer-heading">Newsletter</h6>
+                <p class="footer-about">
+                  Stay updated with seasonal menus and exclusive events.
+                </p>
+                <form class="footer-newsletter" onsubmit="return false;">
+                  <input
+                    type="email"
+                    placeholder="Your email address"
+                    aria-label="Email for newsletter"
+                  />
+                  <button type="submit" aria-label="Subscribe">
+                    <i class="bi bi-send"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <div
+            class="container px-4 px-lg-5 d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2"
+          >
+            <p class="mb-0">&copy; 2026 Maison Verre. All rights reserved.</p>
+            <div class="d-flex gap-3">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Use</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
