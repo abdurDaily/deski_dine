@@ -204,6 +204,8 @@ syncNavbarState();
   goTo(0);
 })();
 
+
+
 /* ── Reels Slider — Slick Carousel ────────────────────────── */
 $(function () {
   $("#reelsSlider").slick({
@@ -235,3 +237,47 @@ $(function () {
     ],
   });
 });
+
+/* ── Floating Action Buttons: Scroll-to-top + WhatsApp ───── */
+(function () {
+  const scrollBtn = document.getElementById("scrollTopBtn");
+  const whatsappBtn = document.getElementById("whatsappBtn");
+  const visibleClass = "is-visible";
+  if (!scrollBtn || !whatsappBtn) return;
+
+  function updateFabVisibility() {
+    const shouldShow = window.scrollY > 200;
+    // Only toggle the scroll-to-top button. WhatsApp should remain visible by default.
+    scrollBtn.classList.toggle(visibleClass, shouldShow);
+  }
+
+  // Smooth scroll to top when clicked
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    // brief feedback
+    scrollBtn.animate(
+      [
+        { transform: "translateY(0) scale(1)" },
+        { transform: "translateY(-6px) scale(1.02)" },
+        { transform: "translateY(0) scale(1)" },
+      ],
+      { duration: 320, easing: "ease-out" },
+    );
+  });
+
+  // Small attention animation for WhatsApp button on click
+  whatsappBtn.addEventListener("click", () => {
+    whatsappBtn.animate(
+      [
+        { transform: "scale(1)" },
+        { transform: "scale(0.96)" },
+        { transform: "scale(1)" },
+      ],
+      { duration: 260, easing: "ease-in-out" },
+    );
+  });
+
+  // Update visibility on load and scroll
+  updateFabVisibility();
+  window.addEventListener("scroll", updateFabVisibility, { passive: true });
+})();

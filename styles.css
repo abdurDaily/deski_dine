@@ -411,6 +411,61 @@ footer[id] {
   padding: 1rem 2.6rem;
 }
 
+/* Featured categories / branches section styles */
+.branches-section .section-title {
+  text-align: center;
+}
+.category-grid {
+  margin-top: 12px;
+  align-items: stretch;
+}
+.category-card {
+  background: #f8fafc; /* light card surface */
+  border-radius: 12px;
+  padding: 22px 14px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+}
+.category-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 28px;
+  margin-bottom: 12px;
+  box-shadow: 0 6px 14px rgba(2,6,23,0.04);
+}
+.category-label {
+  font-size: 14px;
+  color: #0b1220;
+  padding: 0 6px;
+}
+
+@media (max-width: 576px) {
+  .category-card { padding: 18px 10px; }
+  .category-icon { width: 56px; height: 56px; font-size: 24px; }
+  .category-label { font-size: 13px; }
+}
+
+@media (min-width: 992px) {
+  .category-card { padding: 24px 16px; }
+}
+
+
 .hero-bottom-bar p {
   letter-spacing: 0.5px;
   font-size: 1rem;
@@ -488,11 +543,51 @@ footer[id] {
   border-radius: 0.5rem;
 }
 
+/* Make Slick slides align with the page gutters and keep consistent spacing */
+.slick-list {
+  margin: 0 -0.5rem;
+}
+.slick-slide {
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+}
+
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+  border-radius: 0.95rem;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+
+.menu-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
 .menu-slider-track {
   display: flex;
   transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
   touch-action: pan-y;
+}
+
+/* When Slick initializes it will set its own track/slide styles. Add
+   a small override so the legacy .menu-slider-track rules don't
+   conflict when Slick is used. */
+.slick-slider .menu-slider-track,
+.slick-slider .menu-slide-item {
+  display: block !important;
+  width: auto !important;
+}
+
+.menu-slider .menu-slide-item {
+  /* keep card spacing when not using Slick */
+  padding: 0 0.5rem;
 }
 
 .menu-slide-item {
@@ -528,6 +623,19 @@ footer[id] {
 
   .reel-card-thumb {
     max-height: 240px;
+  }
+}
+
+/* Ensure footer columns sit in one row on large screens */
+@media (min-width: 992px) {
+  .site-footer .footer-top .row {
+    flex-wrap: nowrap;
+    align-items: start;
+  }
+  .site-footer .footer-top .col-lg-4,
+  .site-footer .footer-top .col-lg-3,
+  .site-footer .footer-top .col-lg-2 {
+    display: block;
   }
 }
 
@@ -594,6 +702,61 @@ footer[id] {
   font-size: 1.2rem;
 }
 
+/* Slightly larger controls on mobile for easier tapping */
+@media (max-width: 575.98px) {
+  .menu-control-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 1.3rem;
+  }
+}
+
+/* Ensure menu slide items stretch to match card heights */
+.menu-slide-item,
+.slick-slide .menu-slide-item {
+  display: flex;
+  align-items: stretch;
+}
+
+/* Responsive adjustments for the hero and general spacing */
+@media (max-width: 991.98px) {
+  .hero-content {
+    padding-bottom: 3.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-kicker {
+    font-size: 0.68rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-title {
+    font-size: 2.2rem;
+    margin-top: 0.65rem;
+  }
+
+  .hero-copy {
+    font-size: 1rem;
+  }
+
+  .hero-reserve-btn,
+  .mobile-reserve-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.78rem;
+  }
+
+  /* Make sure the menu cards are comfortably sized on mobile */
+  .menu-image {
+    height: 180px;
+  }
+
+  .menu-slider-dots {
+    bottom: -0.4rem;
+  }
+}
+
 .menu-swipe-hint {
   display: inline-flex;
   align-items: center;
@@ -635,11 +798,11 @@ footer[id] {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  background: #1877f2;
-  color: #fff;
+  border: 1px solid #1877f2;
+  /* background:; */
+  color: #1877f2;
   font-weight: 700;
   font-size: 0.88rem;
-  border: none;
   border-radius: 999px;
   padding: 0.55rem 1.3rem;
   text-decoration: none;
@@ -856,6 +1019,10 @@ footer[id] {
   transform: translateY(-50%);
   z-index: 5;
   cursor: pointer;
+  
+}
+.reels-slick-prev::before,.reels-slick-next::before{
+  display: none;
 }
 
 .reels-slick-prev {
@@ -1042,41 +1209,71 @@ footer[id] {
 }
 
 .footer-newsletter {
-  display: flex;
-  border: 1px solid rgba(240, 172, 35, 0.35);
-  border-radius: 0.6rem;
-  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  border: 1px solid rgba(240, 172, 35, 0.12);
+  border-radius: 999px; /* pill */
+  overflow: visible;
   margin-top: 0.5rem;
+  background: rgba(255,255,255,0.02);
+  padding: 4px; /* small outer padding so pill looks clean */
 }
 
 .footer-newsletter input {
   flex: 1;
-  background: rgba(240, 172, 35, 0.07);
+  background: transparent;
   border: none;
   outline: none;
-  padding: 0.65rem 0.9rem;
+  padding: 0.7rem 1.1rem 0.7rem 1.1rem;
   color: #fff8eb;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-family: "Manrope", sans-serif;
 }
 
 .footer-newsletter input::placeholder {
-  color: rgba(255, 235, 190, 0.4);
+  color: rgba(255, 235, 190, 0.55);
 }
 
 .footer-newsletter button {
-  background: var(--brand-gold);
+  background: linear-gradient(90deg, var(--brand-gold), var(--brand));
   border: none;
   color: var(--brand-dark);
-  padding: 0 1rem;
-  font-size: 1rem;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.95rem;
   cursor: pointer;
-  transition: background 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  box-shadow: 0 10px 20px rgba(127, 36, 48, 0.12);
+  transform: translateX(-7px); /* overlap the pill slightly */
+  transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
 }
 
 .footer-newsletter button:hover {
-  background: var(--brand);
-  color: #fff;
+  transform: translateY(-2px) translateX(6px);
+  box-shadow: 0 18px 38px rgba(127, 36, 48, 0.18);
+  filter: brightness(1.03);
+  color: #1b1220;
+}
+
+.footer-newsletter button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(240, 172, 35, 0.12);
+}
+
+/* Decorative arrow/tab on the button */
+.footer-newsletter button::after {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 24px;
+  background: linear-gradient(90deg, rgba(0,0,0,0.04), rgba(255,255,255,0.04));
+  border-radius: 2px;
+  margin-left: 6px;
+  opacity: 0.98;
 }
 
 .footer-divider {
@@ -1099,6 +1296,15 @@ footer[id] {
 
 .footer-bottom a:hover {
   color: var(--brand-gold);
+}
+
+/* Footer safety: ensure footer sits above content and page has room */
+.site-footer {
+  position: relative;
+  z-index: 1030;
+}
+.main-content {
+  padding-bottom: 3.5rem; /* give space so footer isn't overlapped by fixed elements */
 }
 
 .mobile-sidebar {
@@ -1769,4 +1975,90 @@ footer[id] {
   .footer-heading {
     margin-top: 0.5rem;
   }
+}
+
+/* Floating action buttons: left and right containers */
+.floating-left,
+.floating-right {
+  position: fixed;
+  bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  z-index: 2000;
+  align-items: center;
+}
+
+.floating-left { left: 1rem; }
+.floating-right { right: 1rem; }
+
+.fab {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 10px 28px rgba(127, 36, 48, 0.16);
+  transition: transform 0.22s ease, box-shadow 0.18s ease, opacity 0.22s ease;
+  transform: translateY(18px) scale(0.96);
+  opacity: 0;
+}
+
+.fab:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.22rem rgba(240, 172, 35, 0.18), 0 10px 28px rgba(127, 36, 48, 0.16);
+}
+
+/* visible state applied by JS */
+.fab.is-visible {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.fab-whatsapp {
+  background: linear-gradient(180deg, #25D366 0%, #128C7E 100%);
+}
+
+.fab-top {
+  background: linear-gradient(180deg, var(--brand-gold), var(--brand));
+  color: var(--brand-dark);
+}
+
+.fab i {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* Subtle float animation */
+@keyframes fab-bob {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
+
+.fab.is-visible:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* give the scroll button a calm bobbing animation once visible */
+.fab-top.is-visible {
+  animation: fab-bob 2200ms ease-in-out infinite;
+}
+
+/* On very small screens, reduce size and offset */
+@media (max-width: 420px) {
+  .floating-left { left: 0.5rem; bottom: 0.9rem; }
+  .floating-right { right: 0.5rem; bottom: 0.9rem; }
+  .fab { width: 48px; height: 48px; }
+}
+
+/* Make sure FABs don't cover important footer content when visible */
+@media (min-width: 992px) {
+  .floating-left { left: 1.75rem; }
+  .floating-right { right: 1.75rem; }
 }
