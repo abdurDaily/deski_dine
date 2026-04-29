@@ -80,131 +80,58 @@ window.addEventListener("scroll", () => {
 
 syncNavbarState();
 
-/* ── Menu Slider (3 visible, scroll 1 at a time) ────────── */
-(function () {
-  const slider = document.querySelector("#menuSlider");
-  if (!slider) return;
+/* ── Menu Slider — Slick Carousel ─────────────────────────── */
+$(function () {
+  const $menuTrack = $("#menuSlider .menu-slider-track");
+  if (!$menuTrack.length) return;
 
-  const viewport = slider.querySelector(".menu-slider-viewport");
-  const track = slider.querySelector(".menu-slider-track");
-  const items = slider.querySelectorAll(".menu-slide-item");
-  const prevBtn = slider.querySelector(".menu-slider-prev");
-  const nextBtn = slider.querySelector(".menu-slider-next");
-  const dotsEl = slider.querySelector(".menu-slider-dots");
-  const swipeThreshold = 42;
-  let currentIndex = 0;
-  let touchStartX = 0;
-  let touchCurrentX = 0;
-  let touchActive = false;
-
-  function getVisible() {
-    if (window.innerWidth >= 992) return 3;
-    if (window.innerWidth >= 576) return 2;
-    return 1;
-  }
-
-  function getMax() {
-    return Math.max(0, items.length - getVisible());
-  }
-
-  function buildDots() {
-    dotsEl.innerHTML = "";
-    const count = getMax() + 1;
-    for (let i = 0; i < count; i++) {
-      const btn = document.createElement("button");
-      btn.className = "menu-dot" + (i === currentIndex ? " active" : "");
-      btn.setAttribute("aria-label", "Go to slide " + (i + 1));
-      btn.addEventListener("click", () => goTo(i));
-      dotsEl.appendChild(btn);
-    }
-  }
-
-  function syncDots() {
-    dotsEl.querySelectorAll(".menu-dot").forEach((dot, i) => {
-      dot.classList.toggle("active", i === currentIndex);
-    });
-  }
-
-  function goTo(index) {
-    currentIndex = Math.max(0, Math.min(index, getMax()));
-    const cardWidth = viewport.offsetWidth / getVisible();
-    track.style.transform = "translateX(-" + currentIndex * cardWidth + "px)";
-    syncDots();
-    if (prevBtn) {
-      prevBtn.disabled = currentIndex === 0;
-    }
-    if (nextBtn) {
-      nextBtn.disabled = currentIndex >= getMax();
-    }
-  }
-
-  if (prevBtn) {
-    prevBtn.addEventListener("click", () => goTo(currentIndex - 1));
-  }
-  if (nextBtn) {
-    nextBtn.addEventListener("click", () => goTo(currentIndex + 1));
-  }
-
-  function handleSwipeEnd() {
-    const deltaX = touchCurrentX - touchStartX;
-    if (Math.abs(deltaX) < swipeThreshold) {
-      return;
-    }
-
-    if (deltaX < 0) {
-      goTo(currentIndex + 1);
-    } else {
-      goTo(currentIndex - 1);
-    }
-  }
-
-  viewport.addEventListener(
-    "touchstart",
-    (event) => {
-      if (event.touches.length !== 1) {
-        return;
-      }
-      touchStartX = event.touches[0].clientX;
-      touchCurrentX = touchStartX;
-      touchActive = true;
-    },
-    { passive: true },
-  );
-
-  viewport.addEventListener(
-    "touchmove",
-    (event) => {
-      if (!touchActive || event.touches.length !== 1) {
-        return;
-      }
-      touchCurrentX = event.touches[0].clientX;
-    },
-    { passive: true },
-  );
-
-  viewport.addEventListener("touchend", () => {
-    if (!touchActive) {
-      return;
-    }
-    handleSwipeEnd();
-    touchActive = false;
+  $menuTrack.slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    infinite: false,
+    autoplay: true,
+    autoplaySpeed: 2600,
+    pauseOnHover: true,
+    pauseOnFocus: true,
+    speed: 420,
+    swipe: true,
+    touchThreshold: 10,
+    prevArrow: "#menuSlider .menu-slider-prev",
+    nextArrow: "#menuSlider .menu-slider-next",
+    appendDots: "#menuSlider .menu-slider-dots",
+    dotsClass: "slick-dots",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ],
   });
-
-  viewport.addEventListener("touchcancel", () => {
-    touchActive = false;
-  });
-
-  window.addEventListener("resize", () => {
-    if (currentIndex > getMax()) currentIndex = getMax();
-    buildDots();
-    goTo(currentIndex);
-  });
-
-  buildDots();
-  goTo(0);
-})();
-
-
+});
 
 /* ── Reels Slider — Slick Carousel ────────────────────────── */
 $(function () {

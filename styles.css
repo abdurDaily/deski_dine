@@ -652,74 +652,144 @@ footer[id] {
   color: var(--brand-dark);
 }
 
-/* ── Custom menu slider ─────────────────────────────────── */
+/* ── Signature menu slider (Slick) ───────────────────────── */
 .menu-slider {
   position: relative;
-  padding-bottom: 2.8rem;
-  overflow: visible;
+  padding-bottom: 2.5rem;
 }
 
 .menu-slider-viewport {
   overflow: hidden;
-  border-radius: 0.5rem;
 }
 
-/* Make Slick slides align with the page gutters and keep consistent spacing */
-.slick-list {
-  margin: 0 -0.5rem;
-}
-.slick-slide {
-  padding: 0 0.5rem;
-  box-sizing: border-box;
-}
-
-.menu-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  background: #fff;
-  border-radius: 0.95rem;
-  box-shadow: var(--card-shadow);
+#menuSlider .slick-list {
   overflow: hidden;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
 }
 
-.menu-image {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
+#menuSlider .menu-slider-track {
+  margin: 0 -0.45rem;
 }
 
-.menu-slider-track {
-  display: flex;
-  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform;
-  touch-action: pan-y;
+#menuSlider .slick-slide {
+  padding: 0 0.45rem;
+  box-sizing: border-box;
+  height: auto;
 }
 
-/* When Slick initializes it will set its own track/slide styles. Add
-   a small override so the legacy .menu-slider-track rules don't
-   conflict when Slick is used. */
-.slick-slider .menu-slider-track,
-.slick-slider .menu-slide-item {
-  display: block !important;
-  width: auto !important;
-}
-
-.menu-slider .menu-slide-item {
-  /* keep card spacing when not using Slick */
-  padding: 0 0.5rem;
+#menuSlider .slick-slide > div {
+  height: 100%;
 }
 
 .menu-slide-item {
-  flex: 0 0 calc(100% / 3);
-  min-width: 0;
-  padding: 0 0.5rem;
+  height: 100%;
+}
+
+.menu-offer-card {
+  background: #fff;
+  border: 1px solid rgba(239, 139, 31, 0.26);
+  border-radius: 0.9rem;
+  height: 100%;
+  box-shadow: 0 10px 22px rgba(127, 36, 48, 0.1);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.menu-offer-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 28px rgba(127, 36, 48, 0.16);
+}
+
+.menu-offer-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.7rem 0.7rem 0 0;
+}
+
+.menu-offer-body {
+  padding: 0.7rem 0.72rem 0.8rem;
+}
+
+.menu-offer-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.menu-offer-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  margin: 0;
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: var(--brand-dark);
+  line-height: 1.2;
+}
+
+.menu-offer-brand-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  color: var(--brand);
+  flex-shrink: 0;
+}
+
+.menu-offer-brand-icon i {
+  font-size: 0.82rem;
+}
+
+.menu-offer-rating {
+  white-space: nowrap;
+  font-size: 0.86rem;
+  color: #4b5364;
+}
+
+.menu-offer-rating i {
+  color: var(--brand);
+}
+
+.menu-offer-meta {
+  color: #5f6d82;
+  font-size: 0.88rem;
+  line-height: 1.3;
+}
+
+.menu-offer-discount {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.24rem 0.56rem;
+  background: rgba(127, 36, 48, 0.1);
+  color: var(--brand-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.menu-offer-discount::before {
+  content: "✽";
+  font-size: 0.62rem;
+  margin-right: 0.3rem;
 }
 
 @media (max-width: 991.98px) {
-  .menu-slide-item {
-    flex: 0 0 50%;
+  #menuSlider .menu-slider-track {
+    margin: 0 -0.35rem;
+  }
+
+  #menuSlider .slick-slide {
+    padding: 0 0.35rem;
   }
 }
 
@@ -732,6 +802,56 @@ footer[id] {
 
 /* Mobile: ≤767px — smaller thumbnail */
 @media (max-width: 767.98px) {
+  #menuSlider .menu-slider-viewport {
+    padding: 0 0.2rem;
+  }
+
+  #menuSlider .menu-slider-track {
+    margin: 0 -0.25rem;
+  }
+
+  #menuSlider .slick-slide {
+    padding: 0 0.25rem;
+  }
+
+  .menu-offer-image {
+    aspect-ratio: 4 / 3;
+  }
+
+  .menu-offer-body {
+    padding: 0.82rem 0.82rem 0.9rem;
+  }
+
+  .menu-offer-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+    margin-bottom: 0.38rem;
+  }
+
+  .menu-offer-title {
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+
+  .menu-offer-rating {
+    font-size: 0.82rem;
+  }
+
+  .menu-offer-meta {
+    font-size: 0.84rem;
+    line-height: 1.35;
+  }
+
+  .menu-offer-discount {
+    margin-top: 0.1rem;
+  }
+
+  .menu-slider-btn {
+    width: 44px;
+    height: 44px;
+  }
+
   .reel-card-thumb {
     max-height: 280px;
   }
@@ -740,6 +860,22 @@ footer[id] {
 @media (max-width: 575.98px) {
   .menu-slide-item {
     flex: 0 0 100%;
+  }
+
+  .menu-slider-prev {
+    left: -0.8rem;
+  }
+
+  .menu-slider-next {
+    right: -0.8rem;
+  }
+
+  .menu-show-more-btn {
+    width: 100%;
+    max-width: 320px;
+    min-width: 0;
+    padding: 0.74rem 1.05rem;
+    font-size: 0.95rem;
   }
 
   .reel-card-thumb {
@@ -762,13 +898,51 @@ footer[id] {
 
 .menu-slider-dots {
   position: absolute;
-  bottom: 0;
+  bottom: -2.5rem;
   left: 0;
   right: 0;
   display: flex;
   justify-content: center;
   gap: 0.45rem;
   padding-top: 0.8rem;
+}
+
+.menu-slider-footer {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1.1rem;
+}
+
+.menu-show-more-btn {
+  min-width: 230px;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--brand-dark), var(--brand));
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  padding: 0.78rem 1.3rem;
+  transition:
+    transform 0.24s ease,
+    box-shadow 0.24s ease;
+}
+
+.menu-show-more-btn i {
+  font-size: 1.25rem;
+  line-height: 0;
+  margin-left: 0.15rem;
+  vertical-align: middle;
+}
+
+.menu-show-more-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(127, 36, 48, 0.26);
+  color: #fff;
+}
+
+.menu-show-more-btn:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 0.22rem rgba(239, 139, 31, 0.32);
 }
 
 .menu-dot {
@@ -789,46 +963,66 @@ footer[id] {
 .menu-slider-btn {
   position: absolute;
   top: 50%;
-  transform: translateY(calc(-50% - 1.4rem));
-  background: none;
-  border: none;
-  padding: 0;
-  z-index: 2;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid rgba(239, 139, 31, 0.35);
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(127, 36, 48, 0.16);
+  z-index: 4;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
 }
 
-.menu-slider-btn:disabled .menu-control-icon {
-  opacity: 0.38;
+.menu-slider-btn:hover {
+  transform: translateY(-50%) scale(1.06);
+  background: rgba(239, 139, 31, 0.08);
+  box-shadow: 0 12px 22px rgba(127, 36, 48, 0.2);
+}
+
+.menu-slider-btn:disabled {
+  opacity: 0.35;
   cursor: default;
 }
 
 .menu-slider-prev {
-  left: -1.6rem;
+  left: -1.35rem;
 }
 
 .menu-slider-next {
-  right: -1.6rem;
+  right: -1.35rem;
 }
 
 .menu-control-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(127, 36, 48, 0.82);
-  border: 1px solid rgba(240, 172, 35, 0.95);
-  color: #ffe7bf;
-  font-size: 1.2rem;
+  color: var(--brand-dark);
+  font-size: 1.35rem;
+  line-height: 1;
 }
 
 /* Slightly larger controls on mobile for easier tapping */
 @media (max-width: 575.98px) {
+  .menu-slider-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .menu-slider-prev {
+    left: -0.8rem;
+  }
+
+  .menu-slider-next {
+    right: -0.8rem;
+  }
+
   .menu-control-icon {
-    width: 52px;
-    height: 52px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -869,8 +1063,8 @@ footer[id] {
   }
 
   /* Make sure the menu cards are comfortably sized on mobile */
-  .menu-image {
-    height: 180px;
+  .menu-offer-image {
+    height: 170px;
   }
 
   .menu-slider-dots {
@@ -1864,8 +2058,8 @@ footer[id] {
   }
 
   .menu-slider {
-    padding-left: 2.6rem;
-    padding-right: 2.6rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
   }
 
   .menu-slider-viewport {
@@ -1873,11 +2067,11 @@ footer[id] {
   }
 
   .menu-slider-prev {
-    left: 0;
+    left: -0.9rem;
   }
 
   .menu-slider-next {
-    right: 0;
+    right: -0.9rem;
   }
 
   .section-block {
@@ -1919,8 +2113,8 @@ footer[id] {
   }
 
   .hero {
-    min-height: 300px;
-    height: 300px;
+    min-height: 240px;
+    height: 240px;
     align-items: stretch;
   }
 
@@ -1945,26 +2139,20 @@ footer[id] {
   }
 
   .menu-slider {
-    padding-left: 2.4rem;
-    padding-right: 2.4rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
   }
 
   .menu-slider-prev {
-    left: 0;
+    left: -0.8rem;
   }
 
   .menu-slider-next {
-    right: 0;
-  }
-
-  .menu-control-icon {
-    width: 36px;
-    height: 36px;
-    font-size: 1rem;
+    right: -0.8rem;
   }
 
   .menu-slider-btn {
-    display: none;
+    display: inline-flex;
   }
 
   .menu-card {
