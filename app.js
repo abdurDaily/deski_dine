@@ -138,7 +138,7 @@ $(function () {
   $("#reelsSlider").slick({
     slidesToShow: 3,
     slidesToScroll: 1,
-    dots: true,
+    dots: false,
     arrows: true,
     infinite: true,
     speed: 420,
