@@ -429,7 +429,8 @@ footer[id] {
   color: #fffdf8;
   max-width: 920px;
   text-align: center;
-  padding-bottom: 6.5rem;
+  min-height: 100vh;
+  padding-bottom: 0;
   width: 100%;
 }
 
@@ -1736,7 +1737,7 @@ footer[id] {
 /* Responsive adjustments for the hero and general spacing */
 @media (max-width: 991.98px) {
   .hero-content {
-    padding-bottom: 3.25rem;
+    padding-bottom: 0;
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -2970,7 +2971,7 @@ footer[id] {
 
   .hero-content {
     text-align: center;
-    padding-bottom: 2rem;
+    padding-bottom: 0;
     max-width: 100%;
   }
 
@@ -3191,7 +3192,7 @@ footer[id] {
   }
 
   .hero-content {
-    padding-bottom: 4rem;
+    padding-bottom: 0;
   }
 
   .hero-title {
@@ -3330,5 +3331,63 @@ footer[id] {
   }
   .floating-right {
     right: 1.75rem;
+  }
+}
+
+/* Dedicated menu page heading */
+.menu-page-hero {
+  padding-top: 6.2rem;
+}
+
+.menu-page-hero-card {
+  background:
+    radial-gradient(circle at 12% 15%, rgba(240, 172, 35, 0.32), transparent 38%),
+    radial-gradient(circle at 88% 18%, rgba(214, 58, 47, 0.24), transparent 40%),
+    linear-gradient(145deg, #fff7ea 0%, #fcead2 55%, #f8e2c4 100%);
+  border: 1px solid rgba(127, 36, 48, 0.16);
+  border-radius: 1.25rem;
+  padding: clamp(1.4rem, 3.2vw, 2.2rem);
+  box-shadow: 0 14px 36px rgba(127, 36, 48, 0.12);
+}
+
+.menu-page-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--brand-dark);
+  border: 1px solid rgba(127, 36, 48, 0.16);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  padding: 0.36rem 0.82rem;
+}
+
+.menu-page-title {
+  font-size: clamp(2rem, 5.4vw, 3.8rem);
+  line-height: 1;
+  letter-spacing: 1px;
+  color: var(--brand-dark);
+  text-transform: uppercase;
+  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.6);
+}
+
+.menu-page-lead {
+  max-width: 760px;
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  color: rgba(52, 24, 32, 0.9);
+  margin-top: 0.7rem;
+}
+
+@media (max-width: 767.98px) {
+  .menu-page-hero {
+    padding-top: 5.8rem;
+  }
+
+  .menu-page-hero-card {
+    border-radius: 1rem;
+    padding: 1.15rem 1rem;
   }
 }

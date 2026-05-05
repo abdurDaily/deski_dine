@@ -48,7 +48,7 @@
           </li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#video">Video</a></li>
-          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html#menu">Menu</a></li>
           <li class="nav-item">
             <a class="nav-link" href="#testimonials">Reviews</a>
           </li>
@@ -58,7 +58,7 @@
         </ul>
 
         <div class="d-flex align-items-center">
-          <a href="#menu" class="desktop-order-icon" aria-label="Order">
+          <a href="menu.html#menu" class="desktop-order-icon" aria-label="Order">
             <iconify-icon
               class="desktop-order-symbol"
               icon="solar:cart-large-2-outline"
@@ -96,7 +96,7 @@
           />
         </a>
 
-        <a href="#menu" class="mobile-order-icon" aria-label="Order">
+        <a href="menu.html#menu" class="mobile-order-icon" aria-label="Order">
           <iconify-icon
             class="mobile-order-symbol"
             icon="solar:cart-large-2-outline"
@@ -146,7 +146,7 @@
             >
           </li>
           <li class="nav-item">
-            <a data-bs-dismiss="offcanvas" class="nav-link" href="#menu"
+            <a data-bs-dismiss="offcanvas" class="nav-link" href="menu.html#menu"
               >Menu</a
             >
           </li>
@@ -187,11 +187,7 @@
           poster="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1800&q=80"
         >
           <source
-            src="https://www.pexels.com/download/video/857149/"
-            type="video/mp4"
-          />
-          <source
-            src="https://cdn.pixabay.com/video/2018/10/04/18490-292165307_large.mp4"
+            src="video/video.mp4"
             type="video/mp4"
           />
         </video>
@@ -209,25 +205,26 @@
           <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
         </div>
 
-        <div class="container hero-content px-4 px-lg-5">
-          <!-- <span class="hero-kicker mb-3 d-inline-block">Degchi Dine &mdash; Chittagong</span> -->
-          <h2 class="hero-title">
-            Delightful<br class="d-sm-none" />
-            Experience
-          </h2>
-          <p class="hero-copy mt-3 mb-4 mx-auto">
-            Degchi Dine blends formal hospitality with bold local flavor,
-            serving a memorable dining experience in Chittagong.
-          </p>
-          <div class="d-flex flex-wrap gap-3 justify-content-center">
-            <a href="#menu" class="btn btn-brand btn-lg px-4">Order Now</a>
-            <a href="#menu" class="btn btn-outline-light btn-lg px-4"
-              >Explore Menu</a
-            >
+        <div class="container hero-content px-4 px-lg-5 d-flex align-items-center justify-content-center">
+          <div class="text-center w-100">
+            <h2 class="hero-title">
+              Delightful<br class="d-sm-none" />
+              Experience
+            </h2>
+            <p class="hero-copy mt-3 mb-4 mx-auto">
+              Degchi Dine blends formal hospitality with bold local flavor,
+              serving a memorable dining experience in Chittagong.
+            </p>
+            <div class="d-flex flex-wrap gap-3 justify-content-center">
+              <a href="menu.html#menu" class="btn btn-brand btn-lg px-4">Order Now</a>
+              <a href="menu.html#menu" class="btn btn-outline-light btn-lg px-4"
+                >Explore Menu</a
+              >
+            </div>
           </div>
         </div>
 
-        <div class="hero-bottom-bar d-none d-lg-flex">
+        <!-- <div class="hero-bottom-bar d-none d-lg-flex">
           <div>
             <p class="mb-1">
               VISIT US : Boropool Circle, Kaptan Villa, Halishahar, Chittagong
@@ -238,7 +235,7 @@
           <a class="hero-badge" href="#menu" aria-label="Order">
             <span>ORDER</span>
           </a>
-        </div>
+        </div> -->
       </section>
 
       <!-- Featured Dishes (Menu Card Slider) -->
@@ -261,6 +258,110 @@
             <div id="mcSlider">
 
               <div class="mc-slide">
+                <article class="mc-card mc-card-trigger" role="button" tabindex="0" aria-label="View Bangla Menu details">
+                  <div class="mc-img-wrap">
+                    <img src="images/menu_card/1.jpg" alt="Bangla Menu" class="mc-img" />
+                    <span class="mc-badge">Bengali Cuisine</span>
+                    <span class="mc-avail"><i class="bi bi-check-circle-fill"></i> Available</span>
+                  </div>
+                  <div class="mc-body">
+                    <h5 class="mc-title">Bengali Menu</h5>
+                    <p class="mc-desc">
+                      ঐতিহ্যবাহী বাঙালি রন্ধনশৈলীর সেরা খাবার সমূহ, তাজা উপাদান দিয়ে প্রতিদিন তৈরি।
+                    </p>
+                    <div class="mc-divider"></div>
+                    <div class="mc-footer">
+                      <div class="mc-price-wrap">
+                        <span class="mc-price-label">Starts from</span>
+                        <span class="mc-price">৳ 250</span>
+                      </div>
+                      <span class="mc-serve-info">
+                        <i class="bi bi-person" aria-hidden="true"></i> 1 person
+                      </span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="mc-slide">
+                <article class="mc-card mc-card-trigger" role="button" tabindex="0" aria-label="View Kacchi Menu details">
+                  <div class="mc-img-wrap">
+                    <img src="images/menu_card/2.jpg" alt="Kacchi Menu" class="mc-img" />
+                    <span class="mc-badge">Special</span>
+                    <span class="mc-avail"><i class="bi bi-check-circle-fill"></i> Available</span>
+                  </div>
+                  <div class="mc-body">
+                    <h5 class="mc-title">kacchi menu</h5>
+                    <p class="mc-desc">
+                      ঐতিহ্যের স্বাদ নিয়ে আসা কাচ্চি বিরিয়ানি এবং মসলাযুক্ত রেজালা সমৃদ্ধ কালেকশন।
+                    </p>
+                    <div class="mc-divider"></div>
+                    <div class="mc-footer">
+                      <div class="mc-price-wrap">
+                        <span class="mc-price-label">Starts from</span>
+                        <span class="mc-price">৳ 380</span>
+                      </div>
+                      <span class="mc-serve-info">
+                        <i class="bi bi-people" aria-hidden="true"></i> 2 persons
+                      </span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="mc-slide">
+                <article class="mc-card mc-card-trigger" role="button" tabindex="0" aria-label="View Mezbani Menu details">
+                  <div class="mc-img-wrap">
+                    <img src="images/menu_card/3.jpg" alt="Mezbani Menu" class="mc-img" />
+                    <span class="mc-badge">Celebration</span>
+                    <span class="mc-avail"><i class="bi bi-check-circle-fill"></i> Available</span>
+                  </div>
+                  <div class="mc-body">
+                    <h5 class="mc-title">Mezbani Menu</h5>
+                    <p class="mc-desc">
+                      উদযাপনের জন্য বিশেষভাবে তৈরি মেজবানি খাবারের সমাহার, ঐতিহ্যবাহী স্বাদে পরিপূর্ণ।
+                    </p>
+                    <div class="mc-divider"></div>
+                    <div class="mc-footer">
+                      <div class="mc-price-wrap">
+                        <span class="mc-price-label">Starts from</span>
+                        <span class="mc-price">৳ 450</span>
+                      </div>
+                      <span class="mc-serve-info">
+                        <i class="bi bi-people" aria-hidden="true"></i> 3-4 persons
+                      </span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="mc-slide">
+                <article class="mc-card mc-card-trigger" role="button" tabindex="0" aria-label="View Family Premium Package details">
+                  <div class="mc-img-wrap">
+                    <img src="images/menu_card/4.jpg" alt="Family Premium Package" class="mc-img" />
+                    <span class="mc-badge mc-badge--gold">Premium</span>
+                    <span class="mc-avail"><i class="bi bi-check-circle-fill"></i> Available</span>
+                  </div>
+                  <div class="mc-body">
+                    <h5 class="mc-title">Family Premium Package</h5>
+                    <p class="mc-desc">
+                      পরিবারের জন্য সম্পূর্ণ খাবার প্যাকেজ - নানা রকম মাংস, পোলাও এবং সালাদের সংমিশ্রণ।
+                    </p>
+                    <div class="mc-divider"></div>
+                    <div class="mc-footer">
+                      <div class="mc-price-wrap">
+                        <span class="mc-price-label">Starts from</span>
+                        <span class="mc-price">৳ 1200</span>
+                      </div>
+                      <span class="mc-serve-info">
+                        <i class="bi bi-people" aria-hidden="true"></i> 4-5 persons
+                      </span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="mc-slide">
                 <article class="mc-card mc-card-trigger" role="button" tabindex="0" aria-label="View Kacchi Biryani details">
                   <div class="mc-img-wrap">
                     <img src="images/menu_card/1.jpg" alt="Kacchi Biryani" class="mc-img" />
@@ -268,7 +369,7 @@
                     <span class="mc-avail"><i class="bi bi-check-circle-fill"></i> Available</span>
                   </div>
                   <div class="mc-body">
-                    <h5 class="mc-title">Kacchi Biryani</h5>
+                    <h5 class="mc-title">bangla menu</h5>
                     <p class="mc-desc">
                       Slow-cooked marinated mutton layered with fragrant basmati
                       and saffron — a royal classic.
@@ -287,113 +388,7 @@
                 </article>
               </div>
 
-              <div class="mc-slide">
-                <article class="mc-card mc-card-trigger" role="button" tabindex="0" aria-label="View Beef Rezala details">
-                  <div class="mc-img-wrap">
-                    <img src="images/menu_card/2.jpg" alt="Beef Rezala" class="mc-img" />
-                    <span class="mc-badge">Main Course</span>
-                    <span class="mc-avail"><i class="bi bi-check-circle-fill"></i> Available</span>
-                  </div>
-                  <div class="mc-body">
-                    <h5 class="mc-title">Beef Rezala</h5>
-                    <p class="mc-desc">
-                      Tender beef simmered in a velvety white gravy with
-                      delicate whole spices and cream.
-                    </p>
-                    <div class="mc-divider"></div>
-                    <div class="mc-footer">
-                      <div class="mc-price-wrap">
-                        <span class="mc-price-label">Starts from</span>
-                        <span class="mc-price">৳ 320</span>
-                      </div>
-                      <span class="mc-serve-info">
-                        <i class="bi bi-person" aria-hidden="true"></i> 1 person
-                      </span>
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              <div class="mc-slide">
-                <article class="mc-card mc-card-trigger" role="button" tabindex="0" aria-label="View Chicken Tikka details">
-                  <div class="mc-img-wrap">
-                    <img src="images/menu_card/3.jpg" alt="Chicken Tikka" class="mc-img" />
-                    <span class="mc-badge">Grill</span>
-                    <span class="mc-avail"><i class="bi bi-check-circle-fill"></i> Available</span>
-                  </div>
-                  <div class="mc-body">
-                    <h5 class="mc-title">Chicken Tikka</h5>
-                    <p class="mc-desc">
-                      Tandoor-fired chicken with a smoky char, served with zesty
-                      mint chutney on the side.
-                    </p>
-                    <div class="mc-divider"></div>
-                    <div class="mc-footer">
-                      <div class="mc-price-wrap">
-                        <span class="mc-price-label">Starts from</span>
-                        <span class="mc-price">৳ 280</span>
-                      </div>
-                      <span class="mc-serve-info">
-                        <i class="bi bi-people" aria-hidden="true"></i> 2 persons
-                      </span>
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              <div class="mc-slide">
-                <article class="mc-card mc-card-trigger" role="button" tabindex="0" aria-label="View Mutton Korma details">
-                  <div class="mc-img-wrap">
-                    <img src="images/menu_card/4.jpg" alt="Mutton Korma" class="mc-img" />
-                    <span class="mc-badge mc-badge--gold">Chef's Pick</span>
-                    <span class="mc-avail"><i class="bi bi-check-circle-fill"></i> Available</span>
-                  </div>
-                  <div class="mc-body">
-                    <h5 class="mc-title">Mutton Korma</h5>
-                    <p class="mc-desc">
-                      Rich, creamy mutton slow-braised with whole spices and
-                      golden fried onions — an indulgent classic.
-                    </p>
-                    <div class="mc-divider"></div>
-                    <div class="mc-footer">
-                      <div class="mc-price-wrap">
-                        <span class="mc-price-label">Starts from</span>
-                        <span class="mc-price">৳ 450</span>
-                      </div>
-                      <span class="mc-serve-info">
-                        <i class="bi bi-person" aria-hidden="true"></i> 1 person
-                      </span>
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              <div class="mc-slide">
-                <article class="mc-card mc-card-trigger" role="button" tabindex="0" aria-label="View Seafood Platter details">
-                  <div class="mc-img-wrap">
-                    <img src="images/menu_card/5.jpg" alt="Seafood Platter" class="mc-img" />
-                    <span class="mc-badge">Seafood</span>
-                    <span class="mc-avail"><i class="bi bi-check-circle-fill"></i> Available</span>
-                  </div>
-                  <div class="mc-body">
-                    <h5 class="mc-title">Seafood Platter</h5>
-                    <p class="mc-desc">
-                      Tiger prawns, grilled fish fillet, and crispy calamari —
-                      a generous coastal spread.
-                    </p>
-                    <div class="mc-divider"></div>
-                    <div class="mc-footer">
-                      <div class="mc-price-wrap">
-                        <span class="mc-price-label">Starts from</span>
-                        <span class="mc-price">৳ 520</span>
-                      </div>
-                      <span class="mc-serve-info">
-                        <i class="bi bi-people" aria-hidden="true"></i> 2 persons
-                      </span>
-                    </div>
-                  </div>
-                </article>
-              </div>
+              
 
             </div><!-- /#mcSlider -->
 
@@ -406,7 +401,7 @@
           </div><!-- /.mc-slider-wrap -->
 
           <div class="mc-show-more-wrap reveal">
-            <a href="#menu" class="mc-show-more-btn">
+            <a href="menu.html#menu" class="mc-show-more-btn">
               Explore Full Menu
               <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
             </a>
@@ -424,27 +419,32 @@
               <i class="bi bi-fire" aria-hidden="true"></i>
               House Signatures
             </span>
-            <h2 class="section-title mt-2">Signature Menu</h2>
+            <h2 class="section-title mt-2">Our Complete Menu</h2>
             <p class="section-lead mx-auto">
-              Curated best-sellers our guests come back for, freshly prepared
-              every day with transparent pricing.
+              From authentic Bengali delicacies to premium family packages — curated best-sellers our guests come back for, freshly prepared every day with transparent pricing.
             </p>
             <p class="menu-swipe-hint d-md-none mb-0">
               <i class="bi bi-arrow-left-right" aria-hidden="true"></i>
-              Swipe to browse signature dishes
+              Swipe to browse all dishes
             </p>
           </div>
 
           <div id="menuSlider" class="menu-slider reveal">
             <div class="menu-slider-viewport">
               <div class="menu-slider-track">
+                
+
+
+
+
+
                 <div class="menu-slide-item">
                   <article class="menu-offer-card">
                     <div class="menu-offer-image-wrap">
                       <img
                         class="menu-offer-image"
                         src="images/signature_menu/1.jpg"
-                        alt="Kacchi biryani platter"
+                        alt="mutton kacchi "
                       />
                       <span class="menu-offer-badge">Biryani</span>
                       <span class="menu-offer-available"
@@ -452,7 +452,7 @@
                       >
                     </div>
                     <div class="menu-offer-body">
-                      <h5 class="menu-offer-title">Kacchi Biryani Platter</h5>
+                      <h5 class="menu-offer-title">mutton kacchi</h5>
                       <p class="menu-offer-meta mb-0">
                         Fragrant basmati rice layered with marinated mutton,
                         saffron, and signature house masala.
@@ -491,7 +491,7 @@
                       >
                     </div>
                     <div class="menu-offer-body">
-                      <h5 class="menu-offer-title">Beef Rezala</h5>
+                      <h5 class="menu-offer-title">Purān Dhākār Kacchi</h5>
                       <p class="menu-offer-meta mb-0">
                         Tender beef in a rich, aromatic white gravy with whole
                         spices and a silky finish.
@@ -530,7 +530,7 @@
                       >
                     </div>
                     <div class="menu-offer-body">
-                      <h5 class="menu-offer-title">Coffee & Snacks Combo</h5>
+                      <h5 class="menu-offer-title">Mutton Kacchi</h5>
                       <p class="menu-offer-meta mb-0">
                         Freshly brewed coffee paired with crunchy, savory bites
                         for a perfect evening break.
@@ -571,7 +571,7 @@
                       >
                     </div>
                     <div class="menu-offer-body">
-                      <h5 class="menu-offer-title">Shawarma & Kebab Plate</h5>
+                      <h5 class="menu-offer-title">kacchi biryani</h5>
                       <p class="menu-offer-meta mb-0">
                         Juicy kebabs and soft shawarma wraps served with house
                         sauces and fresh pickles.
@@ -610,7 +610,7 @@
                       >
                     </div>
                     <div class="menu-offer-body">
-                      <h5 class="menu-offer-title">Seafood Signature Platter</h5>
+                      <h5 class="menu-offer-title">Mezban </h5>
                       <p class="menu-offer-meta mb-0">
                         A premium platter with grilled fish, prawns, and crispy
                         calamari finished with lemon butter.
@@ -655,8 +655,8 @@
           </div>
 
           <div class="menu-slider-footer mt-4">
-            <a href="#contact" class="btn btn-lg menu-show-more-btn">
-              Explore Full Signature Menu <i class="bi bi-arrow-right-short"></i>
+            <a href="complete-menu.html#menu" class="btn btn-lg menu-show-more-btn">
+              View Complete Menu <i class="bi bi-arrow-right-short"></i>
             </a>
           </div>
         </div>
@@ -1159,7 +1159,8 @@
                 <ul class="footer-links">
                   <li><a href="#home">Home</a></li>
                   <li><a href="#about">About Us</a></li>
-                  <li><a href="#menu">Menu</a></li>
+                  <li><a href="menu.html#menu">Menu</a></li>
+                  <li><a href="complete-menu.html#menu">Complete Menu</a></li>
                   <li><a href="#video">Video</a></li>
                   <li><a href="#testimonials">Reviews</a></li>
                   <li><a href="#location">Location</a></li>
@@ -1284,7 +1285,7 @@
                   <span class="mc-price-label">Starts from</span>
                   <span id="mcQuickViewPrice" class="mc-price"></span>
                 </div>
-                <a href="#menu" class="mc-show-more-btn mt-4" data-bs-dismiss="modal">
+                <a href="menu.html#menu" class="mc-show-more-btn mt-4" data-bs-dismiss="modal">
                   Explore Full Menu
                   <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
                 </a>
