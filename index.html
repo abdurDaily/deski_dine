@@ -39,7 +39,7 @@
     >
       <div class="container px-4 px-xxl-5">
         <a class="navbar-brand hero-logo" href="#home">
-          <!-- <img src="./images/logo.webp" class="nav-logo-img" alt="Restaurant logo" /> -->
+          <img src="./images/logo.webp" class="nav-logo-img" alt="Restaurant logo" />
         </a>
 
         <ul class="navbar-nav flex-row desktop-nav">
@@ -241,18 +241,197 @@
         </div>
       </section>
 
+      <!-- Featured Dishes (Menu Card Slider) -->
+      <section class="section-block mc-section" id="dishes">
+        <div class="container px-4 px-lg-5">
+          <div class="mb-5 text-center reveal">
+            <span class="mc-kicker">
+              <i class="bi bi-stars" aria-hidden="true"></i>
+              What's on the Table
+            </span>
+            <h2 class="section-title mt-2">Our Menu Highlights</h2>
+            <p class="section-lead mx-auto">
+              Every item is freshly prepared and available daily. Prices shown
+              are per serving — no hidden charges.
+            </p>
+            <p class="mc-tap-hint mb-0">Tap any dish card to view details</p>
+          </div>
+
+          <div class="mc-slider-wrap reveal">
+            <div id="mcSlider">
+
+              <div class="mc-slide">
+                <article class="mc-card mc-card-trigger" role="button" tabindex="0" aria-label="View Kacchi Biryani details">
+                  <div class="mc-img-wrap">
+                    <img src="images/menu_card/1.jpg" alt="Kacchi Biryani" class="mc-img" />
+                    <span class="mc-badge">Biryani</span>
+                    <span class="mc-avail"><i class="bi bi-check-circle-fill"></i> Available</span>
+                  </div>
+                  <div class="mc-body">
+                    <h5 class="mc-title">Kacchi Biryani</h5>
+                    <p class="mc-desc">
+                      Slow-cooked marinated mutton layered with fragrant basmati
+                      and saffron — a royal classic.
+                    </p>
+                    <div class="mc-divider"></div>
+                    <div class="mc-footer">
+                      <div class="mc-price-wrap">
+                        <span class="mc-price-label">Starts from</span>
+                        <span class="mc-price">৳ 380</span>
+                      </div>
+                      <span class="mc-serve-info">
+                        <i class="bi bi-person" aria-hidden="true"></i> 1 person
+                      </span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="mc-slide">
+                <article class="mc-card mc-card-trigger" role="button" tabindex="0" aria-label="View Beef Rezala details">
+                  <div class="mc-img-wrap">
+                    <img src="images/menu_card/2.jpg" alt="Beef Rezala" class="mc-img" />
+                    <span class="mc-badge">Main Course</span>
+                    <span class="mc-avail"><i class="bi bi-check-circle-fill"></i> Available</span>
+                  </div>
+                  <div class="mc-body">
+                    <h5 class="mc-title">Beef Rezala</h5>
+                    <p class="mc-desc">
+                      Tender beef simmered in a velvety white gravy with
+                      delicate whole spices and cream.
+                    </p>
+                    <div class="mc-divider"></div>
+                    <div class="mc-footer">
+                      <div class="mc-price-wrap">
+                        <span class="mc-price-label">Starts from</span>
+                        <span class="mc-price">৳ 320</span>
+                      </div>
+                      <span class="mc-serve-info">
+                        <i class="bi bi-person" aria-hidden="true"></i> 1 person
+                      </span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="mc-slide">
+                <article class="mc-card mc-card-trigger" role="button" tabindex="0" aria-label="View Chicken Tikka details">
+                  <div class="mc-img-wrap">
+                    <img src="images/menu_card/3.jpg" alt="Chicken Tikka" class="mc-img" />
+                    <span class="mc-badge">Grill</span>
+                    <span class="mc-avail"><i class="bi bi-check-circle-fill"></i> Available</span>
+                  </div>
+                  <div class="mc-body">
+                    <h5 class="mc-title">Chicken Tikka</h5>
+                    <p class="mc-desc">
+                      Tandoor-fired chicken with a smoky char, served with zesty
+                      mint chutney on the side.
+                    </p>
+                    <div class="mc-divider"></div>
+                    <div class="mc-footer">
+                      <div class="mc-price-wrap">
+                        <span class="mc-price-label">Starts from</span>
+                        <span class="mc-price">৳ 280</span>
+                      </div>
+                      <span class="mc-serve-info">
+                        <i class="bi bi-people" aria-hidden="true"></i> 2 persons
+                      </span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="mc-slide">
+                <article class="mc-card mc-card-trigger" role="button" tabindex="0" aria-label="View Mutton Korma details">
+                  <div class="mc-img-wrap">
+                    <img src="images/menu_card/4.jpg" alt="Mutton Korma" class="mc-img" />
+                    <span class="mc-badge mc-badge--gold">Chef's Pick</span>
+                    <span class="mc-avail"><i class="bi bi-check-circle-fill"></i> Available</span>
+                  </div>
+                  <div class="mc-body">
+                    <h5 class="mc-title">Mutton Korma</h5>
+                    <p class="mc-desc">
+                      Rich, creamy mutton slow-braised with whole spices and
+                      golden fried onions — an indulgent classic.
+                    </p>
+                    <div class="mc-divider"></div>
+                    <div class="mc-footer">
+                      <div class="mc-price-wrap">
+                        <span class="mc-price-label">Starts from</span>
+                        <span class="mc-price">৳ 450</span>
+                      </div>
+                      <span class="mc-serve-info">
+                        <i class="bi bi-person" aria-hidden="true"></i> 1 person
+                      </span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="mc-slide">
+                <article class="mc-card mc-card-trigger" role="button" tabindex="0" aria-label="View Seafood Platter details">
+                  <div class="mc-img-wrap">
+                    <img src="images/menu_card/5.jpg" alt="Seafood Platter" class="mc-img" />
+                    <span class="mc-badge">Seafood</span>
+                    <span class="mc-avail"><i class="bi bi-check-circle-fill"></i> Available</span>
+                  </div>
+                  <div class="mc-body">
+                    <h5 class="mc-title">Seafood Platter</h5>
+                    <p class="mc-desc">
+                      Tiger prawns, grilled fish fillet, and crispy calamari —
+                      a generous coastal spread.
+                    </p>
+                    <div class="mc-divider"></div>
+                    <div class="mc-footer">
+                      <div class="mc-price-wrap">
+                        <span class="mc-price-label">Starts from</span>
+                        <span class="mc-price">৳ 520</span>
+                      </div>
+                      <span class="mc-serve-info">
+                        <i class="bi bi-people" aria-hidden="true"></i> 2 persons
+                      </span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+            </div><!-- /#mcSlider -->
+
+            <button class="mc-nav mc-nav-prev" aria-label="Previous dish">
+              <i class="bi bi-chevron-left" aria-hidden="true"></i>
+            </button>
+            <button class="mc-nav mc-nav-next" aria-label="Next dish">
+              <i class="bi bi-chevron-right" aria-hidden="true"></i>
+            </button>
+          </div><!-- /.mc-slider-wrap -->
+
+          <div class="mc-show-more-wrap reveal">
+            <a href="#menu" class="mc-show-more-btn">
+              Explore Full Menu
+              <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
+            </a>
+          </div>
+
+        </div>
+      </section>
+      <!-- Featured Dishes end -->
+
       <!-- menu -->
       <section class="section-block py-5" id="menu">
         <div class="container px-4 px-lg-5">
-          <div class="mb-4 reveal">
-            <h2 class="section-title">Signature Menu</h2>
-            <p class="section-lead">
-              A balanced menu of handcrafted starters, classic mains, and
-              indulgent desserts.
+          <div class="mb-5 text-center reveal">
+            <span class="menu-kicker">
+              <i class="bi bi-fire" aria-hidden="true"></i>
+              House Signatures
+            </span>
+            <h2 class="section-title mt-2">Signature Menu</h2>
+            <p class="section-lead mx-auto">
+              Curated best-sellers our guests come back for, freshly prepared
+              every day with transparent pricing.
             </p>
             <p class="menu-swipe-hint d-md-none mb-0">
               <i class="bi bi-arrow-left-right" aria-hidden="true"></i>
-              Swipe to browse dishes
+              Swipe to browse signature dishes
             </p>
           </div>
 
@@ -261,145 +440,197 @@
               <div class="menu-slider-track">
                 <div class="menu-slide-item">
                   <article class="menu-offer-card">
-                    <img
-                      class="menu-offer-image"
-                      src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=1200&q=80"
-                      alt="Kacchi biryani platter"
-                    />
+                    <div class="menu-offer-image-wrap">
+                      <img
+                        class="menu-offer-image"
+                        src="images/signature_menu/1.jpg"
+                        alt="Kacchi biryani platter"
+                      />
+                      <span class="menu-offer-badge">Biryani</span>
+                      <span class="menu-offer-available"
+                        ><i class="bi bi-check-circle-fill"></i> Available</span
+                      >
+                    </div>
                     <div class="menu-offer-body">
-                      <div class="menu-offer-head">
-                        <h5 class="menu-offer-title">
-                          Ma Biryani - Gulshan
-                        </h5>
-                        <p class="menu-offer-rating mb-0">
-                          <i class="bi bi-star-fill" aria-hidden="true"></i> 3.9
-                          (1000+)
-                        </p>
+                      <h5 class="menu-offer-title">Kacchi Biryani Platter</h5>
+                      <p class="menu-offer-meta mb-0">
+                        Fragrant basmati rice layered with marinated mutton,
+                        saffron, and signature house masala.
+                      </p>
+                      <div class="menu-offer-divider"></div>
+                      <div class="menu-offer-footer">
+                        <div class="menu-offer-price-wrap">
+                          <span class="menu-offer-price-label">Starts from</span>
+                          <span class="menu-offer-price">৳ 420</span>
+                        </div>
+                        <span class="menu-offer-serve"
+                          ><i class="bi bi-people"></i> 2 persons</span
+                        >
                       </div>
-                      <p class="menu-offer-meta mb-1">
-                        From 10 min · ৳৳ · Biryani
-                      </p>
-                      <p class="menu-offer-meta mb-2">
-                        <i class="bi bi-bicycle me-1" aria-hidden="true"></i
-                        >From Tk 29 with Saver
-                      </p>
-                      <span class="menu-offer-discount">15% off Tk. 50</span>
+                      <div class="menu-offer-actions">
+                        <button class="menu-offer-cart-btn" type="button">
+                          <i class="bi bi-bag-plus" aria-hidden="true"></i>
+                          Add to Cart
+                        </button>
+                      </div>
                     </div>
                   </article>
                 </div>
 
                 <div class="menu-slide-item">
                   <article class="menu-offer-card">
-                    <img
-                      class="menu-offer-image"
-                      src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=1200&q=80"
-                      alt="Kacchi biryani platter"
-                    />
+                    <div class="menu-offer-image-wrap">
+                      <img
+                        class="menu-offer-image"
+                        src="images/signature_menu/2.jpg"
+                        alt="Beef rezala bowl"
+                      />
+                      <span class="menu-offer-badge">Main Course</span>
+                      <span class="menu-offer-available"
+                        ><i class="bi bi-check-circle-fill"></i> Available</span
+                      >
+                    </div>
                     <div class="menu-offer-body">
-                      <div class="menu-offer-head">
-                        <h5 class="menu-offer-title">
-                          Ma Biryani - Gulshan
-                        </h5>
-                        <p class="menu-offer-rating mb-0">
-                          <i class="bi bi-star-fill" aria-hidden="true"></i> 3.9
-                          (1000+)
-                        </p>
+                      <h5 class="menu-offer-title">Beef Rezala</h5>
+                      <p class="menu-offer-meta mb-0">
+                        Tender beef in a rich, aromatic white gravy with whole
+                        spices and a silky finish.
+                      </p>
+                      <div class="menu-offer-divider"></div>
+                      <div class="menu-offer-footer">
+                        <div class="menu-offer-price-wrap">
+                          <span class="menu-offer-price-label">Starts from</span>
+                          <span class="menu-offer-price">৳ 340</span>
+                        </div>
+                        <span class="menu-offer-serve"
+                          ><i class="bi bi-person"></i> 1 person</span
+                        >
                       </div>
-                      <p class="menu-offer-meta mb-1">
-                        From 10 min · ৳৳ · Biryani
-                      </p>
-                      <p class="menu-offer-meta mb-2">
-                        <i class="bi bi-bicycle me-1" aria-hidden="true"></i
-                        >From Tk 29 with Saver
-                      </p>
-                      <span class="menu-offer-discount">15% off Tk. 50</span>
+                      <div class="menu-offer-actions">
+                        <button class="menu-offer-cart-btn" type="button">
+                          <i class="bi bi-bag-plus" aria-hidden="true"></i>
+                          Add to Cart
+                        </button>
+                      </div>
                     </div>
                   </article>
                 </div>
 
                 <div class="menu-slide-item">
                   <article class="menu-offer-card">
-                    <img
-                      class="menu-offer-image"
-                      src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1200&q=80"
-                      alt="Snack platter"
-                    />
+                    <div class="menu-offer-image-wrap">
+                      <img
+                        class="menu-offer-image"
+                        src="images/signature_menu/3.jpg"
+                        alt="Mixed snack platter"
+                      />
+                      <span class="menu-offer-badge">Snacks</span>
+                      <span class="menu-offer-available"
+                        ><i class="bi bi-check-circle-fill"></i> Available</span
+                      >
+                    </div>
                     <div class="menu-offer-body">
-                      <div class="menu-offer-head">
-                        <h5 class="menu-offer-title">
-                          Coffee And Snacks
-                        </h5>
-                        <p class="menu-offer-rating mb-0">
-                          <i class="bi bi-star-fill" aria-hidden="true"></i> 4.8
-                          (100+)
-                        </p>
+                      <h5 class="menu-offer-title">Coffee & Snacks Combo</h5>
+                      <p class="menu-offer-meta mb-0">
+                        Freshly brewed coffee paired with crunchy, savory bites
+                        for a perfect evening break.
+                      </p>
+                      <div class="menu-offer-divider"></div>
+                      <div class="menu-offer-footer">
+                        <div class="menu-offer-price-wrap">
+                          <span class="menu-offer-price-label">Starts from</span>
+                          <span class="menu-offer-price">৳ 290</span>
+                        </div>
+                        <span class="menu-offer-serve"
+                          ><i class="bi bi-person"></i> 1 person</span
+                        >
                       </div>
-                      <p class="menu-offer-meta mb-1">
-                        From 20 min · ৳৳৳ · Snacks
-                      </p>
-                      <p class="menu-offer-meta mb-2">
-                        <i class="bi bi-bicycle me-1" aria-hidden="true"></i
-                        >From Tk 31 with Saver
-                      </p>
-                      <span class="menu-offer-discount">20% off Tk. 50</span>
+                      <div class="menu-offer-actions">
+                        <button class="menu-offer-cart-btn" type="button">
+                          <i class="bi bi-bag-plus" aria-hidden="true"></i>
+                          Add to Cart
+                        </button>
+                      </div>
                     </div>
                   </article>
                 </div>
 
                 <div class="menu-slide-item">
                   <article class="menu-offer-card">
-                    <img
-                      class="menu-offer-image"
-                      src="https://images.unsplash.com/photo-1521305916504-4a1121188589?auto=format&fit=crop&w=1200&q=80"
-                      alt="Shawarma box"
-                    />
+                    <div class="menu-offer-image-wrap">
+                      <img
+                        class="menu-offer-image"
+                        src="images/signature_menu/4.jpg"
+                        alt="Shawarma and kebab plate"
+                      />
+                      <span class="menu-offer-badge menu-offer-badge--gold"
+                        >Chef's Pick</span
+                      >
+                      <span class="menu-offer-available"
+                        ><i class="bi bi-check-circle-fill"></i> Available</span
+                      >
+                    </div>
                     <div class="menu-offer-body">
-                      <div class="menu-offer-head">
-                        <h5 class="menu-offer-title">
-                          Shawarma N Kebab
-                        </h5>
-                        <p class="menu-offer-rating mb-0">
-                          <i class="bi bi-star-fill" aria-hidden="true"></i> 4.6
-                          (200+)
-                        </p>
+                      <h5 class="menu-offer-title">Shawarma & Kebab Plate</h5>
+                      <p class="menu-offer-meta mb-0">
+                        Juicy kebabs and soft shawarma wraps served with house
+                        sauces and fresh pickles.
+                      </p>
+                      <div class="menu-offer-divider"></div>
+                      <div class="menu-offer-footer">
+                        <div class="menu-offer-price-wrap">
+                          <span class="menu-offer-price-label">Starts from</span>
+                          <span class="menu-offer-price">৳ 360</span>
+                        </div>
+                        <span class="menu-offer-serve"
+                          ><i class="bi bi-people"></i> 2 persons</span
+                        >
                       </div>
-                      <p class="menu-offer-meta mb-1">
-                        From 20 min · ৳৳ · Wraps
-                      </p>
-                      <p class="menu-offer-meta mb-2">
-                        <i class="bi bi-bicycle me-1" aria-hidden="true"></i
-                        >From Tk 33 with Saver
-                      </p>
-                      <span class="menu-offer-discount">10% off Tk. 50</span>
+                      <div class="menu-offer-actions">
+                        <button class="menu-offer-cart-btn" type="button">
+                          <i class="bi bi-bag-plus" aria-hidden="true"></i>
+                          Add to Cart
+                        </button>
+                      </div>
                     </div>
                   </article>
                 </div>
 
                 <div class="menu-slide-item">
                   <article class="menu-offer-card">
-                    <img
-                      class="menu-offer-image"
-                      src="https://images.unsplash.com/photo-1521305916504-4a1121188589?auto=format&fit=crop&w=1200&q=80"
-                      alt="Shawarma box"
-                    />
+                    <div class="menu-offer-image-wrap">
+                      <img
+                        class="menu-offer-image"
+                        src="images/signature_menu/5.jpg"
+                        alt="Seafood platter"
+                      />
+                      <span class="menu-offer-badge">Seafood</span>
+                      <span class="menu-offer-available"
+                        ><i class="bi bi-check-circle-fill"></i> Available</span
+                      >
+                    </div>
                     <div class="menu-offer-body">
-                      <div class="menu-offer-head">
-                        <h5 class="menu-offer-title">
-                          Shawarma N Kebab
-                        </h5>
-                        <p class="menu-offer-rating mb-0">
-                          <i class="bi bi-star-fill" aria-hidden="true"></i> 4.6
-                          (200+)
-                        </p>
+                      <h5 class="menu-offer-title">Seafood Signature Platter</h5>
+                      <p class="menu-offer-meta mb-0">
+                        A premium platter with grilled fish, prawns, and crispy
+                        calamari finished with lemon butter.
+                      </p>
+                      <div class="menu-offer-divider"></div>
+                      <div class="menu-offer-footer">
+                        <div class="menu-offer-price-wrap">
+                          <span class="menu-offer-price-label">Starts from</span>
+                          <span class="menu-offer-price">৳ 550</span>
+                        </div>
+                        <span class="menu-offer-serve"
+                          ><i class="bi bi-people"></i> 2 persons</span
+                        >
                       </div>
-                      <p class="menu-offer-meta mb-1">
-                        From 20 min · ৳৳ · Wraps
-                      </p>
-                      <p class="menu-offer-meta mb-2">
-                        <i class="bi bi-bicycle me-1" aria-hidden="true"></i
-                        >From Tk 33 with Saver
-                      </p>
-                      <span class="menu-offer-discount">10% off Tk. 50</span>
+                      <div class="menu-offer-actions">
+                        <button class="menu-offer-cart-btn" type="button">
+                          <i class="bi bi-bag-plus" aria-hidden="true"></i>
+                          Add to Cart
+                        </button>
+                      </div>
                     </div>
                   </article>
                 </div>
@@ -424,13 +655,283 @@
           </div>
 
           <div class="menu-slider-footer mt-4">
-            <button class="btn btn-lg menu-show-more-btn" type="button">
-              Show More Offers <i class="bi bi-arrow-right-short"></i>
-            </button>
+            <a href="#contact" class="btn btn-lg menu-show-more-btn">
+              Explore Full Signature Menu <i class="bi bi-arrow-right-short"></i>
+            </a>
           </div>
         </div>
       </section>
       <!-- menu end -->
+
+
+      <!-- reels -->
+       <section class="section-block my-5 pt-0 reels-section" id="video">
+        <div class="container px-4 px-lg-5">
+          <div class="reels-header-shell reveal">
+            <div class="reels-section-header">
+              <div class="reels-header-left">
+                <span class="reels-kicker"
+                  ><i class="bi bi-camera-reels"></i> Behind The Scenes</span
+                >
+                <h2 class="section-title mt-2 mb-1">Watch Us on Reels</h2>
+                <p class="section-lead mb-0">
+                  Kitchen energy, chef moments, and guest vibes from Degchi Dine.
+                  Fresh reels every week.
+                </p>
+              </div>
+              <a
+                href="https://www.facebook.com/DegchiDine"
+                class="btn reels-follow-btn d-none d-md-inline-flex"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="bi bi-facebook me-2" aria-hidden="true"></i>Follow Us
+              </a>
+            </div>
+          </div>
+
+          <div id="reelsSlider" class="reels-slick reveal">
+            <div class="reel-slide-wrap">
+              <a
+                class="reel-card"
+                href="https://www.facebook.com/share/r/1cNLa7uWHT/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Watch Kitchen Rush reel on Facebook"
+              >
+                <div class="reel-card-thumb">
+                  <img
+                    src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=600&q=80"
+                    alt="Kitchen Rush reel"
+                    loading="lazy"
+                  />
+                  <div class="reel-card-overlay">
+                    <span class="reel-play-icon" aria-hidden="true">
+                      <i class="bi bi-play-fill"></i>
+                    </span>
+                    <span class="reel-watch-label">
+                      <i class="bi bi-facebook me-1" aria-hidden="true"></i
+                      >Watch on Facebook
+                    </span>
+                  </div>
+                  <span class="reel-duration-badge">0:28</span>
+                </div>
+                <div class="reel-card-body">
+                  <p class="reel-card-title">Kitchen Rush</p>
+                  <p class="reel-card-copy">
+                    Fast service moments from dinner prep.
+                  </p>
+                  <div class="reel-meta-row">
+                    <span class="reel-meta-pill"
+                      ><i class="bi bi-eye"></i> 28k views</span
+                    >
+                    <span class="reel-meta-pill"
+                      ><i class="bi bi-clock-history"></i> 2 days ago</span
+                    >
+                  </div>
+                  <span class="reel-card-cta"
+                    >Watch Reel <i class="bi bi-arrow-right ms-1"></i
+                  ></span>
+                </div>
+              </a>
+            </div>
+
+            <div class="reel-slide-wrap">
+              <a
+                class="reel-card"
+                href="https://www.facebook.com/share/v/18JE7BDJKt/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Watch Chef Plating reel on Facebook"
+              >
+                <div class="reel-card-thumb">
+                  <img
+                    src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80"
+                    alt="Chef Plating reel"
+                    loading="lazy"
+                  />
+                  <div class="reel-card-overlay">
+                    <span class="reel-play-icon" aria-hidden="true">
+                      <i class="bi bi-play-fill"></i>
+                    </span>
+                    <span class="reel-watch-label">
+                      <i class="bi bi-facebook me-1" aria-hidden="true"></i
+                      >Watch on Facebook
+                    </span>
+                  </div>
+                  <span class="reel-duration-badge">0:41</span>
+                </div>
+                <div class="reel-card-body">
+                  <p class="reel-card-title">Chef Plating</p>
+                  <p class="reel-card-copy">
+                    Signature finishing touches before service.
+                  </p>
+                  <div class="reel-meta-row">
+                    <span class="reel-meta-pill"
+                      ><i class="bi bi-eye"></i> 19k views</span
+                    >
+                    <span class="reel-meta-pill"
+                      ><i class="bi bi-clock-history"></i> 4 days ago</span
+                    >
+                  </div>
+                  <span class="reel-card-cta"
+                    >Watch Reel <i class="bi bi-arrow-right ms-1"></i
+                  ></span>
+                </div>
+              </a>
+            </div>
+
+            <div class="reel-slide-wrap">
+              <a
+                class="reel-card"
+                href="https://www.facebook.com/share/r/1HuLyL4HbZ/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Watch Guest Vibes reel on Facebook"
+              >
+                <div class="reel-card-thumb">
+                  <img
+                    src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80"
+                    alt="Guest Vibes reel"
+                    loading="lazy"
+                  />
+                  <div class="reel-card-overlay">
+                    <span class="reel-play-icon" aria-hidden="true">
+                      <i class="bi bi-play-fill"></i>
+                    </span>
+                    <span class="reel-watch-label">
+                      <i class="bi bi-facebook me-1" aria-hidden="true"></i
+                      >Watch on Facebook
+                    </span>
+                  </div>
+                  <span class="reel-duration-badge">0:35</span>
+                </div>
+                <div class="reel-card-body">
+                  <p class="reel-card-title">Guest Vibes</p>
+                  <p class="reel-card-copy">
+                    Dining ambiance during peak evening hours.
+                  </p>
+                  <div class="reel-meta-row">
+                    <span class="reel-meta-pill"
+                      ><i class="bi bi-eye"></i> 24k views</span
+                    >
+                    <span class="reel-meta-pill"
+                      ><i class="bi bi-clock-history"></i> 1 week ago</span
+                    >
+                  </div>
+                  <span class="reel-card-cta"
+                    >Watch Reel <i class="bi bi-arrow-right ms-1"></i
+                  ></span>
+                </div>
+              </a>
+            </div>
+
+            <div class="reel-slide-wrap">
+              <a
+                class="reel-card"
+                href="https://www.facebook.com/share/r/1Hb6z4YXpK/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Watch Fresh Ingredients reel on Facebook"
+              >
+                <div class="reel-card-thumb">
+                  <img
+                    src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80"
+                    alt="Fresh Ingredients reel"
+                    loading="lazy"
+                  />
+                  <div class="reel-card-overlay">
+                    <span class="reel-play-icon" aria-hidden="true">
+                      <i class="bi bi-play-fill"></i>
+                    </span>
+                    <span class="reel-watch-label">
+                      <i class="bi bi-facebook me-1" aria-hidden="true"></i
+                      >Watch on Facebook
+                    </span>
+                  </div>
+                  <span class="reel-duration-badge">0:22</span>
+                </div>
+                <div class="reel-card-body">
+                  <p class="reel-card-title">Fresh Ingredients</p>
+                  <p class="reel-card-copy">
+                    Daily prep highlights from local produce.
+                  </p>
+                  <div class="reel-meta-row">
+                    <span class="reel-meta-pill"
+                      ><i class="bi bi-eye"></i> 16k views</span
+                    >
+                    <span class="reel-meta-pill"
+                      ><i class="bi bi-clock-history"></i> 9 days ago</span
+                    >
+                  </div>
+                  <span class="reel-card-cta"
+                    >Watch Reel <i class="bi bi-arrow-right ms-1"></i
+                  ></span>
+                </div>
+              </a>
+            </div>
+
+            <div class="reel-slide-wrap">
+              <a
+                class="reel-card"
+                href="https://www.facebook.com/share/r/18oiP9CJYb/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Watch Special Moments reel on Facebook"
+              >
+                <div class="reel-card-thumb">
+                  <img
+                    src="https://images.unsplash.com/photo-1504674900152-b8d9f8b0db3e?auto=format&fit=crop&w=600&q=80"
+                    alt="Special Moments reel"
+                    loading="lazy"
+                  />
+                  <div class="reel-card-overlay">
+                    <span class="reel-play-icon" aria-hidden="true">
+                      <i class="bi bi-play-fill"></i>
+                    </span>
+                    <span class="reel-watch-label">
+                      <i class="bi bi-facebook me-1" aria-hidden="true"></i
+                      >Watch on Facebook
+                    </span>
+                  </div>
+                  <span class="reel-duration-badge">0:30</span>
+                </div>
+                <div class="reel-card-body">
+                  <p class="reel-card-title">Special Moments</p>
+                  <p class="reel-card-copy">
+                    Celebrations and special occasions at the table.
+                  </p>
+                  <div class="reel-meta-row">
+                    <span class="reel-meta-pill"
+                      ><i class="bi bi-eye"></i> 21k views</span
+                    >
+                    <span class="reel-meta-pill"
+                      ><i class="bi bi-clock-history"></i> 5 days ago</span
+                    >
+                  </div>
+                  <span class="reel-card-cta"
+                    >Watch Reel <i class="bi bi-arrow-right ms-1"></i
+                  ></span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="text-center mt-4 d-md-none reveal">
+            <a
+              href="https://www.facebook.com/DegchiDine"
+              class="btn reels-follow-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-facebook me-2" aria-hidden="true"></i>Follow Us on
+              Facebook
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- reels end -->
+
 
       <section class="section-block" id="about">
         <div class="container px-4 px-lg-5">
@@ -480,191 +981,7 @@
         </div>
       </section>
 
-      <section class="section-block my-5 pt-0 reels-section" id="video">
-        <div class="container px-4 px-lg-5">
-          <!-- Section header -->
-          <div class="reels-section-header reveal">
-            <div class="reels-header-left">
-              <h2 class="section-title mt-2 mb-1">Watch Us on Reels</h2>
-              <p class="section-lead mb-0">
-                Tap any card to watch on Facebook &mdash; new reels every week.
-              </p>
-            </div>
-            <a
-              href="https://www.facebook.com/DegchiDine"
-              class="btn reels-follow-btn d-none d-md-inline-flex"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="bi bi-facebook me-2" aria-hidden="true"></i>Follow Us
-            </a>
-          </div>
-
-          <!-- Reels slider -->
-          <div id="reelsSlider" class="reels-slick reveal">
-            <div class="reel-slide-wrap">
-              <a
-                class="reel-card"
-                href="https://www.facebook.com/DegchiDine"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Watch Kitchen Rush reel on Facebook"
-              >
-                <div class="reel-card-thumb">
-                  <img
-                    src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=600&q=80"
-                    alt="Kitchen Rush reel"
-                    loading="lazy"
-                  />
-                  <div class="reel-card-overlay">
-                    <span class="reel-play-icon" aria-hidden="true">
-                      <i class="bi bi-play-fill"></i>
-                    </span>
-                    <span class="reel-watch-label">
-                      <i class="bi bi-facebook me-1" aria-hidden="true"></i
-                      >Watch on Facebook
-                    </span>
-                  </div>
-                  <span class="reel-duration-badge">0:28</span>
-                </div>
-                <div class="reel-card-body">
-                  <p class="reel-card-title">Kitchen Rush</p>
-                  <p class="reel-card-copy">
-                    Fast service moments from dinner prep.
-                  </p>
-                  <span class="reel-card-cta"
-                    >Watch Reel <i class="bi bi-arrow-right ms-1"></i
-                  ></span>
-                </div>
-              </a>
-            </div>
-
-            <div class="reel-slide-wrap">
-              <a
-                class="reel-card"
-                href="https://www.facebook.com/DegchiDine"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Watch Chef Plating reel on Facebook"
-              >
-                <div class="reel-card-thumb">
-                  <img
-                    src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80"
-                    alt="Chef Plating reel"
-                    loading="lazy"
-                  />
-                  <div class="reel-card-overlay">
-                    <span class="reel-play-icon" aria-hidden="true">
-                      <i class="bi bi-play-fill"></i>
-                    </span>
-                    <span class="reel-watch-label">
-                      <i class="bi bi-facebook me-1" aria-hidden="true"></i
-                      >Watch on Facebook
-                    </span>
-                  </div>
-                  <span class="reel-duration-badge">0:41</span>
-                </div>
-                <div class="reel-card-body">
-                  <p class="reel-card-title">Chef Plating</p>
-                  <p class="reel-card-copy">
-                    Signature finishing touches before service.
-                  </p>
-                  <span class="reel-card-cta"
-                    >Watch Reel <i class="bi bi-arrow-right ms-1"></i
-                  ></span>
-                </div>
-              </a>
-            </div>
-
-            <div class="reel-slide-wrap">
-              <a
-                class="reel-card"
-                href="https://www.facebook.com/DegchiDine"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Watch Guest Vibes reel on Facebook"
-              >
-                <div class="reel-card-thumb">
-                  <img
-                    src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80"
-                    alt="Guest Vibes reel"
-                    loading="lazy"
-                  />
-                  <div class="reel-card-overlay">
-                    <span class="reel-play-icon" aria-hidden="true">
-                      <i class="bi bi-play-fill"></i>
-                    </span>
-                    <span class="reel-watch-label">
-                      <i class="bi bi-facebook me-1" aria-hidden="true"></i
-                      >Watch on Facebook
-                    </span>
-                  </div>
-                  <span class="reel-duration-badge">0:35</span>
-                </div>
-                <div class="reel-card-body">
-                  <p class="reel-card-title">Guest Vibes</p>
-                  <p class="reel-card-copy">
-                    Dining ambiance during peak evening hours.
-                  </p>
-                  <span class="reel-card-cta"
-                    >Watch Reel <i class="bi bi-arrow-right ms-1"></i
-                  ></span>
-                </div>
-              </a>
-            </div>
-
-            <div class="reel-slide-wrap">
-              <a
-                class="reel-card"
-                href="https://www.facebook.com/DegchiDine"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Watch Fresh Ingredients reel on Facebook"
-              >
-                <div class="reel-card-thumb">
-                  <img
-                    src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80"
-                    alt="Fresh Ingredients reel"
-                    loading="lazy"
-                  />
-                  <div class="reel-card-overlay">
-                    <span class="reel-play-icon" aria-hidden="true">
-                      <i class="bi bi-play-fill"></i>
-                    </span>
-                    <span class="reel-watch-label">
-                      <i class="bi bi-facebook me-1" aria-hidden="true"></i
-                      >Watch on Facebook
-                    </span>
-                  </div>
-                  <span class="reel-duration-badge">0:22</span>
-                </div>
-                <div class="reel-card-body">
-                  <p class="reel-card-title">Fresh Ingredients</p>
-                  <p class="reel-card-copy">
-                    Daily prep highlights from local produce.
-                  </p>
-                  <span class="reel-card-cta"
-                    >Watch Reel <i class="bi bi-arrow-right ms-1"></i
-                  ></span>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <!-- Mobile follow CTA -->
-          <div class="text-center mt-4 d-md-none reveal">
-            <a
-              href="https://www.facebook.com/DegchiDine"
-              class="btn reels-follow-btn"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="bi bi-facebook me-2" aria-hidden="true"></i>Follow Us on
-              Facebook
-            </a>
-          </div>
-        </div>
-      </section>
+      
 
       <!-- Featured categories / branches section -->
       <section class="section-block pt-0 branches-section" id="branches">
@@ -702,40 +1019,6 @@
               <div class="category-card">
                 <div class="category-icon"><i class="bi bi-geo-alt"></i></div>
                 <div class="category-label">Muradput</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-block pt-0" id="experience">
-        <div class="container px-4 px-lg-5">
-          <div class="row g-4">
-            <div class="col-lg-4 reveal reveal-delay-1">
-              <div class="feature-card h-100">
-                <h4>Private Dining</h4>
-                <p class="text-secondary mb-0">
-                  Host executive dinners and celebrations in our private lounge
-                  for up to 24 guests.
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-4 reveal reveal-delay-2">
-              <div class="feature-card h-100">
-                <h4>Chef's Table</h4>
-                <p class="text-secondary mb-0">
-                  Seven-course tasting menu served directly from the pass with
-                  curated pairings.
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-4 reveal reveal-delay-3">
-              <div class="feature-card h-100">
-                <h4>Live Piano Evenings</h4>
-                <p class="text-secondary mb-0">
-                  Light classical performances from Thursday to Saturday for a
-                  graceful atmosphere.
-                </p>
               </div>
             </div>
           </div>
@@ -845,7 +1128,7 @@
           <div class="container px-4 px-lg-5">
             <div class="row g-5">
               <div class="col-lg-4 col-md-6">
-                <!-- <img src="./images/logo.webp" alt="Degchi Dine" class="footer-logo mb-3" /> -->
+                <img src="./images/logo.webp" alt="Degchi Dine" class="footer-logo mb-3" />
                 <p class="footer-about">
                   Degchi Dine - ডেক্সি ডাইন. A refined dining destination in
                   Halishahar, Chittagong, known for warm hospitality and
@@ -965,6 +1248,51 @@
       <button id="scrollTopBtn" class="fab fab-top" aria-label="Scroll to top">
         <i class="bi bi-arrow-up" aria-hidden="true"></i>
       </button>
+    </div>
+
+    <div
+      class="modal fade mc-quick-modal"
+      id="mcQuickViewModal"
+      tabindex="-1"
+      aria-labelledby="mcQuickViewTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content mc-modal-content">
+          <button
+            type="button"
+            class="btn-close mc-modal-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+          <div class="row g-0">
+            <div class="col-md-6">
+              <div class="mc-modal-image-wrap">
+                <img id="mcQuickViewImage" src="" alt="" class="mc-modal-image" />
+                <span id="mcQuickViewBadge" class="mc-badge mc-modal-badge"></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mc-modal-body">
+                <p class="mc-modal-kicker mb-2">Menu Preview</p>
+                <h4 id="mcQuickViewTitle" class="mc-modal-title mb-2"></h4>
+                <p id="mcQuickViewDesc" class="mc-modal-desc"></p>
+                <div class="mc-modal-meta">
+                  <span id="mcQuickViewServe" class="mc-serve-info"></span>
+                </div>
+                <div class="mc-modal-price-wrap mt-3">
+                  <span class="mc-price-label">Starts from</span>
+                  <span id="mcQuickViewPrice" class="mc-price"></span>
+                </div>
+                <a href="#menu" class="mc-show-more-btn mt-4" data-bs-dismiss="modal">
+                  Explore Full Menu
+                  <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="app.js"></script>

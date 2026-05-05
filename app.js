@@ -80,6 +80,112 @@ window.addEventListener("scroll", () => {
 
 syncNavbarState();
 
+/* ── Featured Dishes Card Slider ──────────────────────────── */
+$(function () {
+  const $mcSlider = $("#mcSlider");
+  if (!$mcSlider.length) return;
+
+  $mcSlider.slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    pauseOnFocus: true,
+    speed: 420,
+    swipe: true,
+    touchThreshold: 10,
+    prevArrow: ".mc-nav-prev",
+    nextArrow: ".mc-nav-next",
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: { slidesToShow: 3, slidesToScroll: 1 },
+      },
+      {
+        breakpoint: 992,
+        settings: { slidesToShow: 2, slidesToScroll: 1 },
+      },
+      {
+        breakpoint: 768,
+        settings: { slidesToShow: 2, slidesToScroll: 1, arrows: false, dots: true },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: false,
+          centerMode: true,
+          centerPadding: "16px",
+        },
+      },
+    ],
+  });
+});
+
+/* ── Featured Dishes Quick View Modal ─────────────────────── */
+(function () {
+  const modalEl = document.getElementById("mcQuickViewModal");
+  const cards = document.querySelectorAll(".mc-card-trigger");
+
+  if (!modalEl || !cards.length || !window.bootstrap?.Modal) {
+    return;
+  }
+
+  const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+  const modalImage = document.getElementById("mcQuickViewImage");
+  const modalBadge = document.getElementById("mcQuickViewBadge");
+  const modalTitle = document.getElementById("mcQuickViewTitle");
+  const modalDesc = document.getElementById("mcQuickViewDesc");
+  const modalServe = document.getElementById("mcQuickViewServe");
+  const modalPrice = document.getElementById("mcQuickViewPrice");
+
+  const openQuickView = (card) => {
+    const img = card.querySelector(".mc-img");
+    const badge = card.querySelector(".mc-badge");
+    const title = card.querySelector(".mc-title");
+    const desc = card.querySelector(".mc-desc");
+    const serve = card.querySelector(".mc-serve-info");
+    const price = card.querySelector(".mc-price");
+
+    if (!img || !badge || !title || !desc || !serve || !price) {
+      return;
+    }
+
+    modalImage.src = img.getAttribute("src") || "";
+    modalImage.alt = img.getAttribute("alt") || title.textContent?.trim() || "Dish preview";
+    modalBadge.textContent = badge.textContent?.trim() || "Dish";
+    modalBadge.classList.toggle("mc-badge--gold", badge.classList.contains("mc-badge--gold"));
+    modalTitle.textContent = title.textContent?.trim() || "";
+    modalDesc.textContent = desc.textContent?.trim() || "";
+    modalServe.innerHTML = serve.innerHTML;
+    modalPrice.textContent = price.textContent?.trim() || "";
+
+    modal.show();
+  };
+
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      if (card.closest(".slick-slide")?.classList.contains("dragging")) {
+        return;
+      }
+      openQuickView(card);
+    });
+
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openQuickView(card);
+      }
+    });
+  });
+})();
+
 /* ── Menu Slider — Slick Carousel ─────────────────────────── */
 $(function () {
   const $menuTrack = $("#menuSlider .menu-slider-track");
@@ -90,7 +196,7 @@ $(function () {
     slidesToScroll: 1,
     arrows: true,
     dots: false,
-    infinite: false,
+    infinite: true,
     autoplay: true,
     autoplaySpeed: 2600,
     pauseOnHover: true,
@@ -104,31 +210,28 @@ $(function () {
     dotsClass: "slick-dots",
     responsive: [
       {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
+        breakpoint: 1200,
+        settings: { slidesToShow: 3, slidesToScroll: 1 },
       },
       {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
+        breakpoint: 992,
+        settings: { slidesToShow: 2, slidesToScroll: 1 },
       },
       {
-        breakpoint: 480,
+        breakpoint: 768,
+        settings: { slidesToShow: 2, slidesToScroll: 1, arrows: false, dots: false },
+      },
+      {
+        breakpoint: 576,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          arrows: false,
+          dots: false,
+          centerMode: true,
+          centerPadding: "16px",
         },
       },
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
     ],
   });
 });
@@ -136,7 +239,7 @@ $(function () {
 /* ── Reels Slider — Slick Carousel ────────────────────────── */
 $(function () {
   $("#reelsSlider").slick({
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     dots: false,
     arrows: true,
@@ -155,11 +258,25 @@ $(function () {
     responsive: [
       {
         breakpoint: 1200,
-        settings: { slidesToShow: 2 },
+        settings: { slidesToShow: 2, dots: false },
+      },
+      {
+        breakpoint: 992,
+        settings: { slidesToShow: 2, arrows: false, dots: false },
       },
       {
         breakpoint: 768,
-        settings: { slidesToShow: 1, arrows: false },
+        settings: { slidesToShow: 1, arrows: false, dots: false },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          dots: false,
+          centerMode: true,
+          centerPadding: "14px",
+        },
       },
     ],
   });
