@@ -20,9 +20,7 @@ const navLinks = document.querySelectorAll(
 const desktopNavbar = document.querySelector("#desktopNavbar");
 const mobileMenuToggle = document.querySelector("#mobileMenuToggle");
 const mobileMenu = document.querySelector("#mobileMenu");
-const mobileMenuLinks = document.querySelectorAll(
-  "#mobileMenu .nav-link[href^='#']",
-);
+const mobileMenuLinks = document.querySelectorAll("#mobileMenu .nav-link");
 let mobileOffcanvas = null;
 
 if (mobileMenuToggle && mobileMenu && window.bootstrap?.Offcanvas) {
@@ -32,24 +30,55 @@ if (mobileMenuToggle && mobileMenu && window.bootstrap?.Offcanvas) {
   });
 }
 
+const getNavbarOffset = () => {
+  const mobileTopbar = document.querySelector(".mobile-topbar");
+  const activeNavbar =
+    window.innerWidth < 992
+      ? mobileTopbar
+      : document.querySelector("#desktopNavbar");
+  const navHeight = activeNavbar ? activeNavbar.offsetHeight : 0;
+  return navHeight + 12;
+};
+
 mobileMenuLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
     const href = link.getAttribute("href");
-    if (!href || !href.startsWith("#")) {
+    if (!href || href === "#") {
       return;
     }
 
-    const target = document.querySelector(href);
-    if (!target) {
+    const linkUrl = new URL(href, window.location.href);
+    const isSamePage =
+      linkUrl.origin === window.location.origin &&
+      linkUrl.pathname === window.location.pathname;
+
+    if (isSamePage && linkUrl.hash) {
+      const target = document.querySelector(linkUrl.hash);
+      if (!target) {
+        return;
+      }
+
+      event.preventDefault();
+      const top =
+        target.getBoundingClientRect().top + window.scrollY - getNavbarOffset();
+      window.scrollTo({ top: Math.max(top, 0), behavior: "smooth" });
+      if (mobileOffcanvas) {
+        mobileOffcanvas.hide();
+      }
+      window.history.replaceState(null, "", linkUrl.hash);
       return;
     }
 
     event.preventDefault();
-    target.scrollIntoView({ behavior: "smooth", block: "start" });
     if (mobileOffcanvas) {
       mobileOffcanvas.hide();
+      window.setTimeout(() => {
+        window.location.assign(linkUrl.href);
+      }, 220);
+      return;
     }
-    window.history.replaceState(null, "", href);
+
+    window.location.assign(linkUrl.href);
   });
 });
 
@@ -111,7 +140,12 @@ $(function () {
       },
       {
         breakpoint: 768,
-        settings: { slidesToShow: 2, slidesToScroll: 1, arrows: false, dots: true },
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true,
+        },
       },
       {
         breakpoint: 576,
@@ -131,9 +165,8 @@ $(function () {
 /* ── Featured Dishes Quick View Modal ─────────────────────── */
 (function () {
   const modalEl = document.getElementById("mcQuickViewModal");
-  const cards = document.querySelectorAll(".mc-card-trigger");
 
-  if (!modalEl || !cards.length || !window.bootstrap?.Modal) {
+  if (!modalEl || !window.bootstrap?.Modal) {
     return;
   }
 
@@ -158,9 +191,13 @@ $(function () {
     }
 
     modalImage.src = img.getAttribute("src") || "";
-    modalImage.alt = img.getAttribute("alt") || title.textContent?.trim() || "Dish preview";
+    modalImage.alt =
+      img.getAttribute("alt") || title.textContent?.trim() || "Dish preview";
     modalBadge.textContent = badge.textContent?.trim() || "Dish";
-    modalBadge.classList.toggle("mc-badge--gold", badge.classList.contains("mc-badge--gold"));
+    modalBadge.classList.toggle(
+      "mc-badge--gold",
+      badge.classList.contains("mc-badge--gold"),
+    );
     modalTitle.textContent = title.textContent?.trim() || "";
     modalDesc.textContent = desc.textContent?.trim() || "";
     modalServe.innerHTML = serve.innerHTML;
@@ -169,20 +206,30 @@ $(function () {
     modal.show();
   };
 
-  cards.forEach((card) => {
-    card.addEventListener("click", () => {
-      if (card.closest(".slick-slide")?.classList.contains("dragging")) {
-        return;
-      }
-      openQuickView(card);
-    });
+  document.addEventListener("click", (event) => {
+    const card = event.target.closest(".mc-card-trigger");
+    if (!card) {
+      return;
+    }
 
-    card.addEventListener("keydown", (event) => {
-      if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault();
-        openQuickView(card);
-      }
-    });
+    // Ignore drag-end clicks from Slick while the slider is being swiped.
+    if (card.closest(".slick-slider")?.querySelector(".slick-list.dragging")) {
+      return;
+    }
+
+    openQuickView(card);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    const card = event.target.closest(".mc-card-trigger");
+    if (!card) {
+      return;
+    }
+
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openQuickView(card);
+    }
   });
 })();
 
@@ -219,7 +266,12 @@ $(function () {
       },
       {
         breakpoint: 768,
-        settings: { slidesToShow: 2, slidesToScroll: 1, arrows: false, dots: false },
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: false,
+        },
       },
       {
         breakpoint: 576,

@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Degchi Dine | Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="menu-page">
+    <nav
+      id="desktopNavbar"
+      class="navbar py-0 desktop-navbar d-none d-lg-block sticky-top"
+    >
+      <div class="container px-4 px-xxl-5">
+        <a class="navbar-brand hero-logo" href="index.html#home">
+          <img
+            src="./images/logo.webp"
+            class="nav-logo-img"
+            alt="Restaurant logo"
+          />
+        </a>
+
+        <ul class="navbar-nav flex-row desktop-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#testimonials">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact">Contact</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center">
+          <a
+            href="#cartDrawer"
+            class="desktop-order-icon"
+            aria-label="Open cart"
+            data-bs-toggle="offcanvas"
+            role="button"
+            aria-controls="cartDrawer"
+          >
+            <iconify-icon
+              class="desktop-order-symbol"
+              icon="solar:cart-large-2-outline"
+              aria-hidden="true"
+            ></iconify-icon>
+            <span class="desktop-order-qty" aria-label="0 items">0</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <nav class="navbar py-0 navbar-light mobile-topbar d-lg-none sticky-top">
+      <div class="container-fluid px-3 px-sm-4">
+        <button
+          id="mobileMenuToggle"
+          class="navbar-toggler mobile-menu-toggle"
+          type="button"
+          aria-controls="mobileMenu"
+          aria-label="Open menu"
+        >
+          <iconify-icon
+            class="mobile-menu-icon"
+            icon="ri:menu-2-line"
+            width="24"
+            height="24"
+            aria-hidden="true"
+          ></iconify-icon>
+        </button>
+
+        <a class="navbar-brand mobile-nav-brand" href="index.html#home">
+          <img
+            src="./images/logo.webp"
+            class="mobile-logo-img"
+            alt="Restaurant logo"
+          />
+        </a>
+
+        <a
+          href="#cartDrawer"
+          class="mobile-order-icon"
+          aria-label="Open cart"
+          data-bs-toggle="offcanvas"
+          role="button"
+          aria-controls="cartDrawer"
+        >
+          <iconify-icon
+            class="mobile-order-symbol"
+            icon="solar:cart-large-2-outline"
+            aria-hidden="true"
+          ></iconify-icon>
+          <span class="mobile-order-qty" aria-label="0 items">0</span>
+        </a>
+      </div>
+    </nav>
+
+    <div
+      class="offcanvas offcanvas-start mobile-sidebar"
+      tabindex="-1"
+      id="mobileMenu"
+      aria-labelledby="mobileMenuLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="mobileMenuLabel">
+          <img
+            src="./images/logo.webp"
+            class="offcanvas-logo-img"
+            alt="Restaurant logo"
+          />
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="nav flex-column side-nav">
+          <li class="nav-item">
+            <a
+              data-bs-dismiss="offcanvas"
+              class="nav-link"
+              href="index.html#home"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a data-bs-dismiss="offcanvas" class="nav-link" href="menu.html"
+              >Menu</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              data-bs-dismiss="offcanvas"
+              class="nav-link"
+              href="index.html#testimonials"
+              >Reviews</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              data-bs-dismiss="offcanvas"
+              class="nav-link"
+              href="index.html#about"
+              >About</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              data-bs-dismiss="offcanvas"
+              class="nav-link"
+              href="index.html#contact"
+              >Contact</a
+            >
+          </li>
+        </ul>
+
+        <div class="side-footer mt-4 pt-3 border-top">
+          <p class="mb-1">
+            <i class="bi bi-geo-alt me-2"></i>Boropool Circle, Kaptan Villa,
+            Halishahar, Chittagong, Bangladesh
+          </p>
+          <p class="mb-1">
+            <i class="bi bi-clock me-2"></i>Mon-Sun: 5:00 PM - 11:30 PM
+          </p>
+          <p class="mb-0"><i class="bi bi-telephone me-2"></i>01898-795400</p>
+        </div>
+      </div>
+    </div>
+
+    <main class="main-content">
+      <!-- Cart Hero Banner -->
+      <div class="cart-page-hero">
+        <div class="container px-4 px-lg-5">
+          <div
+            class="d-flex align-items-center justify-content-between flex-wrap gap-3"
+          >
+            <div>
+              <span class="menu-kicker"
+                ><i class="bi bi-bag-check"></i> Your Order</span
+              >
+              <h1 class="cart-hero-title mt-1">
+                Your Cart <span class="cart-count-badge">2 Items</span>
+              </h1>
+            </div>
+            <div class="cart-stepper">
+              <span class="cart-step cart-step-active">
+                <i class="bi bi-bag me-1"></i>Cart
+              </span>
+              <i class="bi bi-chevron-right cart-step-arrow"></i>
+              <span class="cart-step">
+                <i class="bi bi-credit-card me-1"></i>Checkout
+              </span>
+              <i class="bi bi-chevron-right cart-step-arrow"></i>
+              <span class="cart-step">
+                <i class="bi bi-check-circle me-1"></i>Confirmed
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section-block cart-page-section">
+        <div class="container px-4 px-lg-5">
+          <!-- Empty State -->
+          <div
+            id="cartPageEmpty"
+            class="cart-empty-block text-center"
+            style="display: none"
+          >
+            <div class="cart-empty-icon-wrap">
+              <i class="bi bi-bag-x cart-empty-icon"></i>
+            </div>
+            <h4 class="cart-empty-heading">Your cart is empty</h4>
+            <p class="cart-empty-text">
+              Looks like you haven't added anything yet.<br />Let's find
+              something delicious!
+            </p>
+            <a href="menu.html" class="btn cart-checkout-btn px-5">
+              <i class="bi bi-grid me-2"></i>Browse Menu
+            </a>
+          </div>
+
+          <!-- Cart Items + Summary -->
+          <div class="row g-4 align-items-start">
+            <!-- Left: Items List -->
+            <div class="col-lg-8">
+              <div
+                class="d-flex align-items-center justify-content-between mb-3 gap-2"
+              >
+                <h6 class="cart-section-label mb-0">
+                  <i class="bi bi-list-check me-2"></i>2 Items in your cart
+                </h6>
+                <button class="btn cart-clear-btn" type="button">
+                  <i class="bi bi-trash me-1"></i>Clear All
+                </button>
+              </div>
+
+              <div id="cartPageItems" class="cart-items-list">
+                <!-- Product Card 1 -->
+                <div class="cart-product-card">
+                  <div class="cart-product-img-wrap">
+                    <img
+                      src="images/signature_menu/1.jpg"
+                      alt="Mutton Kacchi"
+                      class="cart-product-img"
+                    />
+                  </div>
+                  <div class="cart-product-body">
+                    <div class="cart-product-top">
+                      <div>
+                        <h6 class="cart-product-name">Mutton Kacchi</h6>
+                        <span class="cart-product-tag">Signature Dish</span>
+                      </div>
+                      <button
+                        class="btn cart-remove-btn"
+                        type="button"
+                        aria-label="Remove item"
+                      >
+                        <i class="bi bi-x-lg"></i>
+                      </button>
+                    </div>
+                    <div class="cart-product-bottom">
+                      <div class="cart-product-qty">
+                        <button class="btn cart-qty-btn" type="button">
+                          <i class="bi bi-dash"></i>
+                        </button>
+                        <span class="cart-qty-val">1</span>
+                        <button class="btn cart-qty-btn" type="button">
+                          <i class="bi bi-plus"></i>
+                        </button>
+                      </div>
+                      <div class="cart-product-price-wrap">
+                        <span class="cart-product-unit">৳ 420 × 1</span>
+                        <strong class="cart-product-total">৳ 420</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="cart-product-card">
+                  <div class="cart-product-img-wrap">
+                    <img
+                      src="images/signature_menu/4.jpg"
+                      alt="Kacchi Biryani"
+                      class="cart-product-img"
+                    />
+                  </div>
+                  <div class="cart-product-body">
+                    <div class="cart-product-top">
+                      <div>
+                        <h6 class="cart-product-name">Kacchi Biryani</h6>
+                        <span class="cart-product-tag">Fan Favourite</span>
+                      </div>
+                      <button
+                        class="btn cart-remove-btn"
+                        type="button"
+                        aria-label="Remove item"
+                      >
+                        <i class="bi bi-x-lg"></i>
+                      </button>
+                    </div>
+                    <div class="cart-product-bottom">
+                      <div class="cart-product-qty">
+                        <button class="btn cart-qty-btn" type="button">
+                          <i class="bi bi-dash"></i>
+                        </button>
+                        <span class="cart-qty-val">2</span>
+                        <button class="btn cart-qty-btn" type="button">
+                          <i class="bi bi-plus"></i>
+                        </button>
+                      </div>
+                      <div class="cart-product-price-wrap">
+                        <span class="cart-product-unit">৳ 360 × 2</span>
+                        <strong class="cart-product-total">৳ 720</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /cart-items-list -->
+
+              <a
+                href="menu.html"
+                class="cart-continue-link mt-3 d-inline-flex align-items-center"
+              >
+                <i class="bi bi-arrow-left me-2"></i>Continue Shopping
+              </a>
+            </div>
+
+            <!-- Right: Summary Card -->
+            <div class="col-lg-4">
+              <div class="cart-summary-card">
+                <div class="cart-summary-header">
+                  <i class="bi bi-receipt me-2"></i>Order Summary
+                </div>
+
+                <div class="cart-summary-body">
+                  <div class="cart-summary-row">
+                    <span
+                      >Subtotal
+                      <small class="text-muted">(2 items)</small></span
+                    >
+                    <span id="cartPageSubtotal">৳ 1,140</span>
+                  </div>
+                  <div class="cart-summary-row">
+                    <span>Delivery</span>
+                    <span class="cart-free-tag">Free</span>
+                  </div>
+                  <div class="cart-summary-divider"></div>
+                  <div class="cart-summary-total-row">
+                    <span>Total</span>
+                    <strong id="cartPageTotal" class="cart-summary-total-val"
+                      >৳ 1,140</strong
+                    >
+                  </div>
+                </div>
+
+                <div class="cart-summary-footer">
+                  <a href="checkout.html" class="btn cart-checkout-btn w-100">
+                    Proceed to Checkout <i class="bi bi-arrow-right ms-2"></i>
+                  </a>
+                  <p class="cart-secure-note">
+                    <i class="bi bi-shield-check me-1"></i>100% Secure &amp;
+                    Safe Checkout
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /row -->
+        </div>
+      </section>
+    </main>
+
+    <div
+      class="offcanvas offcanvas-end cart-drawer"
+      tabindex="-1"
+      id="cartDrawer"
+      aria-labelledby="cartDrawerLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="cartDrawerLabel">Your Cart</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column">
+        <div id="cartDrawerItems" class="cart-drawer-items">
+          <p class="cart-empty mb-2">
+            Your cart is empty. Add dishes to get started.
+          </p>
+          <article class="cart-item">
+            <img
+              src="images/signature_menu/1.jpg"
+              alt="mutton kacchi"
+              class="cart-item-image"
+            />
+            <div class="cart-item-body">
+              <h6 class="cart-item-title">mutton kacchi</h6>
+              <div class="cart-item-meta">৳ 420</div>
+              <div class="cart-qty-row">
+                <button class="btn btn-sm btn-outline-secondary" type="button">
+                  -
+                </button>
+                <span class="cart-qty">1</span>
+                <button class="btn btn-sm btn-outline-secondary" type="button">
+                  +
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="cart-item">
+            <img
+              src="images/signature_menu/4.jpg"
+              alt="kacchi biryani"
+              class="cart-item-image"
+            />
+            <div class="cart-item-body">
+              <h6 class="cart-item-title">kacchi biryani</h6>
+              <div class="cart-item-meta">৳ 360</div>
+              <div class="cart-qty-row">
+                <button class="btn btn-sm btn-outline-secondary" type="button">
+                  -
+                </button>
+                <span class="cart-qty">2</span>
+                <button class="btn btn-sm btn-outline-secondary" type="button">
+                  +
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="cart-drawer-footer mt-auto">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="cart-total-label">Subtotal</span>
+            <strong id="cartDrawerSubtotal" class="cart-total-value"
+              >৳ 1140</strong
+            >
+          </div>
+          <div class="d-grid gap-2">
+            <a href="cart.html" class="btn cart-view-btn">View Cart</a>
+            <a href="checkout.html" class="btn cart-checkout-btn">Checkout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

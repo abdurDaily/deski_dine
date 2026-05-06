@@ -32,25 +32,32 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <body>
+  <body class="menu-page">
     <nav
       id="desktopNavbar"
-      class="navbar desktop-navbar d-none d-lg-block sticky-top"
+      class="navbar py-0 desktop-navbar d-none d-lg-block sticky-top"
     >
       <div class="container px-4 px-xxl-5">
         <a class="navbar-brand hero-logo" href="index.html#home">
-          <img src="./images/logo.webp" class="nav-logo-img" alt="Restaurant logo" />
+          <img
+            src="./images/logo.webp"
+            class="nav-logo-img"
+            alt="Restaurant logo"
+          />
         </a>
 
         <ul class="navbar-nav flex-row desktop-nav">
           <li class="nav-item">
             <a class="nav-link" href="index.html#home">Home</a>
           </li>
-          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#video">Video</a></li>
-          <li class="nav-item"><a class="nav-link active" href="menu.html#menu">Menu</a></li>
+          <li class="nav-item">
+            <a class="nav-link active" href="menu.html">Menu</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="index.html#testimonials">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#about">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contact">Contact</a>
@@ -58,19 +65,26 @@
         </ul>
 
         <div class="d-flex align-items-center">
-          <a href="menu.html#menu" class="desktop-order-icon" aria-label="Order">
+          <a
+            href="#cartDrawer"
+            class="desktop-order-icon"
+            aria-label="Open cart"
+            data-bs-toggle="offcanvas"
+            role="button"
+            aria-controls="cartDrawer"
+          >
             <iconify-icon
               class="desktop-order-symbol"
               icon="solar:cart-large-2-outline"
               aria-hidden="true"
             ></iconify-icon>
-            <span class="desktop-order-qty" aria-label="3 items">3</span>
+            <span class="desktop-order-qty" aria-label="0 items">0</span>
           </a>
         </div>
       </div>
     </nav>
 
-    <nav class="navbar navbar-light mobile-topbar d-lg-none sticky-top">
+    <nav class="navbar py-0 navbar-light mobile-topbar d-lg-none sticky-top">
       <div class="container-fluid px-3 px-sm-4">
         <button
           id="mobileMenuToggle"
@@ -96,13 +110,20 @@
           />
         </a>
 
-        <a href="menu.html#menu" class="mobile-order-icon" aria-label="Order">
+        <a
+          href="#cartDrawer"
+          class="mobile-order-icon"
+          aria-label="Open cart"
+          data-bs-toggle="offcanvas"
+          role="button"
+          aria-controls="cartDrawer"
+        >
           <iconify-icon
             class="mobile-order-symbol"
             icon="solar:cart-large-2-outline"
             aria-hidden="true"
           ></iconify-icon>
-          <span class="mobile-order-qty" aria-label="3 items">3</span>
+          <span class="mobile-order-qty" aria-label="0 items">0</span>
         </a>
       </div>
     </nav>
@@ -131,28 +152,32 @@
       <div class="offcanvas-body">
         <ul class="nav flex-column side-nav">
           <li class="nav-item">
-            <a data-bs-dismiss="offcanvas" class="nav-link" href="index.html#home"
+            <a
+              data-bs-dismiss="offcanvas"
+              class="nav-link"
+              href="index.html#home"
               >Home</a
             >
           </li>
           <li class="nav-item">
-            <a data-bs-dismiss="offcanvas" class="nav-link" href="index.html#about"
-              >About</a
-            >
-          </li>
-          <li class="nav-item">
-            <a data-bs-dismiss="offcanvas" class="nav-link" href="index.html#video"
-              >Video</a
-            >
-          </li>
-          <li class="nav-item">
-            <a data-bs-dismiss="offcanvas" class="nav-link" href="menu.html#menu"
+            <a data-bs-dismiss="offcanvas" class="nav-link" href="menu.html"
               >Menu</a
             >
           </li>
           <li class="nav-item">
-            <a data-bs-dismiss="offcanvas" class="nav-link" href="index.html#testimonials"
+            <a
+              data-bs-dismiss="offcanvas"
+              class="nav-link"
+              href="index.html#testimonials"
               >Reviews</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              data-bs-dismiss="offcanvas"
+              class="nav-link"
+              href="index.html#about"
+              >About</a
             >
           </li>
           <li class="nav-item">
@@ -175,8 +200,8 @@
       </div>
     </div>
 
-    <main class="main-content mt-5">
-      <section class="section-block py-5 mt-5" id="home">
+    <main class="main-content">
+      <section class="section-block py-5" id="home">
         <div id="menu" class="container px-4 px-lg-5">
           <div class="mb-5 text-center reveal">
             <span class="mc-kicker">
@@ -189,7 +214,7 @@
               are per serving - no hidden charges.
             </p>
             <p class="mt-3 mb-0">
-              <a href="complete-menu.html#menu" class="mc-show-more-btn">
+              <a href="complete-menu.html" class="mc-show-more-btn">
                 Go to Our Complete Menu
                 <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
               </a>
@@ -198,93 +223,160 @@
 
           <div class="row g-4 reveal">
             <div class="col-12 col-sm-6 col-lg-3 d-flex">
-              <article class="mc-card mc-card-trigger w-100" role="button" tabindex="0" aria-label="View Bengali Menu details">
+              <article
+                class="mc-card mc-card-trigger w-100"
+                role="button"
+                tabindex="0"
+                aria-label="View Bengali Menu details"
+              >
                 <div class="mc-img-wrap">
-                  <img src="images/menu_card/1.jpg" alt="Bengali Menu" class="mc-img" />
+                  <img
+                    src="images/menu_card/1.jpg"
+                    alt="Bengali Menu"
+                    class="mc-img"
+                  />
                   <span class="mc-badge">Bengali Cuisine</span>
-                  <span class="mc-avail"><i class="bi bi-check-circle-fill"></i> Available</span>
+                  <span class="mc-avail"
+                    ><i class="bi bi-check-circle-fill"></i> Available</span
+                  >
                 </div>
                 <div class="mc-body">
                   <h5 class="mc-title">Bengali Menu</h5>
-                  <p class="mc-desc">ঐতিহ্যবাহী বাঙালি রন্ধনশৈলীর সেরা খাবার সমূহ, তাজা উপাদান দিয়ে প্রতিদিন তৈরি।</p>
+                  <p class="mc-desc">
+                    ঐতিহ্যবাহী বাঙালি রন্ধনশৈলীর সেরা খাবার সমূহ, তাজা উপাদান
+                    দিয়ে প্রতিদিন তৈরি।
+                  </p>
                   <div class="mc-divider"></div>
                   <div class="mc-footer">
                     <div class="mc-price-wrap">
                       <span class="mc-price-label">Starts from</span>
                       <span class="mc-price">৳ 250</span>
                     </div>
-                    <span class="mc-serve-info"><i class="bi bi-person" aria-hidden="true"></i> 1 person</span>
+                    <span class="mc-serve-info"
+                      ><i class="bi bi-person" aria-hidden="true"></i> 1
+                      person</span
+                    >
                   </div>
                 </div>
               </article>
             </div>
 
             <div class="col-12 col-sm-6 col-lg-3 d-flex">
-              <article class="mc-card mc-card-trigger w-100" role="button" tabindex="0" aria-label="View kacchi menu details">
+              <article
+                class="mc-card mc-card-trigger w-100"
+                role="button"
+                tabindex="0"
+                aria-label="View kacchi menu details"
+              >
                 <div class="mc-img-wrap">
-                  <img src="images/menu_card/2.jpg" alt="kacchi menu" class="mc-img" />
+                  <img
+                    src="images/menu_card/2.jpg"
+                    alt="kacchi menu"
+                    class="mc-img"
+                  />
                   <span class="mc-badge">Special</span>
-                  <span class="mc-avail"><i class="bi bi-check-circle-fill"></i> Available</span>
+                  <span class="mc-avail"
+                    ><i class="bi bi-check-circle-fill"></i> Available</span
+                  >
                 </div>
                 <div class="mc-body">
                   <h5 class="mc-title">kacchi menu</h5>
-                  <p class="mc-desc">ঐতিহ্যের স্বাদ নিয়ে আসা কাচ্চি বিরিয়ানি এবং মসলাযুক্ত রেজালা সমৃদ্ধ কালেকশন।</p>
+                  <p class="mc-desc">
+                    ঐতিহ্যের স্বাদ নিয়ে আসা কাচ্চি বিরিয়ানি এবং মসলাযুক্ত
+                    রেজালা সমৃদ্ধ কালেকশন।
+                  </p>
                   <div class="mc-divider"></div>
                   <div class="mc-footer">
                     <div class="mc-price-wrap">
                       <span class="mc-price-label">Starts from</span>
                       <span class="mc-price">৳ 380</span>
                     </div>
-                    <span class="mc-serve-info"><i class="bi bi-people" aria-hidden="true"></i> 2 persons</span>
+                    <span class="mc-serve-info"
+                      ><i class="bi bi-people" aria-hidden="true"></i> 2
+                      persons</span
+                    >
                   </div>
                 </div>
               </article>
             </div>
 
             <div class="col-12 col-sm-6 col-lg-3 d-flex">
-              <article class="mc-card mc-card-trigger w-100" role="button" tabindex="0" aria-label="View Mezbani Menu details">
+              <article
+                class="mc-card mc-card-trigger w-100"
+                role="button"
+                tabindex="0"
+                aria-label="View Mezbani Menu details"
+              >
                 <div class="mc-img-wrap">
-                  <img src="images/menu_card/3.jpg" alt="Mezbani Menu" class="mc-img" />
+                  <img
+                    src="images/menu_card/3.jpg"
+                    alt="Mezbani Menu"
+                    class="mc-img"
+                  />
                   <span class="mc-badge">Celebration</span>
-                  <span class="mc-avail"><i class="bi bi-check-circle-fill"></i> Available</span>
+                  <span class="mc-avail"
+                    ><i class="bi bi-check-circle-fill"></i> Available</span
+                  >
                 </div>
                 <div class="mc-body">
                   <h5 class="mc-title">Mezbani Menu</h5>
-                  <p class="mc-desc">উদযাপনের জন্য বিশেষভাবে তৈরি মেজবানি খাবারের সমাহার, ঐতিহ্যবাহী স্বাদে পরিপূর্ণ।</p>
+                  <p class="mc-desc">
+                    উদযাপনের জন্য বিশেষভাবে তৈরি মেজবানি খাবারের সমাহার,
+                    ঐতিহ্যবাহী স্বাদে পরিপূর্ণ।
+                  </p>
                   <div class="mc-divider"></div>
                   <div class="mc-footer">
                     <div class="mc-price-wrap">
                       <span class="mc-price-label">Starts from</span>
                       <span class="mc-price">৳ 450</span>
                     </div>
-                    <span class="mc-serve-info"><i class="bi bi-people" aria-hidden="true"></i> 3-4 persons</span>
+                    <span class="mc-serve-info"
+                      ><i class="bi bi-people" aria-hidden="true"></i> 3-4
+                      persons</span
+                    >
                   </div>
                 </div>
               </article>
             </div>
 
             <div class="col-12 col-sm-6 col-lg-3 d-flex">
-              <article class="mc-card mc-card-trigger w-100" role="button" tabindex="0" aria-label="View Family Premium Package details">
+              <article
+                class="mc-card mc-card-trigger w-100"
+                role="button"
+                tabindex="0"
+                aria-label="View Family Premium Package details"
+              >
                 <div class="mc-img-wrap">
-                  <img src="images/menu_card/4.jpg" alt="Family Premium Package" class="mc-img" />
+                  <img
+                    src="images/menu_card/4.jpg"
+                    alt="Family Premium Package"
+                    class="mc-img"
+                  />
                   <span class="mc-badge mc-badge--gold">Premium</span>
-                  <span class="mc-avail"><i class="bi bi-check-circle-fill"></i> Available</span>
+                  <span class="mc-avail"
+                    ><i class="bi bi-check-circle-fill"></i> Available</span
+                  >
                 </div>
                 <div class="mc-body">
                   <h5 class="mc-title">Family Premium Package</h5>
-                  <p class="mc-desc">পরিবারের জন্য সম্পূর্ণ খাবার প্যাকেজ - নানা রকম মাংস, পোলাও এবং সালাদের সংমিশ্রণ।</p>
+                  <p class="mc-desc">
+                    পরিবারের জন্য সম্পূর্ণ খাবার প্যাকেজ - নানা রকম মাংস, পোলাও
+                    এবং সালাদের সংমিশ্রণ।
+                  </p>
                   <div class="mc-divider"></div>
                   <div class="mc-footer">
                     <div class="mc-price-wrap">
                       <span class="mc-price-label">Starts from</span>
                       <span class="mc-price">৳ 1200</span>
                     </div>
-                    <span class="mc-serve-info"><i class="bi bi-people" aria-hidden="true"></i> 4-5 persons</span>
+                    <span class="mc-serve-info"
+                      ><i class="bi bi-people" aria-hidden="true"></i> 4-5
+                      persons</span
+                    >
                   </div>
                 </div>
               </article>
             </div>
-
           </div>
         </div>
       </section>
@@ -294,7 +386,11 @@
           <div class="container px-4 px-lg-5">
             <div class="row g-5">
               <div class="col-lg-4 col-md-6">
-                <img src="./images/logo.webp" alt="Degchi Dine" class="footer-logo mb-3" />
+                <img
+                  src="./images/logo.webp"
+                  alt="Degchi Dine"
+                  class="footer-logo mb-3"
+                />
                 <p class="footer-about">
                   Degchi Dine - ডেক্সি ডাইন. A refined dining destination in
                   Halishahar, Chittagong, known for warm hospitality and
@@ -325,7 +421,7 @@
                 <ul class="footer-links">
                   <li><a href="index.html#home">Home</a></li>
                   <li><a href="index.html#about">About Us</a></li>
-                  <li><a href="menu.html#menu">Menu</a></li>
+                  <li><a href="menu.html">Menu</a></li>
                   <li><a href="index.html#video">Video</a></li>
                   <li><a href="index.html#testimonials">Reviews</a></li>
                   <li><a href="index.html#location">Location</a></li>
@@ -434,8 +530,16 @@
           <div class="row g-0">
             <div class="col-md-6">
               <div class="mc-modal-image-wrap">
-                <img id="mcQuickViewImage" src="" alt="" class="mc-modal-image" />
-                <span id="mcQuickViewBadge" class="mc-badge mc-modal-badge"></span>
+                <img
+                  id="mcQuickViewImage"
+                  src=""
+                  alt=""
+                  class="mc-modal-image"
+                />
+                <span
+                  id="mcQuickViewBadge"
+                  class="mc-badge mc-modal-badge"
+                ></span>
               </div>
             </div>
             <div class="col-md-6">
@@ -450,12 +554,92 @@
                   <span class="mc-price-label">Starts from</span>
                   <span id="mcQuickViewPrice" class="mc-price"></span>
                 </div>
-                <a href="#menu" class="mc-show-more-btn mt-4" data-bs-dismiss="modal">
+                <a
+                  href="#menu"
+                  class="mc-show-more-btn mt-4"
+                  data-bs-dismiss="modal"
+                >
                   Back to Menu
                   <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="offcanvas offcanvas-end cart-drawer"
+      tabindex="-1"
+      id="cartDrawer"
+      aria-labelledby="cartDrawerLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="cartDrawerLabel">Your Cart</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column">
+        <div id="cartDrawerItems" class="cart-drawer-items">
+          <p class="cart-empty mb-2">
+            Your cart is empty. Add dishes to get started.
+          </p>
+          <article class="cart-item">
+            <img
+              src="images/signature_menu/1.jpg"
+              alt="mutton kacchi"
+              class="cart-item-image"
+            />
+            <div class="cart-item-body">
+              <h6 class="cart-item-title">mutton kacchi</h6>
+              <div class="cart-item-meta">৳ 420</div>
+              <div class="cart-qty-row">
+                <button class="btn btn-sm btn-outline-secondary" type="button">
+                  -
+                </button>
+                <span class="cart-qty">1</span>
+                <button class="btn btn-sm btn-outline-secondary" type="button">
+                  +
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="cart-item">
+            <img
+              src="images/signature_menu/4.jpg"
+              alt="kacchi biryani"
+              class="cart-item-image"
+            />
+            <div class="cart-item-body">
+              <h6 class="cart-item-title">kacchi biryani</h6>
+              <div class="cart-item-meta">৳ 360</div>
+              <div class="cart-qty-row">
+                <button class="btn btn-sm btn-outline-secondary" type="button">
+                  -
+                </button>
+                <span class="cart-qty">2</span>
+                <button class="btn btn-sm btn-outline-secondary" type="button">
+                  +
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="cart-drawer-footer mt-auto">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="cart-total-label">Subtotal</span>
+            <strong id="cartDrawerSubtotal" class="cart-total-value"
+              >৳ 1140</strong
+            >
+          </div>
+          <div class="d-grid gap-2">
+            <a href="cart.html" class="btn cart-view-btn">View Cart</a>
+            <a href="checkout.html" class="btn cart-checkout-btn">Checkout</a>
           </div>
         </div>
       </div>
