@@ -334,46 +334,27 @@ $(function () {
   });
 });
 
-/* ── Floating Action Buttons: Scroll-to-top + WhatsApp ───── */
+/* ── Floating Action Button: WhatsApp ────────────────────── */
 (function () {
-  const scrollBtn = document.getElementById("scrollTopBtn");
   const whatsappBtn = document.getElementById("whatsappBtn");
-  const visibleClass = "is-visible";
-  if (!scrollBtn || !whatsappBtn) return;
+  if (!whatsappBtn) return;
 
-  function updateFabVisibility() {
-    const shouldShow = window.scrollY > 200;
-    // Only toggle the scroll-to-top button. WhatsApp should remain visible by default.
-    scrollBtn.classList.toggle(visibleClass, shouldShow);
-  }
-
-  // Smooth scroll to top when clicked
-  scrollBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    // brief feedback
-    scrollBtn.animate(
-      [
-        { transform: "translateY(0) scale(1)" },
-        { transform: "translateY(-6px) scale(1.02)" },
-        { transform: "translateY(0) scale(1)" },
-      ],
-      { duration: 320, easing: "ease-out" },
-    );
-  });
-
-  // Small attention animation for WhatsApp button on click
+  // Click feedback animation.
   whatsappBtn.addEventListener("click", () => {
     whatsappBtn.animate(
       [
-        { transform: "scale(1)" },
-        { transform: "scale(0.96)" },
-        { transform: "scale(1)" },
+        { transform: "translateY(0) scale(1)" },
+        { transform: "translateY(-2px) scale(0.95)" },
+        { transform: "translateY(0) scale(1.05)" },
+        { transform: "translateY(0) scale(1)" },
       ],
-      { duration: 260, easing: "ease-in-out" },
+      { duration: 320, easing: "cubic-bezier(0.34, 1.56, 0.64, 1)" },
     );
   });
 
-  // Update visibility on load and scroll
-  updateFabVisibility();
-  window.addEventListener("scroll", updateFabVisibility, { passive: true });
+  // Periodic nudge to draw attention without being distracting.
+  setInterval(() => {
+    whatsappBtn.classList.add("is-nudging");
+    setTimeout(() => whatsappBtn.classList.remove("is-nudging"), 700);
+  }, 7000);
 })();

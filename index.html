@@ -204,7 +204,7 @@
         </video>
         <div class="hero-overlay"></div>
 
-        <div class="hero-side-rail hero-side-left d-none d-lg-flex">
+        <div class="hero-side-rail hero-side-right d-none d-lg-flex">
           <a
             href="https://www.facebook.com/DegchiDine"
             target="_blank"
@@ -252,6 +252,26 @@
           </a>
         </div> -->
       </section>
+
+      <!-- Mobile Hero Card (visible only on ≤767px, replaces hidden hero content) -->
+      <div class="mobile-hero-card d-block d-md-none">
+        <div class="mobile-hero-card-inner">
+          <span class="menu-kicker mb-2 d-inline-flex">
+            <i class="bi bi-stars me-1"></i> Premium Dining Experience
+          </span>
+          <h2 class="mobile-hero-title">Delightful<br />Experience</h2>
+          <p class="mobile-hero-copy">
+            Degchi Dine blends formal hospitality with bold local flavor,
+            serving a memorable dining experience in Chittagong.
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="menu.html" class="btn btn-brand px-4">Order Now</a>
+            <a href="menu.html" class="btn btn-outline-dark px-4"
+              >Explore Menu</a
+            >
+          </div>
+        </div>
+      </div>
 
       <!-- Featured Dishes (Menu Card Slider) -->
       <section class="section-block mc-section" id="dishes">
@@ -1306,8 +1326,8 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!-- Floating action buttons: WhatsApp (left) + Scroll-to-top (right) -->
-    <div class="floating-left">
+    <!-- Floating action button: WhatsApp (right) -->
+    <div class="floating-right">
       <a
         id="whatsappBtn"
         class="fab fab-whatsapp is-visible"
@@ -1318,12 +1338,6 @@
       >
         <i class="bi bi-whatsapp" aria-hidden="true"></i>
       </a>
-    </div>
-
-    <div class="floating-right">
-      <button id="scrollTopBtn" class="fab fab-top" aria-label="Scroll to top">
-        <i class="bi bi-arrow-up" aria-hidden="true"></i>
-      </button>
     </div>
 
     <div
