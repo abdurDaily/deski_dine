@@ -398,6 +398,10 @@ h4,
   padding-top: 5.25rem;
 }
 
+.hero-page .main-content {
+  padding-top: 86px;
+}
+
 section[id],
 footer[id],
 #menu {
@@ -405,7 +409,7 @@ footer[id],
 }
 
 .hero {
-  min-height: 100vh;
+  min-height: calc(100vh - 86px);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -434,7 +438,7 @@ footer[id],
   color: #fffdf8;
   max-width: 920px;
   text-align: center;
-  min-height: 100vh;
+  min-height: 100%;
   padding-bottom: 0;
   width: 100%;
 }
@@ -759,6 +763,14 @@ footer[id],
   box-shadow:
     0 0 0 0.2rem rgba(239, 139, 31, 0.34),
     0 20px 40px rgba(127, 36, 48, 0.17);
+}
+
+/* Keep highlights section from creating its own scrollbars */
+.mc-section,
+.mc-slider-wrap,
+#mcSlider,
+#mcSlider .slick-list {
+  overflow-x: hidden;
 }
 
 /* Image */
@@ -3509,7 +3521,7 @@ footer[id],
   z-index: 1030;
 }
 .main-content {
-  padding-bottom: 3.5rem; /* give space so footer isn't overlapped by fixed elements */
+  padding-bottom: 0; /* give space so footer isn't overlapped by fixed elements */
 }
 
 .mobile-sidebar {
@@ -3980,6 +3992,10 @@ footer[id],
 
   .main-content {
     padding-top: 5.25rem;
+  }
+
+  .hero-page .main-content {
+    padding-top: 63px;
   }
 
   .mobile-topbar .container-fluid {
