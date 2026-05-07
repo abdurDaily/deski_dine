@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Degchi Dine | Privilege Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="privilege-page">
+    <nav
+      id="desktopNavbar"
+      class="navbar py-0 desktop-navbar d-none d-lg-block sticky-top"
+    >
+      <div class="container px-4 px-xxl-5">
+        <a class="navbar-brand hero-logo" href="index.html#home">
+          <img
+            src="./images/logo.webp"
+            class="nav-logo-img"
+            alt="Restaurant logo"
+          />
+        </a>
+
+        <ul class="navbar-nav flex-row desktop-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="privilege-card.html"
+              >Privilege Card</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#testimonials">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center">
+          <a
+            href="menu.html"
+            class="hero-reserve-btn text-decoration-none"
+            aria-label="Go to menu"
+            >Order Now</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <nav class="navbar py-0 navbar-light mobile-topbar d-lg-none sticky-top">
+      <div class="container-fluid px-3 px-sm-4">
+        <button
+          id="mobileMenuToggle"
+          class="navbar-toggler mobile-menu-toggle"
+          type="button"
+          aria-controls="mobileMenu"
+          aria-label="Open menu"
+        >
+          <iconify-icon
+            class="mobile-menu-icon"
+            icon="ri:menu-2-line"
+            width="24"
+            height="24"
+            aria-hidden="true"
+          ></iconify-icon>
+        </button>
+
+        <a class="navbar-brand mobile-nav-brand" href="index.html#home">
+          <img
+            src="./images/logo.webp"
+            class="mobile-logo-img"
+            alt="Restaurant logo"
+          />
+        </a>
+
+        <a href="menu.html" class="mobile-reserve-btn" aria-label="Go to menu"
+          >Menu</a
+        >
+      </div>
+    </nav>
+
+    <div
+      class="offcanvas offcanvas-start mobile-sidebar"
+      tabindex="-1"
+      id="mobileMenu"
+      aria-labelledby="mobileMenuLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="mobileMenuLabel">
+          <img
+            src="./images/logo.webp"
+            class="offcanvas-logo-img"
+            alt="Restaurant logo"
+          />
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="nav flex-column side-nav">
+          <li class="nav-item">
+            <a
+              data-bs-dismiss="offcanvas"
+              class="nav-link"
+              href="index.html#home"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a data-bs-dismiss="offcanvas" class="nav-link" href="menu.html"
+              >Menu</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              data-bs-dismiss="offcanvas"
+              class="nav-link"
+              href="privilege-card.html"
+              >Privilege Card</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              data-bs-dismiss="offcanvas"
+              class="nav-link"
+              href="index.html#testimonials"
+              >Reviews</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              data-bs-dismiss="offcanvas"
+              class="nav-link"
+              href="index.html#about"
+              >About</a
+            >
+          </li>
+          <li class="nav-item">
+            <a data-bs-dismiss="offcanvas" class="nav-link" href="#contact"
+              >Contact</a
+            >
+          </li>
+        </ul>
+
+        <div class="side-footer mt-4 pt-3 border-top">
+          <p class="mb-1">
+            <i class="bi bi-geo-alt me-2"></i>Boropool Circle, Kaptan Villa,
+            Halishahar, Chittagong, Bangladesh
+          </p>
+          <p class="mb-1">
+            <i class="bi bi-clock me-2"></i>Mon-Sun: 5:00 PM - 11:30 PM
+          </p>
+          <p class="mb-0"><i class="bi bi-telephone me-2"></i>01898-795400</p>
+        </div>
+      </div>
+    </div>
+
+    <main class="main-content">
+      <!-- Privilege Hero ───────────────────────────────── -->
+      <section class="priv-hero" id="privilege">
+        <!-- decorative blobs -->
+        <span class="priv-blob priv-blob--1" aria-hidden="true"></span>
+        <span class="priv-blob priv-blob--2" aria-hidden="true"></span>
+        <span class="priv-blob priv-blob--3" aria-hidden="true"></span>
+
+        <div class="container px-4 px-lg-5">
+          <!-- heading -->
+          <div class="priv-heading reveal">
+            <span class="mc-kicker mc-kicker--light">
+              <i class="bi bi-gem" aria-hidden="true"></i>
+              Exclusive Membership
+            </span>
+            <h1 class="priv-title">
+              Degchi Dine<br class="d-none d-sm-block" /><span
+                class="priv-title-accent"
+              >
+                Privilege Card</span
+              >
+            </h1>
+            <p class="priv-lead">
+              Unlock exclusive rewards, priority seating, and special treats
+              crafted just for our most valued guests.
+            </p>
+          </div>
+
+          <!-- two-column panel — both inside one .reveal so they animate together -->
+          <div class="priv-panel reveal">
+            <!-- LEFT — card + benefits -->
+            <div class="priv-left">
+              <div class="priv-card-glow">
+                <img
+                  src="images/privilege_card.png"
+                  alt="Degchi Dine Privilege Card"
+                  class="priv-card-img"
+                />
+              </div>
+              <ul class="priv-benefits">
+                <li>
+                  <span class="priv-benefit-icon"
+                    ><i class="bi bi-tag-fill"></i
+                  ></span>
+                  Exclusive discounts on every visit
+                </li>
+                <li>
+                  <span class="priv-benefit-icon"
+                    ><i class="bi bi-calendar-check-fill"></i
+                  ></span>
+                  Priority table reservation
+                </li>
+                <li>
+                  <span class="priv-benefit-icon"
+                    ><i class="bi bi-stars"></i
+                  ></span>
+                  Early access to seasonal menus &amp; events
+                </li>
+                <li>
+                  <span class="priv-benefit-icon"
+                    ><i class="bi bi-gift-fill"></i
+                  ></span>
+                  Birthday &amp; anniversary special treats
+                </li>
+              </ul>
+            </div>
+
+            <!-- RIGHT — form -->
+            <div class="priv-right">
+              <div class="priv-form-wrap" id="privilege-apply">
+                <div class="priv-form-header">
+                  <span class="priv-form-badge">Free &middot; Apply Now</span>
+                  <h2 class="priv-form-title">Get Your Card</h2>
+                  <p class="priv-form-sub">
+                    Fill in the details below and we'll reach out to you
+                    shortly.
+                  </p>
+                </div>
+
+                <p id="privilegeLiveStatus" class="privilege-live-status mb-4">
+                  Complete 0 of 3 fields correctly.
+                </p>
+
+                <form id="privilegeCardForm" novalidate>
+                  <div class="priv-field">
+                    <label for="applicantName">
+                      <i class="bi bi-person"></i> Full Name
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control priv-input"
+                      id="applicantName"
+                      name="name"
+                      placeholder="e.g. Rahim Uddin"
+                      required
+                      autocomplete="name"
+                    />
+                    <small
+                      class="privilege-field-note"
+                      data-note-for="applicantName"
+                      >Required</small
+                    >
+                  </div>
+
+                  <div class="priv-field">
+                    <label for="applicantEmail">
+                      <i class="bi bi-envelope"></i> Email Address
+                    </label>
+                    <input
+                      type="email"
+                      class="form-control priv-input"
+                      id="applicantEmail"
+                      name="email"
+                      placeholder="e.g. rahim@email.com"
+                      required
+                      autocomplete="email"
+                    />
+                    <small
+                      class="privilege-field-note"
+                      data-note-for="applicantEmail"
+                      >Required</small
+                    >
+                  </div>
+
+                  <div class="priv-field mb-4">
+                    <label for="applicantPhone">
+                      <i class="bi bi-telephone"></i> Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      class="form-control priv-input"
+                      id="applicantPhone"
+                      name="phone"
+                      placeholder="e.g. 01XXXXXXXXX"
+                      required
+                      autocomplete="tel"
+                    />
+                    <small
+                      class="privilege-field-note"
+                      data-note-for="applicantPhone"
+                      >Required</small
+                    >
+                  </div>
+
+                  <button
+                    id="privilegeSubmitBtn"
+                    type="submit"
+                    class="btn privilege-submit-btn"
+                    disabled
+                  >
+                    <i class="bi bi-send-fill me-2"></i>Submit Application
+                  </button>
+                </form>
+
+                <div
+                  id="privilegeThanks"
+                  class="privilege-thanks d-none"
+                  role="status"
+                  aria-live="polite"
+                >
+                  <i class="bi bi-patch-check-fill me-2"></i>
+                  Thank you for applying! Our team will reach out to you soon.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /priv-panel -->
+        </div>
+      </section>
+
+      <footer id="contact" class="site-footer">
+        <div class="footer-top">
+          <div class="container px-4 px-lg-5">
+            <div class="row g-5">
+              <div class="col-lg-4 col-md-6">
+                <img
+                  src="./images/logo.webp"
+                  alt="Degchi Dine"
+                  class="footer-logo mb-3"
+                />
+                <p class="footer-about">
+                  Degchi Dine - ডেক্সি ডাইন. A refined dining destination in
+                  Halishahar, Chittagong, known for warm hospitality and
+                  signature flavors.
+                </p>
+                <div class="footer-socials">
+                  <a
+                    href="https://www.facebook.com/DegchiDine"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                    ><i class="bi bi-facebook"></i
+                  ></a>
+                  <a href="#" aria-label="Instagram"
+                    ><i class="bi bi-instagram"></i
+                  ></a>
+                  <a href="#" aria-label="Twitter / X"
+                    ><i class="bi bi-twitter-x"></i
+                  ></a>
+                  <a href="#" aria-label="TripAdvisor"
+                    ><i class="bi bi-star"></i
+                  ></a>
+                </div>
+              </div>
+
+              <div class="col-lg-2 col-md-6 col-6">
+                <h6 class="footer-heading">Quick Links</h6>
+                <ul class="footer-links">
+                  <li><a href="index.html#home">Home</a></li>
+                  <li><a href="index.html#about">About Us</a></li>
+                  <li><a href="menu.html">Menu</a></li>
+                  <li><a href="privilege-card.html">Privilege Card</a></li>
+                  <li><a href="index.html#testimonials">Reviews</a></li>
+                  <li><a href="index.html#location">Location</a></li>
+                </ul>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-6">
+                <h6 class="footer-heading">Contact Us</h6>
+                <ul class="footer-links">
+                  <li>
+                    <i class="bi bi-geo-alt me-2 text-brand"></i>Boropool
+                    Circle, Kaptan Villa, Halishahar, Chittagong, Bangladesh
+                  </li>
+                  <li>
+                    <i class="bi bi-telephone me-2 text-brand"></i>01898-795400
+                  </li>
+                  <li>
+                    <i class="bi bi-envelope me-2 text-brand"></i
+                    >degchidine@gmail.com
+                  </li>
+                  <li>
+                    <i class="bi bi-clock me-2 text-brand"></i>Daily, 5:00 PM
+                    &ndash; 11:30 PM
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-lg-3 col-md-6">
+                <h6 class="footer-heading">Newsletter</h6>
+                <p class="footer-about">
+                  Stay updated with seasonal menus and exclusive events.
+                </p>
+                <form class="footer-newsletter" onsubmit="return false;">
+                  <input
+                    type="email"
+                    placeholder="Your email address"
+                    aria-label="Email for newsletter"
+                  />
+                  <button type="submit" aria-label="Subscribe">
+                    <i class="bi bi-send"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <div
+            class="container px-4 px-lg-5 d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2"
+          >
+            <p class="mb-0">&copy; 2026 Degchi Dine. All rights reserved.</p>
+            <div class="d-flex gap-3">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Use</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

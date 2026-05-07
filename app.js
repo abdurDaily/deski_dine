@@ -13,6 +13,288 @@ const observer = new IntersectionObserver(
 
 revealItems.forEach((item) => observer.observe(item));
 
+const getCurrentPageFile = () => {
+  const pathname = window.location.pathname;
+  const file = pathname.substring(pathname.lastIndexOf("/") + 1);
+  return file || "index.html";
+};
+
+const syncSharedNavigationAndFooter = () => {
+  const currentPage = getCurrentPageFile();
+  const isHomePage = currentPage === "index.html";
+  const menuPages = [
+    "menu.html",
+    "complete-menu.html",
+    "cart.html",
+    "checkout.html",
+  ];
+
+  const activeKey = isHomePage
+    ? "home"
+    : currentPage === "privilege-card.html"
+      ? "privilege"
+      : menuPages.includes(currentPage)
+        ? "menu"
+        : "";
+
+  const navItems = [
+    {
+      key: "home",
+      label: "Home",
+      homeHref: "#home",
+      otherHref: "index.html#home",
+    },
+    {
+      key: "menu",
+      label: "Menu",
+      homeHref: "menu.html",
+      otherHref: "menu.html",
+    },
+    {
+      key: "privilege",
+      label: "Privilege Card",
+      homeHref: "privilege-card.html",
+      otherHref: "privilege-card.html",
+    },
+    {
+      key: "reviews",
+      label: "Reviews",
+      homeHref: "#testimonials",
+      otherHref: "index.html#testimonials",
+    },
+    {
+      key: "about",
+      label: "About",
+      homeHref: "#about",
+      otherHref: "index.html#about",
+    },
+    {
+      key: "contact",
+      label: "Contact",
+      homeHref: "#contact",
+      otherHref: "index.html#contact",
+    },
+  ];
+
+  const quickLinks = [
+    {
+      label: "Home",
+      homeHref: "#home",
+      otherHref: "index.html#home",
+    },
+    {
+      label: "About Us",
+      homeHref: "#about",
+      otherHref: "index.html#about",
+    },
+    {
+      label: "Menu",
+      homeHref: "menu.html",
+      otherHref: "menu.html",
+    },
+    {
+      label: "Privilege Card",
+      homeHref: "privilege-card.html",
+      otherHref: "privilege-card.html",
+    },
+    {
+      label: "Video",
+      homeHref: "#video",
+      otherHref: "index.html#video",
+    },
+    {
+      label: "Reviews",
+      homeHref: "#testimonials",
+      otherHref: "index.html#testimonials",
+    },
+    {
+      label: "Location",
+      homeHref: "#location",
+      otherHref: "index.html#location",
+    },
+  ];
+
+  const desktopNav = document.querySelector(".desktop-nav");
+  if (desktopNav) {
+    desktopNav.innerHTML = navItems
+      .map((item) => {
+        const href = isHomePage ? item.homeHref : item.otherHref;
+        const activeClass = item.key === activeKey ? " active" : "";
+        return `<li class="nav-item"><a class="nav-link${activeClass}" href="${href}">${item.label}</a></li>`;
+      })
+      .join("");
+  }
+
+  const sideNav = document.querySelector("#mobileMenu .side-nav");
+  if (sideNav) {
+    sideNav.innerHTML = navItems
+      .map((item) => {
+        const href = isHomePage ? item.homeHref : item.otherHref;
+        return `<li class="nav-item"><a data-bs-dismiss="offcanvas" class="nav-link" href="${href}">${item.label}</a></li>`;
+      })
+      .join("");
+  }
+
+  const quickLinksHeading = Array.from(
+    document.querySelectorAll(".footer-heading"),
+  ).find(
+    (heading) => heading.textContent.trim().toLowerCase() === "quick links",
+  );
+
+  const quickLinksList = quickLinksHeading?.nextElementSibling;
+  if (quickLinksList?.classList.contains("footer-links")) {
+    quickLinksList.innerHTML = quickLinks
+      .map((item) => {
+        const href = isHomePage ? item.homeHref : item.otherHref;
+        return `<li><a href="${href}">${item.label}</a></li>`;
+      })
+      .join("");
+  }
+};
+
+const setupPrivilegeCardForm = () => {
+  const form = document.getElementById("privilegeCardForm");
+  if (!form) {
+    return;
+  }
+
+  const fields = {
+    name: document.getElementById("applicantName"),
+    email: document.getElementById("applicantEmail"),
+    phone: document.getElementById("applicantPhone"),
+  };
+
+  const submitBtn = document.getElementById("privilegeSubmitBtn");
+  const liveStatus = document.getElementById("privilegeLiveStatus");
+  const thanksBox = document.getElementById("privilegeThanks");
+
+  if (
+    !fields.name ||
+    !fields.email ||
+    !fields.phone ||
+    !submitBtn ||
+    !thanksBox
+  ) {
+    return;
+  }
+
+  const getFieldNote = (fieldId) =>
+    form.querySelector(`[data-note-for="${fieldId}"]`);
+
+  const getValidationState = (field) => {
+    const value = field.value.trim();
+
+    if (field.id === "applicantName") {
+      const isValid = value.length >= 3;
+      return {
+        isValid,
+        message: isValid
+          ? "Looks good."
+          : "Please enter at least 3 characters.",
+      };
+    }
+
+    if (field.id === "applicantEmail") {
+      const isValid = field.checkValidity() && value.length > 0;
+      return {
+        isValid,
+        message: isValid ? "Email is valid." : "Enter a valid email address.",
+      };
+    }
+
+    if (field.id === "applicantPhone") {
+      const digits = value.replace(/\D/g, "");
+      const isValid = digits.length >= 10 && digits.length <= 14;
+      return {
+        isValid,
+        message: isValid
+          ? "Phone number is valid."
+          : "Phone must contain 10 to 14 digits.",
+      };
+    }
+
+    return { isValid: false, message: "This field is required." };
+  };
+
+  const updateFieldState = (field) => {
+    const value = field.value.trim();
+    const note = getFieldNote(field.id);
+
+    if (!value) {
+      field.classList.remove("is-valid", "is-invalid");
+      if (note) {
+        note.textContent = "Required";
+        note.classList.remove("is-valid");
+      }
+      return false;
+    }
+
+    const { isValid, message } = getValidationState(field);
+    field.classList.toggle("is-valid", isValid);
+    field.classList.toggle("is-invalid", !isValid);
+
+    if (note) {
+      note.textContent = message;
+      note.classList.toggle("is-valid", isValid);
+      note.classList.toggle("is-invalid", !isValid);
+    }
+
+    return isValid;
+  };
+
+  const updateFormState = () => {
+    const fieldList = [fields.name, fields.email, fields.phone];
+    const validCount = fieldList.filter((field) =>
+      updateFieldState(field),
+    ).length;
+    const allValid = validCount === fieldList.length;
+
+    submitBtn.disabled = !allValid;
+    if (liveStatus) {
+      liveStatus.textContent = allValid
+        ? "Everything looks good. You can submit now."
+        : `Complete ${validCount} of ${fieldList.length} fields correctly.`;
+    }
+
+    return allValid;
+  };
+
+  [fields.name, fields.email, fields.phone].forEach((field) => {
+    field.addEventListener("input", updateFormState);
+    field.addEventListener("blur", updateFormState);
+  });
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (!updateFormState()) {
+      const firstInvalid = [fields.name, fields.email, fields.phone].find(
+        (field) => !field.classList.contains("is-valid"),
+      );
+      firstInvalid?.focus();
+      return;
+    }
+
+    submitBtn.classList.add("is-loading");
+    submitBtn.disabled = true;
+
+    window.setTimeout(() => {
+      const applicantName = fields.name.value.trim();
+      form.classList.add("d-none");
+      if (liveStatus) {
+        liveStatus.classList.add("d-none");
+      }
+      thanksBox.innerHTML = `<i class="bi bi-patch-check-fill me-2"></i>Thank you, ${applicantName}! Your privilege card application has been received.`;
+      thanksBox.classList.remove("d-none");
+      submitBtn.classList.remove("is-loading");
+    }, 650);
+  });
+
+  updateFormState();
+};
+
+syncSharedNavigationAndFooter();
+
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(
   ".side-nav .nav-link, .offcanvas .nav-link, .desktop-nav .nav-link",
@@ -108,6 +390,7 @@ window.addEventListener("scroll", () => {
 });
 
 syncNavbarState();
+setupPrivilegeCardForm();
 
 /* ── Featured Dishes Card Slider ──────────────────────────── */
 $(function () {
