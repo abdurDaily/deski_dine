@@ -5335,3 +5335,52 @@ footer[id],
     width: 28px; /* Smoothly expands into a pill */
     border-radius: 10px;
 }
+/* --- Mobile Centering & X-Axis Safety --- */
+@media (max-width: 576px) {
+    /* Ensure the slider container doesn't have internal padding fighting the center */
+    .reviews-slider {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* The slide wrapper */
+    .reviews-slider .slick-slide {
+        display: flex;
+        justify-content: center; /* Horizontally center the card within the slide */
+        opacity: 0.3;
+        transform: scale(0.9);
+        padding: 0 15px; /* Creates the gap on left/right of the card */
+    }
+
+    .reviews-slider .slick-center {
+        opacity: 1 !important;
+        transform: scale(1); /* Keeps it crisp and centered */
+    }
+
+    /* The Card itself */
+    .review-card {
+        width: 100%;/* Manual centering */
+        padding: 25px 20px;
+        /* Ensures card is never too wide for small screens */
+        max-width: calc(100vw - 40px); 
+    }
+
+    /* Clean up the author section for small screens */
+    .review-author {
+        justify-content: center; /* Centers author info on mobile */
+        text-align: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .review-text {
+        text-align: center;
+        font-size: 0.95rem;
+    }
+}
+
+/* Base Fix to prevent horizontal "jump" during swap */
+.reviews-section {
+    overflow-x: hidden;
+    width: 100%;
+}
