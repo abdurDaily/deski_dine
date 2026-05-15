@@ -68,12 +68,6 @@ const syncSharedNavigationAndFooter = () => {
       homeHref: "#about",
       otherHref: "index.html#about",
     },
-    {
-      key: "contact",
-      label: "Contact",
-      homeHref: "#contact",
-      otherHref: "index.html#contact",
-    },
   ];
 
   const quickLinks = [
@@ -641,3 +635,29 @@ $(function () {
     setTimeout(() => whatsappBtn.classList.remove("is-nudging"), 700);
   }, 7000);
 })();
+
+// review
+$('.reviews-slider').slick({
+    centerMode: true,
+    centerPadding: '0px', 
+    slidesToShow: 3,
+    infinite: true,
+    speed: 900, // Slightly slower for a more "expensive" feel
+    // This curve provides a very smooth, soft deceleration
+    cssEase: 'cubic-bezier(0.23, 1, 0.32, 1)', 
+    autoplay: true,
+    autoplaySpeed: 4000,
+    dots: true,
+    arrows: false,
+    useTransform: true, // Forces GPU acceleration
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                centerMode: true,
+                centerPadding: '20px'
+            }
+        }
+    ]
+});

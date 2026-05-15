@@ -2754,12 +2754,8 @@ footer[id],
     var(--bg-main) 0%,
     rgba(240, 172, 35, 0.08) 100%
   );
-  border: 1.5px solid rgba(239, 139, 31, 0.28);
   border-radius: 1.35rem;
   padding: 1.6rem 1.6rem 1.5rem;
-  box-shadow:
-    0 2px 8px rgba(0, 0, 0, 0.04),
-    0 12px 32px rgba(127, 36, 48, 0.16);
   margin-bottom: 2rem;
   position: relative;
   overflow: hidden;
@@ -5123,4 +5119,219 @@ footer[id],
   .mobile-hero-title {
     font-size: clamp(1.75rem, 8.5vw, 2.4rem);
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Clean Text-Only Branches Styling */
+.branches-section .category-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 2.5rem 1.5rem; /* Generous vertical padding to balance the text */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.015);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+}
+
+/* Base style for the branch name text */
+.branches-section .category-label {
+    font-family: 'Fraunces', serif; /* Uses your heading font style for elegance */
+    font-weight: 700;
+    font-size: 1.35rem;
+    color: #212529;
+    transition: color 0.3s ease;
+}
+
+/* Interactive effects when a user hovers over a branch name */
+.branches-section .category-card:hover {
+    transform: translateY(-4px);
+    border-color: #A52A2A; /* Your restaurant brand color */
+    box-shadow: 0 10px 25px rgba(165, 42, 42, 0.08);
+}
+
+.branches-section .category-card:hover .category-label {
+    color: #A52A2A; /* Text changes to brand color on hover */
+}
+
+/* Structural helpers for the section headers */
+.tracking-wider {
+    letter-spacing: 1.5px;
+}
+.section-lead {
+    max-width: 600px;
+    color: #6c757d;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* review  */
+/* --- Global Fix for X-Axis Spacing --- */
+.reviews-section {
+    overflow-x: hidden; /* Hard stop for any horizontal leakage */
+    padding: 60px 0;
+}
+
+/* Base slide container */
+.reviews-slider .slick-slide {
+    transition: all 0.6s ease;
+    opacity: 0.3;
+    transform: scale(0.9);
+    padding: 10px; /* Internal spacing instead of large margins */
+    outline: none;
+}
+
+.reviews-slider .slick-center {
+    opacity: 1 !important;
+    transform: scale(1.03); /* Subtle scale for mobile safety */
+}
+
+/* --- The Card --- */
+.review-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px 20px; /* Reduced side padding for mobile friendliness */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.02);
+    margin: 5px auto; /* Centering the card inside the slide */
+    width: 100%;
+    max-width: 450px; /* Prevents card from getting too wide on tablets */
+}
+
+/* --- Mobile Specific Overrides --- */
+@media (max-width: 576px) {
+    .reviews-slider {
+        padding: 20px 0;
+    }
+    
+    .review-card {
+        padding: 25px 15px; /* Tighter padding for small screens */
+    }
+    
+    .review-text {
+        font-size: 0.95rem; /* Slightly smaller text for mobile */
+        line-height: 1.6;
+    }
+
+    .review-avatar {
+        width: 50px;
+        height: 50px;
+    }
+    
+    /* Ensure dots don't push the section height too far */
+    .slick-dots {
+        padding-top: 15px;
+    }
+}
+
+/* --- The Pill Dots (Fixed for Mobile) --- */
+.slick-dots {
+    display: flex !important;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 6px;
+}
+
+.slick-dots li button:before { display: none !important; }
+
+.slick-dots li button {
+    width: 8px;
+    height: 8px;
+    background: #ccc;
+    border: none;
+    border-radius: 50%;
+    font-size: 0;
+    transition: width 0.3s ease;
+}
+
+.slick-dots li.slick-active button {
+    background: #A52A2A;
+    width: 20px;
+    border-radius: 10px;
+}
+
+/* --- Ultra-Smooth Performance --- */
+.reviews-slider .slick-slide {
+    /* Prepared for hardware acceleration */
+    will-change: transform, opacity;
+    transition: all 0.9s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 0.25;
+    transform: scale(0.88);
+    filter: blur(0.5px); /* Very slight blur makes the motion feel more cinematic */
+}
+
+.reviews-slider .slick-center {
+    opacity: 1 !important;
+    transform: scale(1.02); /* Minimal scale change for maximum smoothness */
+    filter: blur(0);
+}
+
+/* Fix for horizontal jitter on mobile */
+.reviews-section {
+    overflow-x: hidden;
+    /* Prevents "bouncing" on mobile swipes */
+    touch-action: pan-y; 
+}
+
+/* --- Card UI Polish --- */
+.review-card {
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 35px;
+    /* Soft border instead of a hard one */
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    /* Layered shadows create a more realistic "depth" */
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.01),
+        0 15px 30px rgba(0, 0, 0, 0.03);
+    margin: 10px;
+    backface-visibility: hidden; /* Fixes flickering in Chrome/Safari */
+}
+
+/* --- The Pill Dots (Optimized) --- */
+.slick-dots {
+    display: flex !important;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.slick-dots li button:before { display: none !important; }
+
+.slick-dots li button {
+    width: 8px;
+    height: 8px;
+    background: #e0e0e0;
+    border: none;
+    border-radius: 50%;
+    font-size: 0;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.slick-dots li.slick-active button {
+    background: #A52A2A;
+    width: 28px; /* Smoothly expands into a pill */
+    border-radius: 10px;
 }
