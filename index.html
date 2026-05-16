@@ -1,1458 +1,1100 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Degchi Dine | ডেক্সি ডাইন</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
-    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
 
-  <body class="hero-page">
-    <nav
-      id="desktopNavbar"
-      class="navbar py-0 desktop-navbar d-none d-lg-block sticky-top"
-    >
-      <div class="container px-4 px-xxl-5">
-        <a class="navbar-brand hero-logo" href="#home">
-          <img
-            src="./images/logo.webp"
-            class="nav-logo-img"
-            alt="Restaurant logo"
-          />
-        </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Degchi Dine | ডেক্সি ডাইন</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-        <ul class="navbar-nav flex-row desktop-nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="menu.html">Menu</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="privilege-card.html">Privilege Card</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#testimonials">Reviews</a>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <!-- <li class="nav-item">
+<body class="hero-page">
+
+
+  <nav id="desktopNavbar" class="navbar py-0 desktop-navbar d-none d-lg-block sticky-top">
+    <div class="container px-4 px-xxl-5">
+      <a class="navbar-brand" href="#">
+        <div class="logo-badge-wrapper">
+          <img src="./images/logo.webp" alt="Logo" class="nav-logo-img">
+        </div>
+      </a>
+
+      <ul class="navbar-nav flex-row desktop-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="menu.html">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="privilege-card.html">Privilege Card</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#testimonials">Reviews</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <!-- <li class="nav-item">
             <a class="nav-link" href="#contact">Contact</a>
           </li> -->
-        </ul>
+      </ul>
 
-        <div class="d-flex align-items-center">
-          <a
-            href="#cartDrawer"
-            class="desktop-order-icon"
-            aria-label="Open cart"
-            data-bs-toggle="offcanvas"
-            role="button"
-            aria-controls="cartDrawer"
-          >
-            <iconify-icon
-              class="desktop-order-symbol"
-              icon="solar:cart-large-2-outline"
-              aria-hidden="true"
-            ></iconify-icon>
-            <span class="desktop-order-qty" aria-label="0 items">0</span>
-          </a>
-        </div>
-      </div>
-    </nav>
-
-    <nav class="navbar py-0 navbar-light mobile-topbar d-lg-none sticky-top">
-      <div class="container-fluid px-3 px-sm-4">
-        <button
-          id="mobileMenuToggle"
-          class="navbar-toggler mobile-menu-toggle"
-          type="button"
-          aria-controls="mobileMenu"
-          aria-label="Open menu"
-        >
-          <iconify-icon
-            class="mobile-menu-icon"
-            icon="ri:menu-2-line"
-            width="24"
-            height="24"
-            aria-hidden="true"
-          ></iconify-icon>
-        </button>
-
-        <a class="navbar-brand mobile-nav-brand" href="#home">
-          <img
-            src="./images/logo.webp"
-            class="mobile-logo-img"
-            alt="Restaurant logo"
-          />
-        </a>
-
-        <a
-          href="#cartDrawer"
-          class="mobile-order-icon"
-          aria-label="Open cart"
-          data-bs-toggle="offcanvas"
-          role="button"
-          aria-controls="cartDrawer"
-        >
-          <iconify-icon
-            class="mobile-order-symbol"
-            icon="solar:cart-large-2-outline"
-            aria-hidden="true"
-          ></iconify-icon>
-          <span class="mobile-order-qty" aria-label="0 items">0</span>
+      <div class="d-flex align-items-center">
+        <a href="#cartDrawer" class="desktop-order-icon" aria-label="Open cart" data-bs-toggle="offcanvas" role="button"
+          aria-controls="cartDrawer">
+          <iconify-icon class="desktop-order-symbol" icon="solar:cart-large-2-outline"
+            aria-hidden="true"></iconify-icon>
+          <span class="desktop-order-qty" aria-label="0 items">0</span>
         </a>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <div
-      class="offcanvas offcanvas-start mobile-sidebar"
-      tabindex="-1"
-      id="mobileMenu"
-      aria-labelledby="mobileMenuLabel"
-    >
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="mobileMenuLabel">
-          <img
-            src="./images/logo.webp"
-            class="offcanvas-logo-img"
-            alt="Restaurant logo"
-          />
-        </h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="nav flex-column side-nav">
-          <li class="nav-item">
-            <a data-bs-dismiss="offcanvas" class="nav-link" href="#home"
-              >Home</a
-            >
-          </li>
-          <li class="nav-item">
-            <a data-bs-dismiss="offcanvas" class="nav-link" href="menu.html"
-              >Menu</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              data-bs-dismiss="offcanvas"
-              class="nav-link"
-              href="privilege-card.html"
-              >Privilege Card</a
-            >
-          </li>
-          <li class="nav-item">
-            <a data-bs-dismiss="offcanvas" class="nav-link" href="#testimonials"
-              >Reviews</a
-            >
-          </li>
-          <li class="nav-item">
-            <a data-bs-dismiss="offcanvas" class="nav-link" href="#about"
-              >About</a
-            >
-          </li>
-          <!-- <li class="nav-item">
+  <nav class="navbar py-0 navbar-light mobile-topbar d-lg-none sticky-top">
+    <div class="container-fluid px-3 px-sm-4">
+      <button id="mobileMenuToggle" class="navbar-toggler mobile-menu-toggle" type="button" aria-controls="mobileMenu"
+        aria-label="Open menu">
+        <iconify-icon class="mobile-menu-icon" icon="ri:menu-2-line" width="24" height="24"
+          aria-hidden="true"></iconify-icon>
+      </button>
+
+      <a class="navbar-brand mobile-nav-brand" href="#home">
+        <img src="./images/logo.webp" class="mobile-logo-img" alt="Restaurant logo" />
+      </a>
+
+      <a href="#cartDrawer" class="mobile-order-icon" aria-label="Open cart" data-bs-toggle="offcanvas" role="button"
+        aria-controls="cartDrawer">
+        <iconify-icon class="mobile-order-symbol" icon="solar:cart-large-2-outline" aria-hidden="true"></iconify-icon>
+        <span class="mobile-order-qty" aria-label="0 items">0</span>
+      </a>
+    </div>
+  </nav>
+
+  <div class="offcanvas offcanvas-start mobile-sidebar" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="mobileMenuLabel">
+        <img src="./images/logo.webp" class="offcanvas-logo-img" alt="Restaurant logo" />
+      </h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="nav flex-column side-nav">
+        <li class="nav-item">
+          <a data-bs-dismiss="offcanvas" class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a data-bs-dismiss="offcanvas" class="nav-link" href="menu.html">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a data-bs-dismiss="offcanvas" class="nav-link" href="privilege-card.html">Privilege Card</a>
+        </li>
+        <li class="nav-item">
+          <a data-bs-dismiss="offcanvas" class="nav-link" href="#testimonials">Reviews</a>
+        </li>
+        <li class="nav-item">
+          <a data-bs-dismiss="offcanvas" class="nav-link" href="#about">About</a>
+        </li>
+        <!-- <li class="nav-item">
             <a data-bs-dismiss="offcanvas" class="nav-link" href="#contact"
               >Contact</a
             >
           </li> -->
-        </ul>
+      </ul>
 
-        <div class="side-footer mt-4 pt-3 border-top">
-          <p class="mb-1">
-            <i class="bi bi-geo-alt me-2"></i>Boropool Circle, Kaptan Villa,
-            Halishahar, Chittagong, Bangladesh
-          </p>
-          <p class="mb-1">
-            <i class="bi bi-clock me-2"></i>Mon-Sun: 5:00 PM - 11:30 PM
-          </p>
-          <p class="mb-0"><i class="bi bi-telephone me-2"></i>01898-795400</p>
-        </div>
+      <div class="side-footer mt-4 pt-3 border-top">
+        <p class="mb-1">
+          <i class="bi bi-geo-alt me-2"></i>Boropool Circle, Kaptan Villa,
+          Halishahar, Chittagong, Bangladesh
+        </p>
+        <p class="mb-1">
+          <i class="bi bi-clock me-2"></i>Mon-Sun: 5:00 PM - 11:30 PM
+        </p>
+        <p class="mb-0"><i class="bi bi-telephone me-2"></i>01898-795400</p>
       </div>
     </div>
+  </div>
 
-    <main class="main-content">
-      <section id="home" class="hero">
-        <video
-          class="hero-video"
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="auto"
-          poster="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1800&q=80"
-        >
-          <source src="video/video.mp4" type="video/mp4" />
-        </video>
-        <div class="hero-overlay"></div>
+  <main class="main-content">
+    <section id="home" class="hero">
+      <video class="hero-video" autoplay muted loop playsinline preload="auto"
+        poster="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1800&q=80">
+        <source src="video/video.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay"></div>
 
-        <div class="hero-side-rail hero-side-right d-none d-lg-flex">
-          <a
-            href="https://www.facebook.com/DegchiDine"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-            ><i class="bi bi-facebook"></i
-          ></a>
-          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-        </div>
+      <div class="hero-side-rail hero-side-right d-none d-lg-flex">
+        <a href="https://www.facebook.com/DegchiDine" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+            class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+      </div>
 
-        <div
-          class="container hero-content px-4 px-lg-5 d-none d-lg-flex align-items-center justify-content-center"
-        >
-          <div class="text-center w-100">
-            <h2 class="hero-title">
-              Delightful<br class="d-sm-none" />
-              Experience
-            </h2>
-            <p class="hero-copy mt-3 mb-4 mx-auto">
-              Degchi Dine blends formal hospitality with bold local flavor,
-              serving a memorable dining experience in Chittagong.
-            </p>
-            <div class="d-flex flex-wrap gap-3 justify-content-center">
-              <a href="menu.html" class="btn btn-brand btn-lg px-4"
-                >Order Now</a
-              >
-              <a href="menu.html" class="btn btn-outline-light btn-lg px-4"
-                >Explore Menu</a
-              >
-            </div>
+      <div class="container hero-content px-4 px-lg-5 d-none d-lg-flex align-items-center justify-content-center">
+        <div class="text-center w-100">
+          <h2 class="hero-title">
+            Delightful<br class="d-sm-none" />
+            Experience
+          </h2>
+          <p class="hero-copy mt-3 mb-4 mx-auto">
+            Degchi Dine blends formal hospitality with bold local flavor,
+            serving a memorable dining experience in Chittagong.
+          </p>
+          <div class="d-flex flex-wrap gap-3 justify-content-center">
+            <a href="menu.html" class="btn btn-brand btn-lg px-4">Order Now</a>
+            <a href="menu.html" class="btn btn-outline-light btn-lg px-4">Explore Menu</a>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- menu -->
-      <section class="section-block py-5" id="menu">
-        <div class="container px-4 px-lg-5">
-          <div class="mb-5 text-center reveal">
-            <span class="menu-kicker">
-              <i class="bi bi-fire" aria-hidden="true"></i>
-              House Signatures
-            </span>
-            <h2 class="section-title mt-2">Our Complete Menu</h2>
-          </div>
-
-          <div id="menuSlider" class="menu-slider reveal">
-            <div class="menu-slider-viewport">
-              <div class="menu-slider-track">
-                <div class="menu-slide-item">
-                  <article class="menu-offer-card">
-                    <div class="menu-offer-image-wrap">
-                      <img
-                        class="menu-offer-image"
-                        src="images/signature_menu/1.jpg"
-                        alt="mutton kacchi "
-                      />
-                      <span class="menu-offer-badge">Biryani</span>
-                      <span class="menu-offer-available"
-                        ><i class="bi bi-check-circle-fill"></i> Available</span
-                      >
-                    </div>
-                    <div class="menu-offer-body">
-                      <h5 class="menu-offer-title">mutton kacchi</h5>
-                      <p class="menu-offer-meta mb-0">
-                        Fragrant basmati rice layered with marinated mutton,
-                        saffron, and signature house masala.
-                      </p>
-                      <div class="menu-offer-divider"></div>
-                      <div class="menu-offer-footer">
-                        <div class="menu-offer-price-wrap">
-                          <span class="menu-offer-price-label"
-                            >Starts from</span
-                          >
-                          <span class="menu-offer-price">৳ 420</span>
-                        </div>
-                        <span class="menu-offer-serve"
-                          ><i class="bi bi-people"></i> 2 persons</span
-                        >
-                      </div>
-                      <div class="menu-offer-actions">
-                        <button class="menu-offer-cart-btn" type="button">
-                          <i class="bi bi-bag-plus" aria-hidden="true"></i>
-                          Order Now
-                        </button>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-
-                <div class="menu-slide-item">
-                  <article class="menu-offer-card">
-                    <div class="menu-offer-image-wrap">
-                      <img
-                        class="menu-offer-image"
-                        src="images/signature_menu/2.jpg"
-                        alt="Beef rezala bowl"
-                      />
-                      <span class="menu-offer-badge">Main Course</span>
-                      <span class="menu-offer-available"
-                        ><i class="bi bi-check-circle-fill"></i> Available</span
-                      >
-                    </div>
-                    <div class="menu-offer-body">
-                      <h5 class="menu-offer-title">Purān Dhākār Kacchi</h5>
-                      <p class="menu-offer-meta mb-0">
-                        Tender beef in a rich, aromatic white gravy with whole
-                        spices and a silky finish.
-                      </p>
-                      <div class="menu-offer-divider"></div>
-                      <div class="menu-offer-footer">
-                        <div class="menu-offer-price-wrap">
-                          <span class="menu-offer-price-label"
-                            >Starts from</span
-                          >
-                          <span class="menu-offer-price">৳ 340</span>
-                        </div>
-                        <span class="menu-offer-serve"
-                          ><i class="bi bi-person"></i> 1 person</span
-                        >
-                      </div>
-                      <div class="menu-offer-actions">
-                        <button class="menu-offer-cart-btn" type="button">
-                          <i class="bi bi-bag-plus" aria-hidden="true"></i>
-                          Order Now
-                        </button>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-
-                <div class="menu-slide-item">
-                  <article class="menu-offer-card">
-                    <div class="menu-offer-image-wrap">
-                      <img
-                        class="menu-offer-image"
-                        src="images/signature_menu/3.jpg"
-                        alt="Mixed snack platter"
-                      />
-                      <span class="menu-offer-badge">Snacks</span>
-                      <span class="menu-offer-available"
-                        ><i class="bi bi-check-circle-fill"></i> Available</span
-                      >
-                    </div>
-                    <div class="menu-offer-body">
-                      <h5 class="menu-offer-title">Mutton Kacchi</h5>
-                      <p class="menu-offer-meta mb-0">
-                        Freshly brewed coffee paired with crunchy, savory bites
-                        for a perfect evening break.
-                      </p>
-                      <div class="menu-offer-divider"></div>
-                      <div class="menu-offer-footer">
-                        <div class="menu-offer-price-wrap">
-                          <span class="menu-offer-price-label"
-                            >Starts from</span
-                          >
-                          <span class="menu-offer-price">৳ 290</span>
-                        </div>
-                        <span class="menu-offer-serve"
-                          ><i class="bi bi-person"></i> 1 person</span
-                        >
-                      </div>
-                      <div class="menu-offer-actions">
-                        <button class="menu-offer-cart-btn" type="button">
-                          <i class="bi bi-bag-plus" aria-hidden="true"></i>
-                          Order Now
-                        </button>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-
-                <div class="menu-slide-item">
-                  <article class="menu-offer-card">
-                    <div class="menu-offer-image-wrap">
-                      <img
-                        class="menu-offer-image"
-                        src="images/signature_menu/4.jpg"
-                        alt="Shawarma and kebab plate"
-                      />
-                      <span class="menu-offer-badge menu-offer-badge--gold"
-                        >Chef's Pick</span
-                      >
-                      <span class="menu-offer-available"
-                        ><i class="bi bi-check-circle-fill"></i> Available</span
-                      >
-                    </div>
-                    <div class="menu-offer-body">
-                      <h5 class="menu-offer-title">kacchi biryani</h5>
-                      <p class="menu-offer-meta mb-0">
-                        Juicy kebabs and soft shawarma wraps served with house
-                        sauces and fresh pickles.
-                      </p>
-                      <div class="menu-offer-divider"></div>
-                      <div class="menu-offer-footer">
-                        <div class="menu-offer-price-wrap">
-                          <span class="menu-offer-price-label"
-                            >Starts from</span
-                          >
-                          <span class="menu-offer-price">৳ 360</span>
-                        </div>
-                        <span class="menu-offer-serve"
-                          ><i class="bi bi-people"></i> 2 persons</span
-                        >
-                      </div>
-                      <div class="menu-offer-actions">
-                        <button class="menu-offer-cart-btn" type="button">
-                          <i class="bi bi-bag-plus" aria-hidden="true"></i>
-                          Order Now
-                        </button>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-
-                <div class="menu-slide-item">
-                  <article class="menu-offer-card">
-                    <div class="menu-offer-image-wrap">
-                      <img
-                        class="menu-offer-image"
-                        src="images/signature_menu/5.jpg"
-                        alt="Seafood platter"
-                      />
-                      <span class="menu-offer-badge">Seafood</span>
-                      <span class="menu-offer-available"
-                        ><i class="bi bi-check-circle-fill"></i> Available</span
-                      >
-                    </div>
-                    <div class="menu-offer-body">
-                      <h5 class="menu-offer-title">Mezban</h5>
-                      <p class="menu-offer-meta mb-0">
-                        A premium platter with grilled fish, prawns, and crispy
-                        calamari finished with lemon butter.
-                      </p>
-                      <div class="menu-offer-divider"></div>
-                      <div class="menu-offer-footer">
-                        <div class="menu-offer-price-wrap">
-                          <span class="menu-offer-price-label"
-                            >Starts from</span
-                          >
-                          <span class="menu-offer-price">৳ 550</span>
-                        </div>
-                        <span class="menu-offer-serve"
-                          ><i class="bi bi-people"></i> 2 persons</span
-                        >
-                      </div>
-                      <div class="menu-offer-actions">
-                        <button class="menu-offer-cart-btn" type="button">
-                          <i class="bi bi-bag-plus" aria-hidden="true"></i>
-                          Order Now
-                        </button>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-              </div>
-            </div>
-
-            <button
-              class="menu-slider-btn menu-slider-prev"
-              aria-label="Previous"
-            >
-              <span class="menu-control-icon" aria-hidden="true"
-                ><i class="bi bi-chevron-left"></i
-              ></span>
-            </button>
-            <button class="menu-slider-btn menu-slider-next" aria-label="Next">
-              <span class="menu-control-icon" aria-hidden="true"
-                ><i class="bi bi-chevron-right"></i
-              ></span>
-            </button>
-
-            <div class="menu-slider-dots"></div>
-          </div>
-
-          <div class="menu-slider-footer mt-4">
-            <a href="complete-menu.html" class="btn btn-lg menu-show-more-btn">
-              View Complete Menu <i class="bi bi-arrow-right-short"></i>
-            </a>
-          </div>
+    <!-- menu -->
+    <section class="section-block py-5" id="menu">
+      <div class="container px-4 px-lg-5">
+        <div class="mb-5 text-center reveal">
+          <span class="menu-kicker">
+            <i class="bi bi-fire" aria-hidden="true"></i>
+            House Signatures
+          </span>
+          <h2 class="section-title mt-2">Our Complete Menu</h2>
         </div>
-      </section>
-      <!-- menu end -->
 
-      <!-- Featured Dishes (Menu Card Slider) -->
-      <section class="section-block mc-section" id="dishes">
-        <div class="container px-4 px-lg-5">
-          <div class="mb-5 text-center reveal">
-            <span class="mc-kicker">
-              <i class="bi bi-stars" aria-hidden="true"></i>
-              What's on the Table
-            </span>
-            <h2 class="section-title mt-2">Our Menu Highlights</h2>
-            <p class="section-lead mx-auto">
-              Every item is freshly prepared and available daily. Prices shown
-              are per serving — no hidden charges.
-            </p>
-            <p class="mc-tap-hint mb-0">Tap any dish card to view details</p>
-          </div>
-
-          <div class="mc-slider-wrap reveal">
-            <div id="mcSlider">
-              <div class="mc-slide">
-                <article
-                  class="mc-card mc-card-trigger"
-                  role="button"
-                  tabindex="0"
-                  aria-label="View Bangla Menu details"
-                >
-                  <div class="mc-img-wrap">
-                    <img
-                      src="images/menu_card/1.jpg"
-                      alt="Bangla Menu"
-                      class="mc-img"
-                    />
-                    <span class="mc-badge">Bengali Cuisine</span>
-                    <span class="mc-avail"
-                      ><i class="bi bi-check-circle-fill"></i> Available</span
-                    >
+        <div id="menuSlider" class="menu-slider reveal">
+          <div class="menu-slider-viewport">
+            <div class="menu-slider-track">
+              <div class="menu-slide-item">
+                <article class="menu-offer-card">
+                  <div class="menu-offer-image-wrap">
+                    <img class="menu-offer-image" src="images/signature_menu/1.jpg" alt="mutton kacchi " />
+                    <span class="menu-offer-badge">Biryani</span>
+                    <span class="menu-offer-available"><i class="bi bi-check-circle-fill"></i> Available</span>
                   </div>
-                  <div class="mc-body">
-                    <h5 class="mc-title">Bengali Menu</h5>
-                    <p class="mc-desc">
-                      ঐতিহ্যবাহী বাঙালি রন্ধনশৈলীর সেরা খাবার সমূহ, তাজা উপাদান
-                      দিয়ে প্রতিদিন তৈরি।
+                  <div class="menu-offer-body">
+                    <h5 class="menu-offer-title">mutton kacchi</h5>
+                    <p class="menu-offer-meta mb-0">
+                      Fragrant basmati rice layered with marinated mutton,
+                      saffron, and signature house masala.
                     </p>
-                    <div class="mc-divider"></div>
-                    <div class="mc-footer">
-                      <div class="mc-price-wrap">
-                        <span class="mc-price-label">Starts from</span>
-                        <span class="mc-price">৳ 250</span>
+                    <div class="menu-offer-divider"></div>
+                    <div class="menu-offer-footer">
+                      <div class="menu-offer-price-wrap">
+                        <span class="menu-offer-price-label">Starts from</span>
+                        <span class="menu-offer-price">৳ 420</span>
                       </div>
-                      <span class="mc-serve-info">
-                        <i class="bi bi-person" aria-hidden="true"></i> 1 person
-                      </span>
+                      <span class="menu-offer-serve"><i class="bi bi-people"></i> 2 persons</span>
+                    </div>
+                    <div class="menu-offer-actions">
+                      <button class="menu-offer-cart-btn" type="button">
+                        <i class="bi bi-bag-plus" aria-hidden="true"></i>
+                        Order Now
+                      </button>
                     </div>
                   </div>
                 </article>
               </div>
 
-              <div class="mc-slide">
-                <article
-                  class="mc-card mc-card-trigger"
-                  role="button"
-                  tabindex="0"
-                  aria-label="View Kacchi Menu details"
-                >
-                  <div class="mc-img-wrap">
-                    <img
-                      src="images/menu_card/2.jpg"
-                      alt="Kacchi Menu"
-                      class="mc-img"
-                    />
-                    <span class="mc-badge">Special</span>
-                    <span class="mc-avail"
-                      ><i class="bi bi-check-circle-fill"></i> Available</span
-                    >
+              <div class="menu-slide-item">
+                <article class="menu-offer-card">
+                  <div class="menu-offer-image-wrap">
+                    <img class="menu-offer-image" src="images/signature_menu/2.jpg" alt="Beef rezala bowl" />
+                    <span class="menu-offer-badge">Main Course</span>
+                    <span class="menu-offer-available"><i class="bi bi-check-circle-fill"></i> Available</span>
                   </div>
-                  <div class="mc-body">
-                    <h5 class="mc-title">kacchi menu</h5>
-                    <p class="mc-desc">
-                      ঐতিহ্যের স্বাদ নিয়ে আসা কাচ্চি বিরিয়ানি এবং মসলাযুক্ত
-                      রেজালা সমৃদ্ধ কালেকশন।
+                  <div class="menu-offer-body">
+                    <h5 class="menu-offer-title">Purān Dhākār Kacchi</h5>
+                    <p class="menu-offer-meta mb-0">
+                      Tender beef in a rich, aromatic white gravy with whole
+                      spices and a silky finish.
                     </p>
-                    <div class="mc-divider"></div>
-                    <div class="mc-footer">
-                      <div class="mc-price-wrap">
-                        <span class="mc-price-label">Starts from</span>
-                        <span class="mc-price">৳ 380</span>
+                    <div class="menu-offer-divider"></div>
+                    <div class="menu-offer-footer">
+                      <div class="menu-offer-price-wrap">
+                        <span class="menu-offer-price-label">Starts from</span>
+                        <span class="menu-offer-price">৳ 340</span>
                       </div>
-                      <span class="mc-serve-info">
-                        <i class="bi bi-people" aria-hidden="true"></i> 2
-                        persons
-                      </span>
+                      <span class="menu-offer-serve"><i class="bi bi-person"></i> 1 person</span>
+                    </div>
+                    <div class="menu-offer-actions">
+                      <button class="menu-offer-cart-btn" type="button">
+                        <i class="bi bi-bag-plus" aria-hidden="true"></i>
+                        Order Now
+                      </button>
                     </div>
                   </div>
                 </article>
               </div>
 
-              <div class="mc-slide">
-                <article
-                  class="mc-card mc-card-trigger"
-                  role="button"
-                  tabindex="0"
-                  aria-label="View Mezbani Menu details"
-                >
-                  <div class="mc-img-wrap">
-                    <img
-                      src="images/menu_card/3.jpg"
-                      alt="Mezbani Menu"
-                      class="mc-img"
-                    />
-                    <span class="mc-badge">Celebration</span>
-                    <span class="mc-avail"
-                      ><i class="bi bi-check-circle-fill"></i> Available</span
-                    >
+              <div class="menu-slide-item">
+                <article class="menu-offer-card">
+                  <div class="menu-offer-image-wrap">
+                    <img class="menu-offer-image" src="images/signature_menu/3.jpg" alt="Mixed snack platter" />
+                    <span class="menu-offer-badge">Snacks</span>
+                    <span class="menu-offer-available"><i class="bi bi-check-circle-fill"></i> Available</span>
                   </div>
-                  <div class="mc-body">
-                    <h5 class="mc-title">Mezbani Menu</h5>
-                    <p class="mc-desc">
-                      উদযাপনের জন্য বিশেষভাবে তৈরি মেজবানি খাবারের সমাহার,
-                      ঐতিহ্যবাহী স্বাদে পরিপূর্ণ।
+                  <div class="menu-offer-body">
+                    <h5 class="menu-offer-title">Mutton Kacchi</h5>
+                    <p class="menu-offer-meta mb-0">
+                      Freshly brewed coffee paired with crunchy, savory bites
+                      for a perfect evening break.
                     </p>
-                    <div class="mc-divider"></div>
-                    <div class="mc-footer">
-                      <div class="mc-price-wrap">
-                        <span class="mc-price-label">Starts from</span>
-                        <span class="mc-price">৳ 450</span>
+                    <div class="menu-offer-divider"></div>
+                    <div class="menu-offer-footer">
+                      <div class="menu-offer-price-wrap">
+                        <span class="menu-offer-price-label">Starts from</span>
+                        <span class="menu-offer-price">৳ 290</span>
                       </div>
-                      <span class="mc-serve-info">
-                        <i class="bi bi-people" aria-hidden="true"></i> 3-4
-                        persons
-                      </span>
+                      <span class="menu-offer-serve"><i class="bi bi-person"></i> 1 person</span>
+                    </div>
+                    <div class="menu-offer-actions">
+                      <button class="menu-offer-cart-btn" type="button">
+                        <i class="bi bi-bag-plus" aria-hidden="true"></i>
+                        Order Now
+                      </button>
                     </div>
                   </div>
                 </article>
               </div>
 
-              <div class="mc-slide">
-                <article
-                  class="mc-card mc-card-trigger"
-                  role="button"
-                  tabindex="0"
-                  aria-label="View Family Premium Package details"
-                >
-                  <div class="mc-img-wrap">
-                    <img
-                      src="images/menu_card/4.jpg"
-                      alt="Family Premium Package"
-                      class="mc-img"
-                    />
-                    <span class="mc-badge mc-badge--gold">Premium</span>
-                    <span class="mc-avail"
-                      ><i class="bi bi-check-circle-fill"></i> Available</span
-                    >
+              <div class="menu-slide-item">
+                <article class="menu-offer-card">
+                  <div class="menu-offer-image-wrap">
+                    <img class="menu-offer-image" src="images/signature_menu/4.jpg" alt="Shawarma and kebab plate" />
+                    <span class="menu-offer-badge menu-offer-badge--gold">Chef's Pick</span>
+                    <span class="menu-offer-available"><i class="bi bi-check-circle-fill"></i> Available</span>
                   </div>
-                  <div class="mc-body">
-                    <h5 class="mc-title">Family Premium Package</h5>
-                    <p class="mc-desc">
-                      পরিবারের জন্য সম্পূর্ণ খাবার প্যাকেজ - নানা রকম মাংস,
-                      পোলাও এবং সালাদের সংমিশ্রণ।
+                  <div class="menu-offer-body">
+                    <h5 class="menu-offer-title">kacchi biryani</h5>
+                    <p class="menu-offer-meta mb-0">
+                      Juicy kebabs and soft shawarma wraps served with house
+                      sauces and fresh pickles.
                     </p>
-                    <div class="mc-divider"></div>
-                    <div class="mc-footer">
-                      <div class="mc-price-wrap">
-                        <span class="mc-price-label">Starts from</span>
-                        <span class="mc-price">৳ 1200</span>
+                    <div class="menu-offer-divider"></div>
+                    <div class="menu-offer-footer">
+                      <div class="menu-offer-price-wrap">
+                        <span class="menu-offer-price-label">Starts from</span>
+                        <span class="menu-offer-price">৳ 360</span>
                       </div>
-                      <span class="mc-serve-info">
-                        <i class="bi bi-people" aria-hidden="true"></i> 4-5
-                        persons
-                      </span>
+                      <span class="menu-offer-serve"><i class="bi bi-people"></i> 2 persons</span>
+                    </div>
+                    <div class="menu-offer-actions">
+                      <button class="menu-offer-cart-btn" type="button">
+                        <i class="bi bi-bag-plus" aria-hidden="true"></i>
+                        Order Now
+                      </button>
                     </div>
                   </div>
                 </article>
               </div>
 
-              <div class="mc-slide">
-                <article
-                  class="mc-card mc-card-trigger"
-                  role="button"
-                  tabindex="0"
-                  aria-label="View Kacchi Biryani details"
-                >
-                  <div class="mc-img-wrap">
-                    <img
-                      src="images/menu_card/1.jpg"
-                      alt="Kacchi Biryani"
-                      class="mc-img"
-                    />
-                    <span class="mc-badge">Biryani</span>
-                    <span class="mc-avail"
-                      ><i class="bi bi-check-circle-fill"></i> Available</span
-                    >
+              <div class="menu-slide-item">
+                <article class="menu-offer-card">
+                  <div class="menu-offer-image-wrap">
+                    <img class="menu-offer-image" src="images/signature_menu/5.jpg" alt="Seafood platter" />
+                    <span class="menu-offer-badge">Seafood</span>
+                    <span class="menu-offer-available"><i class="bi bi-check-circle-fill"></i> Available</span>
                   </div>
-                  <div class="mc-body">
-                    <h5 class="mc-title">bangla menu</h5>
-                    <p class="mc-desc">
-                      Slow-cooked marinated mutton layered with fragrant basmati
-                      and saffron — a royal classic.
+                  <div class="menu-offer-body">
+                    <h5 class="menu-offer-title">Mezban</h5>
+                    <p class="menu-offer-meta mb-0">
+                      A premium platter with grilled fish, prawns, and crispy
+                      calamari finished with lemon butter.
                     </p>
-                    <div class="mc-divider"></div>
-                    <div class="mc-footer">
-                      <div class="mc-price-wrap">
-                        <span class="mc-price-label">Starts from</span>
-                        <span class="mc-price">৳ 380</span>
+                    <div class="menu-offer-divider"></div>
+                    <div class="menu-offer-footer">
+                      <div class="menu-offer-price-wrap">
+                        <span class="menu-offer-price-label">Starts from</span>
+                        <span class="menu-offer-price">৳ 550</span>
                       </div>
-                      <span class="mc-serve-info">
-                        <i class="bi bi-person" aria-hidden="true"></i> 1 person
-                      </span>
+                      <span class="menu-offer-serve"><i class="bi bi-people"></i> 2 persons</span>
+                    </div>
+                    <div class="menu-offer-actions">
+                      <button class="menu-offer-cart-btn" type="button">
+                        <i class="bi bi-bag-plus" aria-hidden="true"></i>
+                        Order Now
+                      </button>
                     </div>
                   </div>
                 </article>
               </div>
             </div>
-            <!-- /#mcSlider -->
-
-            <button class="mc-nav mc-nav-prev" aria-label="Previous dish">
-              <i class="bi bi-chevron-left" aria-hidden="true"></i>
-            </button>
-            <button class="mc-nav mc-nav-next" aria-label="Next dish">
-              <i class="bi bi-chevron-right" aria-hidden="true"></i>
-            </button>
           </div>
-          <!-- /.mc-slider-wrap -->
 
-          <div class="mc-show-more-wrap reveal">
-            <a href="menu.html" class="mc-show-more-btn">
-              Explore Full Menu
-              <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
-            </a>
-          </div>
+          <button class="menu-slider-btn menu-slider-prev" aria-label="Previous">
+            <span class="menu-control-icon" aria-hidden="true"><i class="bi bi-chevron-left"></i></span>
+          </button>
+          <button class="menu-slider-btn menu-slider-next" aria-label="Next">
+            <span class="menu-control-icon" aria-hidden="true"><i class="bi bi-chevron-right"></i></span>
+          </button>
+
+          <div class="menu-slider-dots"></div>
         </div>
-      </section>
-      <!-- Featured Dishes end -->
 
-      <!-- reels -->
-      <section class="section-block mt-5 pt-0 reels-section" id="video">
-        <div class="container px-4 px-lg-5">
-          <div class="reels-header-shell reveal">
-            <div class="reels-section-header">
-              <div class="reels-header-left">
-                <span class="reels-kicker"
-                  ><i class="bi bi-camera-reels"></i> Behind The Scenes</span
-                >
-                <h2 class="section-title mt-2 mb-1">Watch Us on Reels</h2>
-                <p class="section-lead mb-0">
-                  Kitchen energy, chef moments, and guest vibes from Degchi
-                  Dine. Fresh reels every week.
-                </p>
-              </div>
-              <a
-                href="https://www.facebook.com/DegchiDine"
-                class="btn reels-follow-btn d-none d-md-inline-flex"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="bi bi-facebook me-2" aria-hidden="true"></i>Follow Us
-              </a>
-            </div>
-          </div>
-
-          <div id="reelsSlider" class="reels-slick reveal">
-            <div class="reel-slide-wrap">
-              <a
-                class="reel-card"
-                href="https://www.facebook.com/share/r/1cNLa7uWHT/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Watch Kitchen Rush reel on Facebook"
-              >
-                <div class="reel-card-thumb">
-                  <img
-                    src="./images/reels/4.jfif"
-                    alt="Kitchen Rush reel"
-                    loading="lazy"
-                  />
-                  <div class="reel-card-overlay">
-                    <span class="reel-play-icon" aria-hidden="true">
-                      <i class="bi bi-play-fill"></i>
-                    </span>
-                    <span class="reel-watch-label">
-                      <i class="bi bi-facebook me-1" aria-hidden="true"></i
-                      >Watch on Facebook
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="reel-slide-wrap">
-              <a
-                class="reel-card"
-                href="https://www.facebook.com/share/r/1cNLa7uWHT/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Watch Kitchen Rush reel on Facebook"
-              >
-                <div class="reel-card-thumb">
-                  <img
-                    src="./images/reels/1.jfif"
-                    alt="Kitchen Rush reel"
-                    loading="lazy"
-                  />
-                  <div class="reel-card-overlay">
-                    <span class="reel-play-icon" aria-hidden="true">
-                      <i class="bi bi-play-fill"></i>
-                    </span>
-                    <span class="reel-watch-label">
-                      <i class="bi bi-facebook me-1" aria-hidden="true"></i
-                      >Watch on Facebook
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="reel-slide-wrap">
-              <a
-                class="reel-card"
-                href="https://www.facebook.com/share/r/1cNLa7uWHT/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Watch Kitchen Rush reel on Facebook"
-              >
-                <div class="reel-card-thumb">
-                  <img
-                    src="./images/reels/2.jfif"
-                    alt="Kitchen Rush reel"
-                    loading="lazy"
-                  />
-                  <div class="reel-card-overlay">
-                    <span class="reel-play-icon" aria-hidden="true">
-                      <i class="bi bi-play-fill"></i>
-                    </span>
-                    <span class="reel-watch-label">
-                      <i class="bi bi-facebook me-1" aria-hidden="true"></i
-                      >Watch on Facebook
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="reel-slide-wrap">
-              <a
-                class="reel-card"
-                href="https://www.facebook.com/share/r/1cNLa7uWHT/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Watch Kitchen Rush reel on Facebook"
-              >
-                <div class="reel-card-thumb">
-                  <img
-                    src="./images/reels/3.jfif"
-                    alt="Kitchen Rush reel"
-                    loading="lazy"
-                  />
-                  <div class="reel-card-overlay">
-                    <span class="reel-play-icon" aria-hidden="true">
-                      <i class="bi bi-play-fill"></i>
-                    </span>
-                    <span class="reel-watch-label">
-                      <i class="bi bi-facebook me-1" aria-hidden="true"></i
-                      >Watch on Facebook
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="reel-slide-wrap">
-              <a
-                class="reel-card"
-                href="https://www.facebook.com/share/r/1cNLa7uWHT/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Watch Kitchen Rush reel on Facebook"
-              >
-                <div class="reel-card-thumb">
-                  <img
-                    src="./images/reels/1.jpg"
-                    alt="Kitchen Rush reel"
-                    loading="lazy"
-                  />
-                  <div class="reel-card-overlay">
-                    <span class="reel-play-icon" aria-hidden="true">
-                      <i class="bi bi-play-fill"></i>
-                    </span>
-                    <span class="reel-watch-label">
-                      <i class="bi bi-facebook me-1" aria-hidden="true"></i
-                      >Watch on Facebook
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="text-center mt-4 d-md-none reveal">
-            <a
-              href="https://www.facebook.com/DegchiDine"
-              class="btn reels-follow-btn"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="bi bi-facebook me-2" aria-hidden="true"></i>Follow Us on
-              Facebook
-            </a>
-          </div>
+        <div class="menu-slider-footer mt-4">
+          <a href="complete-menu.html" class="btn btn-lg menu-show-more-btn">
+            View Complete Menu <i class="bi bi-arrow-right-short"></i>
+          </a>
         </div>
-      </section>
-      <!-- reels end -->
+      </div>
+    </section>
+    <!-- menu end -->
 
-      <section class="section-block" id="about">
-        <div class="container px-4 px-lg-5">
-          <div class="row g-4 align-items-center">
-            <div class="col-lg-6 reveal-left">
-              <span class="badge badge-soft rounded-pill mb-3">Since 2008</span>
-              <h2 class="section-title">
-                A Formal Dining Legacy with a Modern 
-              </h2>
-              <p class="section-lead mt-3">
-                From handcrafted sauces to carefully paired wines, our chefs
-                blend traditional French technique with modern expression. 
+    <!-- Featured Dishes (Menu Card Slider) -->
+    <section class="section-block mc-section" id="dishes">
+      <div class="container px-4 px-lg-5">
+        <div class="mb-5 text-center reveal">
+          <span class="mc-kicker">
+            <i class="bi bi-stars" aria-hidden="true"></i>
+            What's on the Table
+          </span>
+          <h2 class="section-title mt-2">Our Menu Highlights</h2>
+          <p class="section-lead mx-auto">
+            Every item is freshly prepared and available daily. Prices shown
+            are per serving — no hidden charges.
+          </p>
+          <p class="mc-tap-hint mb-0">Tap any dish card to view details</p>
+        </div>
+
+        <div class="mc-slider-wrap reveal">
+          <div id="mcSlider">
+            <div class="mc-slide">
+              <article class="mc-card mc-card-trigger" role="button" tabindex="0" aria-label="View Bangla Menu details">
+                <div class="mc-img-wrap">
+                  <img src="images/menu_card/1.jpg" alt="Bangla Menu" class="mc-img" />
+                  <span class="mc-badge">Bengali Cuisine</span>
+                  <span class="mc-avail"><i class="bi bi-check-circle-fill"></i> Available</span>
+                </div>
+                <div class="mc-body">
+                  <h5 class="mc-title">Bengali Menu</h5>
+                  <p class="mc-desc">
+                    ঐতিহ্যবাহী বাঙালি রন্ধনশৈলীর সেরা খাবার সমূহ, তাজা উপাদান
+                    দিয়ে প্রতিদিন তৈরি।
+                  </p>
+                  <div class="mc-divider"></div>
+                  <div class="mc-footer">
+                    <div class="mc-price-wrap">
+                      <span class="mc-price-label">Starts from</span>
+                      <span class="mc-price">৳ 250</span>
+                    </div>
+                    <span class="mc-serve-info">
+                      <i class="bi bi-person" aria-hidden="true"></i> 1 person
+                    </span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="mc-slide">
+              <article class="mc-card mc-card-trigger" role="button" tabindex="0" aria-label="View Kacchi Menu details">
+                <div class="mc-img-wrap">
+                  <img src="images/menu_card/2.jpg" alt="Kacchi Menu" class="mc-img" />
+                  <span class="mc-badge">Special</span>
+                  <span class="mc-avail"><i class="bi bi-check-circle-fill"></i> Available</span>
+                </div>
+                <div class="mc-body">
+                  <h5 class="mc-title">kacchi menu</h5>
+                  <p class="mc-desc">
+                    ঐতিহ্যের স্বাদ নিয়ে আসা কাচ্চি বিরিয়ানি এবং মসলাযুক্ত
+                    রেজালা সমৃদ্ধ কালেকশন।
+                  </p>
+                  <div class="mc-divider"></div>
+                  <div class="mc-footer">
+                    <div class="mc-price-wrap">
+                      <span class="mc-price-label">Starts from</span>
+                      <span class="mc-price">৳ 380</span>
+                    </div>
+                    <span class="mc-serve-info">
+                      <i class="bi bi-people" aria-hidden="true"></i> 2
+                      persons
+                    </span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="mc-slide">
+              <article class="mc-card mc-card-trigger" role="button" tabindex="0"
+                aria-label="View Mezbani Menu details">
+                <div class="mc-img-wrap">
+                  <img src="images/menu_card/3.jpg" alt="Mezbani Menu" class="mc-img" />
+                  <span class="mc-badge">Celebration</span>
+                  <span class="mc-avail"><i class="bi bi-check-circle-fill"></i> Available</span>
+                </div>
+                <div class="mc-body">
+                  <h5 class="mc-title">Mezbani Menu</h5>
+                  <p class="mc-desc">
+                    উদযাপনের জন্য বিশেষভাবে তৈরি মেজবানি খাবারের সমাহার,
+                    ঐতিহ্যবাহী স্বাদে পরিপূর্ণ।
+                  </p>
+                  <div class="mc-divider"></div>
+                  <div class="mc-footer">
+                    <div class="mc-price-wrap">
+                      <span class="mc-price-label">Starts from</span>
+                      <span class="mc-price">৳ 450</span>
+                    </div>
+                    <span class="mc-serve-info">
+                      <i class="bi bi-people" aria-hidden="true"></i> 3-4
+                      persons
+                    </span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="mc-slide">
+              <article class="mc-card mc-card-trigger" role="button" tabindex="0"
+                aria-label="View Family Premium Package details">
+                <div class="mc-img-wrap">
+                  <img src="images/menu_card/4.jpg" alt="Family Premium Package" class="mc-img" />
+                  <span class="mc-badge mc-badge--gold">Premium</span>
+                  <span class="mc-avail"><i class="bi bi-check-circle-fill"></i> Available</span>
+                </div>
+                <div class="mc-body">
+                  <h5 class="mc-title">Family Premium Package</h5>
+                  <p class="mc-desc">
+                    পরিবারের জন্য সম্পূর্ণ খাবার প্যাকেজ - নানা রকম মাংস,
+                    পোলাও এবং সালাদের সংমিশ্রণ।
+                  </p>
+                  <div class="mc-divider"></div>
+                  <div class="mc-footer">
+                    <div class="mc-price-wrap">
+                      <span class="mc-price-label">Starts from</span>
+                      <span class="mc-price">৳ 1200</span>
+                    </div>
+                    <span class="mc-serve-info">
+                      <i class="bi bi-people" aria-hidden="true"></i> 4-5
+                      persons
+                    </span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="mc-slide">
+              <article class="mc-card mc-card-trigger" role="button" tabindex="0"
+                aria-label="View Kacchi Biryani details">
+                <div class="mc-img-wrap">
+                  <img src="images/menu_card/1.jpg" alt="Kacchi Biryani" class="mc-img" />
+                  <span class="mc-badge">Biryani</span>
+                  <span class="mc-avail"><i class="bi bi-check-circle-fill"></i> Available</span>
+                </div>
+                <div class="mc-body">
+                  <h5 class="mc-title">bangla menu</h5>
+                  <p class="mc-desc">
+                    Slow-cooked marinated mutton layered with fragrant basmati
+                    and saffron — a royal classic.
+                  </p>
+                  <div class="mc-divider"></div>
+                  <div class="mc-footer">
+                    <div class="mc-price-wrap">
+                      <span class="mc-price-label">Starts from</span>
+                      <span class="mc-price">৳ 380</span>
+                    </div>
+                    <span class="mc-serve-info">
+                      <i class="bi bi-person" aria-hidden="true"></i> 1 person
+                    </span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <!-- /#mcSlider -->
+
+          <button class="mc-nav mc-nav-prev" aria-label="Previous dish">
+            <i class="bi bi-chevron-left" aria-hidden="true"></i>
+          </button>
+          <button class="mc-nav mc-nav-next" aria-label="Next dish">
+            <i class="bi bi-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+        <!-- /.mc-slider-wrap -->
+
+        <div class="mc-show-more-wrap reveal">
+          <a href="menu.html" class="mc-show-more-btn">
+            Explore Full Menu
+            <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Featured Dishes end -->
+
+    <!-- reels -->
+    <section class="section-block mt-5 pt-0 reels-section" id="video">
+      <div class="container px-4 px-lg-5">
+        <div class="reels-header-shell reveal">
+          <div class="reels-section-header">
+            <div class="reels-header-left">
+              <span class="reels-kicker"><i class="bi bi-camera-reels"></i> Behind The Scenes</span>
+              <h2 class="section-title mt-2 mb-1">Watch Us on Reels</h2>
+              <p class="section-lead mb-0">
+                Kitchen energy, chef moments, and guest vibes from Degchi
+                Dine. Fresh reels every week.
               </p>
-              <div class="row g-3 mt-2">
-                <div class="col-sm-6">
-                  <div class="feature-card">
-                    <p class="feature-icon mb-2"><i class="bi bi-award"></i></p>
-                    <h5 class="mb-1">Michelin Mentioned</h5>
-                    <p class="mb-0 text-secondary">
-                      Recognized for consistency and artistry.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="feature-card">
-                    <p class="feature-icon mb-2">
-                      <i class="bi bi-flower1"></i>
-                    </p>
-                    <h5 class="mb-1">Seasonal Ingredients</h5>
-                    <p class="mb-0 text-secondary">
-                      Locally sourced produce, refreshed weekly.
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
-            <div class="col-lg-6 reveal-right">
-              <img
-                class="about-image"
-                src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80"
-                alt="Chef preparing a plated dish"
-              />
-            </div>
+            <a href="https://www.facebook.com/DegchiDine" class="btn reels-follow-btn d-none d-md-inline-flex"
+              target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-facebook me-2" aria-hidden="true"></i>Follow Us
+            </a>
           </div>
         </div>
-      </section>
 
-      <!-- Testimonials / Guest Impressions Slider Section -->
-      <section class="section-block reviews-section" id="testimonials">
-        <div class="container px-4 px-lg-5">
-          <div class="mb-5 text-center reveal">
-            <span class="badge badge-soft rounded-pill mb-3"
-              >Guest Impressions</span
-            >
-            <h2 class="section-title">What Our Guests Say</h2>
-            <p class="section-lead mx-auto">
-              A few words from those who have experienced the premium authentic
-              flavors at Degchi Dine.
+        <div id="reelsSlider" class="reels-slick reveal">
+          <div class="reel-slide-wrap">
+            <a class="reel-card" href="https://www.facebook.com/share/r/1cNLa7uWHT/" target="_blank"
+              rel="noopener noreferrer" aria-label="Watch Kitchen Rush reel on Facebook">
+              <div class="reel-card-thumb">
+                <img src="./images/reels/4.jfif" alt="Kitchen Rush reel" loading="lazy" />
+                <div class="reel-card-overlay">
+                  <span class="reel-play-icon" aria-hidden="true">
+                    <i class="bi bi-play-fill"></i>
+                  </span>
+                  <span class="reel-watch-label">
+                    <i class="bi bi-facebook me-1" aria-hidden="true"></i>Watch on Facebook
+                  </span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="reel-slide-wrap">
+            <a class="reel-card" href="https://www.facebook.com/share/r/1cNLa7uWHT/" target="_blank"
+              rel="noopener noreferrer" aria-label="Watch Kitchen Rush reel on Facebook">
+              <div class="reel-card-thumb">
+                <img src="./images/reels/1.jfif" alt="Kitchen Rush reel" loading="lazy" />
+                <div class="reel-card-overlay">
+                  <span class="reel-play-icon" aria-hidden="true">
+                    <i class="bi bi-play-fill"></i>
+                  </span>
+                  <span class="reel-watch-label">
+                    <i class="bi bi-facebook me-1" aria-hidden="true"></i>Watch on Facebook
+                  </span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="reel-slide-wrap">
+            <a class="reel-card" href="https://www.facebook.com/share/r/1cNLa7uWHT/" target="_blank"
+              rel="noopener noreferrer" aria-label="Watch Kitchen Rush reel on Facebook">
+              <div class="reel-card-thumb">
+                <img src="./images/reels/2.jfif" alt="Kitchen Rush reel" loading="lazy" />
+                <div class="reel-card-overlay">
+                  <span class="reel-play-icon" aria-hidden="true">
+                    <i class="bi bi-play-fill"></i>
+                  </span>
+                  <span class="reel-watch-label">
+                    <i class="bi bi-facebook me-1" aria-hidden="true"></i>Watch on Facebook
+                  </span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="reel-slide-wrap">
+            <a class="reel-card" href="https://www.facebook.com/share/r/1cNLa7uWHT/" target="_blank"
+              rel="noopener noreferrer" aria-label="Watch Kitchen Rush reel on Facebook">
+              <div class="reel-card-thumb">
+                <img src="./images/reels/3.jfif" alt="Kitchen Rush reel" loading="lazy" />
+                <div class="reel-card-overlay">
+                  <span class="reel-play-icon" aria-hidden="true">
+                    <i class="bi bi-play-fill"></i>
+                  </span>
+                  <span class="reel-watch-label">
+                    <i class="bi bi-facebook me-1" aria-hidden="true"></i>Watch on Facebook
+                  </span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="reel-slide-wrap">
+            <a class="reel-card" href="https://www.facebook.com/share/r/1cNLa7uWHT/" target="_blank"
+              rel="noopener noreferrer" aria-label="Watch Kitchen Rush reel on Facebook">
+              <div class="reel-card-thumb">
+                <img src="./images/reels/1.jpg" alt="Kitchen Rush reel" loading="lazy" />
+                <div class="reel-card-overlay">
+                  <span class="reel-play-icon" aria-hidden="true">
+                    <i class="bi bi-play-fill"></i>
+                  </span>
+                  <span class="reel-watch-label">
+                    <i class="bi bi-facebook me-1" aria-hidden="true"></i>Watch on Facebook
+                  </span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="text-center mt-4 d-md-none reveal">
+          <a href="https://www.facebook.com/DegchiDine" class="btn reels-follow-btn" target="_blank"
+            rel="noopener noreferrer">
+            <i class="bi bi-facebook me-2" aria-hidden="true"></i>Follow Us on
+            Facebook
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- reels end -->
+
+    <section class="section-block" id="about">
+      <div class="container px-4 px-lg-5">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6 reveal-left">
+            <span class="badge badge-soft rounded-pill mb-3">Since 2008</span>
+            <h2 class="section-title">
+              A Formal Dining Legacy with a Modern
+            </h2>
+            <p class="section-lead mt-3">
+              From handcrafted sauces to carefully paired wines, our chefs
+              blend traditional French technique with modern expression.
             </p>
-          </div>
-
-          <div class="reviews-slider">
-            <div class="review-slide-item">
-              <div class="review-card">
-                <div class="review-quote-icon">
-                  <i class="bi bi-quote"></i>
-                </div>
-                <div class="review-stars mb-3">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                </div>
-                <p class="review-text">
-                  "Authentic flavors that remind me of old traditional cookery.
-                  The premium Kacchi items are absolutely worth every visit."
-                </p>
-                <hr class="review-divider" />
-                <div class="review-author">
-                  <img
-                    src="https://i.pravatar.cc/150?u=asif"
-                    class="review-avatar"
-                    alt="Asif R."
-                  />
-                  <div class="author-info">
-                    <strong class="d-block">Asif R.</strong>
-                    <span class="text-muted small">Food Enthusiast</span>
-                  </div>
+            <div class="row g-3 mt-2">
+              <div class="col-sm-6">
+                <div class="feature-card">
+                  <p class="feature-icon mb-2"><i class="bi bi-award"></i></p>
+                  <h5 class="mb-1">Michelin Mentioned</h5>
+                  <p class="mb-0 text-secondary">
+                    Recognized for consistency and artistry.
+                  </p>
                 </div>
               </div>
-            </div>
-
-            <div class="review-slide-item">
-              <div class="review-card">
-                <div class="review-quote-icon">
-                  <i class="bi bi-quote"></i>
-                </div>
-                <div class="review-stars mb-3">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                </div>
-                <p class="review-text">
-                  "The atmosphere is elegant without feeling stiff. Every course
-                  was balanced, flavorful, and beautifully presented."
-                </p>
-                <hr class="review-divider" />
-                <div class="review-author">
-                  <img
-                    src="https://i.pravatar.cc/150?u=eleanor"
-                    class="review-avatar"
-                    alt="Eleanor W."
-                  />
-                  <div class="author-info">
-                    <strong class="d-block">Eleanor W.</strong>
-                    <span class="text-muted small">Regular Guest</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="review-slide-item">
-              <div class="review-card">
-                <div class="review-quote-icon">
-                  <i class="bi bi-quote"></i>
-                </div>
-                <div class="review-stars mb-3">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                </div>
-                <p class="review-text">
-                  "From arrival to dessert, service was impeccable. A perfect
-                  venue for formal client dinners and traditional feasts."
-                </p>
-                <hr class="review-divider" />
-                <div class="review-author">
-                  <img
-                    src="https://i.pravatar.cc/150?u=daniel"
-                    class="review-avatar"
-                    alt="Daniel C."
-                  />
-                  <div class="author-info">
-                    <strong class="d-block">Daniel C.</strong>
-                    <span class="text-muted small">Business Dining</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="review-slide-item">
-              <div class="review-card">
-                <div class="review-quote-icon">
-                  <i class="bi bi-quote"></i>
-                </div>
-                <div class="review-stars mb-3">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                </div>
-                <p class="review-text">
-                  "The best dining experience in Chittagong. The staff knows
-                  exactly how to treat you like royalty while serving hot, fresh
-                  food."
-                </p>
-                <hr class="review-divider" />
-                <div class="review-author">
-                  <img
-                    src="https://i.pravatar.cc/150?u=mira"
-                    class="review-avatar"
-                    alt="Mira L."
-                  />
-                  <div class="author-info">
-                    <strong class="d-block">Mira L.</strong>
-                    <span class="text-muted small">Seasonal Guest</span>
-                  </div>
+              <div class="col-sm-6">
+                <div class="feature-card">
+                  <p class="feature-icon mb-2">
+                    <i class="bi bi-flower1"></i>
+                  </p>
+                  <h5 class="mb-1">Seasonal Ingredients</h5>
+                  <p class="mb-0 text-secondary">
+                    Locally sourced produce, refreshed weekly.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!--  -->
-
-      <!-- Featured categories / branches section -->
-      <section class="section-block pt-0 branches-section" id="branches">
-        <div class="container px-4 px-lg-5">
-          <div class="mb-5 text-center reveal">
-            <span class="menu-kicker text-uppercase tracking-wider">
-              <i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Dine With Us
-            </span>
-            <h2 class="section-title mt-2">Our Branches</h2>
-            <p class="section-lead mx-auto">
-              Find a Degchi Dine location near you and experience premium
-              authentic dining.
-            </p>
-          </div>
-
-          <div class="category-grid row g-3 justify-content-center">
-            <!-- Branch 1: GSC -->
-            <div class="col-6 col-sm-4 col-md-3">
-              <div class="category-card text-center">
-                <div class="category-label">GSC Circle</div>
-              </div>
-            </div>
-
-            <!-- Branch 2: Chawkbazar -->
-            <div class="col-6 col-sm-4 col-md-3">
-              <div class="category-card text-center">
-                <div class="category-label">Chawkbazar</div>
-              </div>
-            </div>
-
-            <!-- Branch 3: Oxygen -->
-            <div class="col-6 col-sm-4 col-md-3">
-              <div class="category-card text-center">
-                <div class="category-label">Oxygen</div>
-              </div>
-            </div>
-
-            <!-- Branch 4: Muradpur -->
-            <div class="col-6 col-sm-4 col-md-3">
-              <div class="category-card text-center">
-                <div class="category-label">Muradpur</div>
-              </div>
-            </div>
-            <!-- Branch 1: GSC -->
-            <div class="col-6 col-sm-4 col-md-3">
-              <div class="category-card text-center">
-                <div class="category-label">GSC Circle</div>
-              </div>
-            </div>
-
-            <!-- Branch 2: Chawkbazar -->
-            <div class="col-6 col-sm-4 col-md-3">
-              <div class="category-card text-center">
-                <div class="category-label">Chawkbazar</div>
-              </div>
-            </div>
-
-            <!-- Branch 3: Oxygen -->
-            <div class="col-6 col-sm-4 col-md-3">
-              <div class="category-card text-center">
-                <div class="category-label">Oxygen</div>
-              </div>
-            </div>
-
-            <!-- Branch 4: Muradpur -->
-            <div class="col-6 col-sm-4 col-md-3">
-              <div class="category-card text-center">
-                <div class="category-label">Muradpur</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Location Section -->
-      <section class="section-block pt-0" id="location">
-        <div class="container px-4 px-lg-5">
-          <div class="mb-5 text-center reveal">
-            <span class="badge badge-soft rounded-pill mb-3">Find Us</span>
-            <h2 class="section-title">Our Location</h2>
-            <p class="section-lead mx-auto">
-              Visit Degchi Dine at Boropool Circle, Kaptan Villa, Halishahar,
-              Chittagong.
-            </p>
-          </div>
-          <div class="location-map-only reveal">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d59042.51440573683!2d91.8115425!3d22.3476943!3m2!1i1024!2i768!4f13.1!2m1!1sdeski%20dine!5e0!3m2!1sen!2sbd!4v1777386382065!5m2!1sen!2sbd"
-              style="border: 0"
-              allowfullscreen
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Degchi Dine location map"
-            ></iframe>
-          </div>
-        </div>
-      </section>
-
-      <!-- Footer -->
-      <footer id="contact" class="site-footer">
-        <div class="footer-top">
-          <div class="container px-4 px-lg-5">
-            <div class="row g-5">
-              <div class="col-lg-4 col-md-6">
-                <img
-                  src="./images/logo.webp"
-                  alt="Degchi Dine"
-                  class="footer-logo mb-3"
-                />
-                <p class="footer-about">
-                  Degchi Dine - ডেক্সি ডাইন. A refined dining destination in
-                  Halishahar, Chittagong, known for warm hospitality and
-                  signature flavors.
-                </p>
-                <div class="footer-socials">
-                  <a
-                    href="https://www.facebook.com/DegchiDine"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Facebook"
-                    ><i class="bi bi-facebook"></i
-                  ></a>
-                  <a href="#" aria-label="Instagram"
-                    ><i class="bi bi-instagram"></i
-                  ></a>
-                  <a href="#" aria-label="Twitter / X"
-                    ><i class="bi bi-twitter-x"></i
-                  ></a>
-                  <a href="#" aria-label="TripAdvisor"
-                    ><i class="bi bi-star"></i
-                  ></a>
-                </div>
-              </div>
-
-              <div class="col-lg-2 col-md-6 col-6">
-                <h6 class="footer-heading">Quick Links</h6>
-                <ul class="footer-links">
-                  <li><a href="#home">Home</a></li>
-                  <li><a href="#about">About Us</a></li>
-                  <li><a href="menu.html">Menu</a></li>
-                  <li><a href="privilege-card.html">Privilege Card</a></li>
-                  <li><a href="complete-menu.html">Complete Menu</a></li>
-                  <li><a href="#video">Video</a></li>
-                  <li><a href="#testimonials">Reviews</a></li>
-                  <li><a href="#location">Location</a></li>
-                </ul>
-              </div>
-
-              <div class="col-lg-3 col-md-6 col-6">
-                <h6 class="footer-heading">Contact Us</h6>
-                <ul class="footer-links">
-                  <li>
-                    <i class="bi bi-geo-alt me-2 text-brand"></i>Boropool
-                    Circle, Kaptan Villa, Halishahar, Chittagong, Bangladesh
-                  </li>
-                  <li>
-                    <i class="bi bi-telephone me-2 text-brand"></i>01898-795400
-                  </li>
-                  <li>
-                    <i class="bi bi-envelope me-2 text-brand"></i
-                    >degchidine@gmail.com
-                  </li>
-                  <li>
-                    <i class="bi bi-clock me-2 text-brand"></i>Daily, 5:00 PM
-                    &ndash; 11:30 PM
-                  </li>
-                </ul>
-              </div>
-
-              <div class="col-lg-3 col-md-6">
-                <h6 class="footer-heading">Newsletter</h6>
-                <p class="footer-about">
-                  Stay updated with seasonal menus and exclusive events.
-                </p>
-                <form class="footer-newsletter" onsubmit="return false;">
-                  <input
-                    type="email"
-                    placeholder="Your email address"
-                    aria-label="Email for newsletter"
-                  />
-                  <button type="submit" aria-label="Subscribe">
-                    <i class="bi bi-send"></i>
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        <div class="footer-bottom">
-          <div
-            class="container px-4 px-lg-5 d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2"
-          >
-            <p class="mb-0">&copy; 2026 Degchi Dine. All rights reserved.</p>
-            <div class="d-flex gap-3">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Use</a>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </main>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!-- Floating action button: WhatsApp (right) -->
-    <div class="floating-right">
-      <a
-        id="whatsappBtn"
-        class="fab fab-whatsapp is-visible"
-        href="https://wa.me/8801898795400?text=Hello%20Degchi%20Dine%20I%20have%20a%20question%20about%20ordering"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Chat with us on WhatsApp"
-      >
-        <i class="bi bi-whatsapp" aria-hidden="true"></i>
-      </a>
-    </div>
-
-    <div
-      class="modal fade mc-quick-modal"
-      id="mcQuickViewModal"
-      tabindex="-1"
-      aria-labelledby="mcQuickViewTitle"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content mc-modal-content">
-          <button
-            type="button"
-            class="btn-close mc-modal-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-          <div class="row g-0">
-            <div class="col-md-6">
-              <div class="mc-modal-image-wrap">
-                <img
-                  id="mcQuickViewImage"
-                  src=""
-                  alt=""
-                  class="mc-modal-image"
-                />
-                <span
-                  id="mcQuickViewBadge"
-                  class="mc-badge mc-modal-badge"
-                ></span>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="mc-modal-body">
-                <p class="mc-modal-kicker mb-2">Menu Preview</p>
-                <h4 id="mcQuickViewTitle" class="mc-modal-title mb-2"></h4>
-                <p id="mcQuickViewDesc" class="mc-modal-desc"></p>
-                <div class="mc-modal-meta">
-                  <span id="mcQuickViewServe" class="mc-serve-info"></span>
-                </div>
-                <div class="mc-modal-price-wrap mt-3">
-                  <span class="mc-price-label">Starts from</span>
-                  <span id="mcQuickViewPrice" class="mc-price"></span>
-                </div>
-                <a
-                  href="menu.html"
-                  class="mc-show-more-btn mt-4"
-                  data-bs-dismiss="modal"
-                >
-                  Explore Full Menu
-                  <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
+          <div class="col-lg-6 reveal-right">
+            <img class="about-image"
+              src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80"
+              alt="Chef preparing a plated dish" />
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div
-      class="offcanvas offcanvas-end cart-drawer"
-      tabindex="-1"
-      id="cartDrawer"
-      aria-labelledby="cartDrawerLabel"
-    >
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="cartDrawerLabel">Your Cart</h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="offcanvas-body d-flex flex-column">
-        <div id="cartDrawerItems" class="cart-drawer-items">
-          <p class="cart-empty mb-2">
-            Your cart is empty. Add dishes to get started.
+    <!-- Testimonials / Guest Impressions Slider Section -->
+    <section class="section-block reviews-section" id="testimonials">
+      <div class="container px-4 px-lg-5">
+        <div class="mb-5 text-center reveal">
+          <span class="badge badge-soft rounded-pill mb-3">Guest Impressions</span>
+          <h2 class="section-title">What Our Guests Say</h2>
+          <p class="section-lead mx-auto">
+            A few words from those who have experienced the premium authentic
+            flavors at Degchi Dine.
           </p>
-          <article class="cart-item">
-            <img
-              src="images/signature_menu/1.jpg"
-              alt="mutton kacchi"
-              class="cart-item-image"
-            />
-            <div class="cart-item-body">
-              <h6 class="cart-item-title">mutton kacchi</h6>
-              <div class="cart-item-meta">৳ 420</div>
-              <div class="cart-qty-row">
-                <button class="btn btn-sm btn-outline-secondary" type="button">
-                  -
-                </button>
-                <span class="cart-qty">1</span>
-                <button class="btn btn-sm btn-outline-secondary" type="button">
-                  +
-                </button>
-              </div>
-            </div>
-          </article>
-          <article class="cart-item">
-            <img
-              src="images/signature_menu/4.jpg"
-              alt="kacchi biryani"
-              class="cart-item-image"
-            />
-            <div class="cart-item-body">
-              <h6 class="cart-item-title">kacchi biryani</h6>
-              <div class="cart-item-meta">৳ 360</div>
-              <div class="cart-qty-row">
-                <button class="btn btn-sm btn-outline-secondary" type="button">
-                  -
-                </button>
-                <span class="cart-qty">2</span>
-                <button class="btn btn-sm btn-outline-secondary" type="button">
-                  +
-                </button>
-              </div>
-            </div>
-          </article>
         </div>
-        <div class="cart-drawer-footer mt-auto">
-          <div class="d-flex justify-content-between align-items-center mb-3">
-            <span class="cart-total-label">Subtotal</span>
-            <strong id="cartDrawerSubtotal" class="cart-total-value"
-              >৳ 1140</strong
-            >
+
+        <div class="reviews-slider">
+          <div class="review-slide-item">
+            <div class="review-card">
+              <div class="review-quote-icon">
+                <i class="bi bi-quote"></i>
+              </div>
+              <div class="review-stars mb-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="review-text">
+                "Authentic flavors that remind me of old traditional cookery.
+                The premium Kacchi items are absolutely worth every visit."
+              </p>
+              <hr class="review-divider" />
+              <div class="review-author">
+                <img src="https://i.pravatar.cc/150?u=asif" class="review-avatar" alt="Asif R." />
+                <div class="author-info">
+                  <strong class="d-block">Asif R.</strong>
+                  <span class="text-muted small">Food Enthusiast</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="d-grid gap-2">
-            <a href="cart.html" class="btn cart-view-btn">View Cart</a>
-            <a href="checkout.html" class="btn cart-checkout-btn">Checkout</a>
+
+          <div class="review-slide-item">
+            <div class="review-card">
+              <div class="review-quote-icon">
+                <i class="bi bi-quote"></i>
+              </div>
+              <div class="review-stars mb-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="review-text">
+                "The atmosphere is elegant without feeling stiff. Every course
+                was balanced, flavorful, and beautifully presented."
+              </p>
+              <hr class="review-divider" />
+              <div class="review-author">
+                <img src="https://i.pravatar.cc/150?u=eleanor" class="review-avatar" alt="Eleanor W." />
+                <div class="author-info">
+                  <strong class="d-block">Eleanor W.</strong>
+                  <span class="text-muted small">Regular Guest</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-slide-item">
+            <div class="review-card">
+              <div class="review-quote-icon">
+                <i class="bi bi-quote"></i>
+              </div>
+              <div class="review-stars mb-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="review-text">
+                "From arrival to dessert, service was impeccable. A perfect
+                venue for formal client dinners and traditional feasts."
+              </p>
+              <hr class="review-divider" />
+              <div class="review-author">
+                <img src="https://i.pravatar.cc/150?u=daniel" class="review-avatar" alt="Daniel C." />
+                <div class="author-info">
+                  <strong class="d-block">Daniel C.</strong>
+                  <span class="text-muted small">Business Dining</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-slide-item">
+            <div class="review-card">
+              <div class="review-quote-icon">
+                <i class="bi bi-quote"></i>
+              </div>
+              <div class="review-stars mb-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="review-text">
+                "The best dining experience in Chittagong. The staff knows
+                exactly how to treat you like royalty while serving hot, fresh
+                food."
+              </p>
+              <hr class="review-divider" />
+              <div class="review-author">
+                <img src="https://i.pravatar.cc/150?u=mira" class="review-avatar" alt="Mira L." />
+                <div class="author-info">
+                  <strong class="d-block">Mira L.</strong>
+                  <span class="text-muted small">Seasonal Guest</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--  -->
+
+    <!-- Featured categories / branches section -->
+    <section class="section-block pt-0 branches-section" id="branches">
+      <div class="container px-4 px-lg-5">
+        <div class="mb-5 text-center reveal">
+          <span class="menu-kicker text-uppercase tracking-wider">
+            <i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Dine With Us
+          </span>
+          <h2 class="section-title mt-2">Our Branches</h2>
+          <p class="section-lead mx-auto">
+            Find a Degchi Dine location near you and experience premium
+            authentic dining.
+          </p>
+        </div>
+
+        <div class="category-grid row g-3 justify-content-center">
+          <!-- Branch 1: GSC -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="category-card text-center">
+              <div class="category-label">GSC Circle</div>
+            </div>
+          </div>
+
+          <!-- Branch 2: Chawkbazar -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="category-card text-center">
+              <div class="category-label">Chawkbazar</div>
+            </div>
+          </div>
+
+          <!-- Branch 3: Oxygen -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="category-card text-center">
+              <div class="category-label">Oxygen</div>
+            </div>
+          </div>
+
+          <!-- Branch 4: Muradpur -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="category-card text-center">
+              <div class="category-label">Muradpur</div>
+            </div>
+          </div>
+          <!-- Branch 1: GSC -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="category-card text-center">
+              <div class="category-label">GSC Circle</div>
+            </div>
+          </div>
+
+          <!-- Branch 2: Chawkbazar -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="category-card text-center">
+              <div class="category-label">Chawkbazar</div>
+            </div>
+          </div>
+
+          <!-- Branch 3: Oxygen -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="category-card text-center">
+              <div class="category-label">Oxygen</div>
+            </div>
+          </div>
+
+          <!-- Branch 4: Muradpur -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="category-card text-center">
+              <div class="category-label">Muradpur</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Location Section -->
+    <section class="section-block pt-0" id="location">
+      <div class="container px-4 px-lg-5">
+        <div class="mb-5 text-center reveal">
+          <span class="badge badge-soft rounded-pill mb-3">Find Us</span>
+          <h2 class="section-title">Our Location</h2>
+          <p class="section-lead mx-auto">
+            Visit Degchi Dine at Boropool Circle, Kaptan Villa, Halishahar,
+            Chittagong.
+          </p>
+        </div>
+        <div class="location-map-only reveal">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d59042.51440573683!2d91.8115425!3d22.3476943!3m2!1i1024!2i768!4f13.1!2m1!1sdeski%20dine!5e0!3m2!1sen!2sbd!4v1777386382065!5m2!1sen!2sbd"
+            style="border: 0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Degchi Dine location map"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="site-footer">
+      <div class="footer-top">
+        <div class="container px-4 px-lg-5">
+          <div class="row g-5">
+            <div class="col-lg-4 col-md-6">
+              <img src="./images/logo.webp" alt="Degchi Dine" class="footer-logo mb-3" />
+              <p class="footer-about">
+                Degchi Dine - ডেক্সি ডাইন. A refined dining destination in
+                Halishahar, Chittagong, known for warm hospitality and
+                signature flavors.
+              </p>
+              <div class="footer-socials">
+                <a href="https://www.facebook.com/DegchiDine" target="_blank" rel="noopener noreferrer"
+                  aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" aria-label="TripAdvisor"><i class="bi bi-star"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 col-6">
+              <h6 class="footer-heading">Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="privilege-card.html">Privilege Card</a></li>
+                <li><a href="complete-menu.html">Complete Menu</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#location">Location</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-6">
+              <h6 class="footer-heading">Contact Us</h6>
+              <ul class="footer-links">
+                <li>
+                  <i class="bi bi-geo-alt me-2 text-brand"></i>Boropool
+                  Circle, Kaptan Villa, Halishahar, Chittagong, Bangladesh
+                </li>
+                <li>
+                  <i class="bi bi-telephone me-2 text-brand"></i>01898-795400
+                </li>
+                <li>
+                  <i class="bi bi-envelope me-2 text-brand"></i>degchidine@gmail.com
+                </li>
+                <li>
+                  <i class="bi bi-clock me-2 text-brand"></i>Daily, 5:00 PM
+                  &ndash; 11:30 PM
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <h6 class="footer-heading">Newsletter</h6>
+              <p class="footer-about">
+                Stay updated with seasonal menus and exclusive events.
+              </p>
+              <form class="footer-newsletter" onsubmit="return false;">
+                <input type="email" placeholder="Your email address" aria-label="Email for newsletter" />
+                <button type="submit" aria-label="Subscribe">
+                  <i class="bi bi-send"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <div
+          class="container px-4 px-lg-5 d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+          <p class="mb-0">&copy; 2026 Degchi Dine. All rights reserved.</p>
+          <div class="d-flex gap-3">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!-- Floating action button: WhatsApp (right) -->
+  <div class="floating-right">
+    <a id="whatsappBtn" class="fab fab-whatsapp is-visible"
+      href="https://wa.me/8801898795400?text=Hello%20Degchi%20Dine%20I%20have%20a%20question%20about%20ordering"
+      target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+      <i class="bi bi-whatsapp" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <div class="modal fade mc-quick-modal" id="mcQuickViewModal" tabindex="-1" aria-labelledby="mcQuickViewTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content mc-modal-content">
+        <button type="button" class="btn-close mc-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="row g-0">
+          <div class="col-md-6">
+            <div class="mc-modal-image-wrap">
+              <img id="mcQuickViewImage" src="" alt="" class="mc-modal-image" />
+              <span id="mcQuickViewBadge" class="mc-badge mc-modal-badge"></span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mc-modal-body">
+              <p class="mc-modal-kicker mb-2">Menu Preview</p>
+              <h4 id="mcQuickViewTitle" class="mc-modal-title mb-2"></h4>
+              <p id="mcQuickViewDesc" class="mc-modal-desc"></p>
+              <div class="mc-modal-meta">
+                <span id="mcQuickViewServe" class="mc-serve-info"></span>
+              </div>
+              <div class="mc-modal-price-wrap mt-3">
+                <span class="mc-price-label">Starts from</span>
+                <span id="mcQuickViewPrice" class="mc-price"></span>
+              </div>
+              <a href="menu.html" class="mc-show-more-btn mt-4" data-bs-dismiss="modal">
+                Explore Full Menu
+                <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <script src="app.js"></script>
-  </body>
+  <div class="offcanvas offcanvas-end cart-drawer" tabindex="-1" id="cartDrawer" aria-labelledby="cartDrawerLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="cartDrawerLabel">Your Cart</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div id="cartDrawerItems" class="cart-drawer-items">
+        <p class="cart-empty mb-2">
+          Your cart is empty. Add dishes to get started.
+        </p>
+        <article class="cart-item">
+          <img src="images/signature_menu/1.jpg" alt="mutton kacchi" class="cart-item-image" />
+          <div class="cart-item-body">
+            <h6 class="cart-item-title">mutton kacchi</h6>
+            <div class="cart-item-meta">৳ 420</div>
+            <div class="cart-qty-row">
+              <button class="btn btn-sm btn-outline-secondary" type="button">
+                -
+              </button>
+              <span class="cart-qty">1</span>
+              <button class="btn btn-sm btn-outline-secondary" type="button">
+                +
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="cart-item">
+          <img src="images/signature_menu/4.jpg" alt="kacchi biryani" class="cart-item-image" />
+          <div class="cart-item-body">
+            <h6 class="cart-item-title">kacchi biryani</h6>
+            <div class="cart-item-meta">৳ 360</div>
+            <div class="cart-qty-row">
+              <button class="btn btn-sm btn-outline-secondary" type="button">
+                -
+              </button>
+              <span class="cart-qty">2</span>
+              <button class="btn btn-sm btn-outline-secondary" type="button">
+                +
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="cart-drawer-footer mt-auto">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="cart-total-label">Subtotal</span>
+          <strong id="cartDrawerSubtotal" class="cart-total-value">৳ 1140</strong>
+        </div>
+        <div class="d-grid gap-2">
+          <a href="cart.html" class="btn cart-view-btn">View Cart</a>
+          <a href="checkout.html" class="btn cart-checkout-btn">Checkout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
 </html>
