@@ -2095,82 +2095,141 @@ h4,
 }
 
 /* ==========================================================================
-   10. RESTAURANT BRANCHES CONFIG (#branches)
+   04. PREMIUM GEOMETRIC BRANCHES SECTION
    ========================================================================== */
 
-.branches-section .section-title {
-  text-align: center;
-}
-
-.category-grid {
-  margin-top: 12px;
-  align-items: stretch;
-}
-
-/* --- Clean Text-Only Architecture --- */
-.branches-section .category-card {
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 12px;
-  padding: 2.5rem 1.5rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.015);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
+.branches-section {
+  background-color: #ffffff; /* Soft background tint */
   position: relative;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
-.branches-section .category-label {
-  font-family: "Fraunces", serif;
+/* --- Section Title Formatting --- */
+.branches-section .menu-kicker {
+  color: #ef8b1f; /* Brand Orange */
   font-weight: 700;
-  font-size: 1.35rem;
-  color: #212529;
-  transition: color 0.3s ease;
-  padding: 0 6px;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
 }
 
+.branches-section .section-title {
+  color: #7f2430; /* Brand Burgundy */
+  font-weight: 800;
+  /* text-transform: uppercase; */
+  letter-spacing: 1px;
+  font-family: stylish;
+}
+
+
+
+.branches-section .section-lead {
+  max-width: 550px;
+  color: var(--text-main, #555);
+  font-size: 0.95rem;
+}
+
+/* --- Animated Geometric Card Framework --- */
+.branches-section .category-card {
+  background-color: #ffffff; /* Brand Cream Base */
+  border: 2px solid rgba(127, 36, 48, 0.12); /* Burgundy accent border line */
+  border-radius: 0 !important; /* Force completely sharp corners */
+  padding: 2.5rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  box-shadow: 0 6px 18px rgba(127, 36, 48, 0.063);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Card inner context structural layer wrapper */
+.branches-section .card-inner-content {
+  position: relative;
+  z-index: 3;
+}
+
+/* Icon Box formatting */
+.branches-section .branch-icon-box {
+  font-size: 2.2rem;
+  color: #7f2430; /* Starts Burgundy */
+  margin-bottom: 1rem;
+  transition:
+    transform 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+    color 0.4s ease;
+}
+
+/* Primary text formatting label */
+.branches-section .category-label {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #7f2430;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+  transition: color 0.4s ease;
+}
+
+/* Sub-text detail tracker link reveal */
+.branches-section .view-details-txt {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ef8b1f; /* Starts Orange */
+  opacity: 0.8;
+  display: inline-block;
+  transform: translateY(5px);
+  transition:
+    transform 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+    color 0.4s ease,
+    opacity 0.4s ease;
+}
+
+/* --- Premium Animation Overlay Kinetic Sliding Sheet --- */
+.branches-section .category-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #7f2430; /* Solid brand burgundy fill */
+  z-index: 2;
+
+  /* Start completely tucked beneath the frame using clip-path */
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  transition: clip-path 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* --- Active Layout Hover Interactions --- */
 .branches-section .category-card:hover {
-  transform: translateY(-4px);
-  border-color: #a52a2a;
-  box-shadow: 0 10px 25px rgba(165, 42, 42, 0.08);
+  border-color: #7f2430;
+  box-shadow: 0 15px 35px rgba(127, 36, 48, 0.2);
+  transform: translateY(-5px); /* Clean upward physical shift */
+}
+
+/* Lift the sliding solid sheet cleanly upward */
+.branches-section .category-card:hover::after {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Color adaptation updates inside active hover stack environment */
+.branches-section .category-card:hover .branch-icon-box {
+  color: #ef8b1f; /* Flips color to bright orange */
+  transform: scale(1.1);
 }
 
 .branches-section .category-card:hover .category-label {
-  color: #a52a2a;
+  color: #fcecd6; /* Contrast text updates flawlessly to brand cream color */
 }
 
-/* --- Deprecated Icon Mode Handlers (Retained for Fallback) --- */
-.category-card {
-  padding: 22px 14px;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+.branches-section .category-card:hover .view-details-txt {
+  color: #ffffff;
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.category-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
-}
-
-.category-icon {
-  width: 64px;
-  height: 64px;
-  border-radius: 12px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: #ffffff;
-  color: #0f172a;
-  font-size: 28px;
-  margin-bottom: 12px;
-  box-shadow: 0 6px 14px rgba(2, 6, 23, 0.04);
-}
-
-.category-label {
-  font-size: 14px;
-  color: #0b1220;
+/* Active click state compression layout response */
+.branches-section .category-card:active {
+  transform: translateY(-2px) scale(0.98);
 }
 
 /* ==========================================================================
