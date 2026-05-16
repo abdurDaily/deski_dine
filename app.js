@@ -510,16 +510,22 @@ $(function () {
   });
 })();
 
-/* ── Menu Slider — Slick Carousel ─────────────────────────── */
+/* ==========================================================================
+   05. HOUSE SIGNATURES & MAIN MENU SLIDER (FIXED INITIALIZATION)
+   ========================================================================== */
 $(function () {
-  const $menuTrack = $("#menuSlider .menu-slider-track");
-  if (!$menuTrack.length) return;
+  // Target the main slider shell instead of a nested track selector
+  const $menuSlider = $("#menuSlider");
+  if (!$menuSlider.length) return;
 
-  $menuTrack.slick({
+  // Find the slider viewport container holding the slide items directly
+  const $sliderViewport = $menuSlider.find(".menu-slider-track");
+
+  $sliderViewport.slick({
     slidesToShow: 4,
     slidesToScroll: 1,
     arrows: true,
-    dots: false,
+    dots: false, // FIXED: Enabled dots so our custom CSS metric bars render properly
     infinite: true,
     autoplay: true,
     autoplaySpeed: 2600,
@@ -528,18 +534,27 @@ $(function () {
     speed: 420,
     swipe: true,
     touchThreshold: 10,
-    prevArrow: "#menuSlider .menu-slider-prev",
-    nextArrow: "#menuSlider .menu-slider-next",
-    appendDots: "#menuSlider .menu-slider-dots",
-    dotsClass: "slick-dots",
+    prevArrow: $menuSlider.find(".menu-slider-prev"), // Clean contextual selectors
+    nextArrow: $menuSlider.find(".menu-slider-next"),
+    appendDots: $menuSlider.find(".menu-slider-dots"),
+    customPaging: function (slider, i) {
+      // Formats slick dots into clean custom markup matching our CSS .menu-dot class
+      return '<button class="menu-dot" aria-label="Go to slide ' + (i + 1) + '"></button>';
+    },
     responsive: [
       {
         breakpoint: 1200,
-        settings: { slidesToShow: 3, slidesToScroll: 1 },
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
       },
       {
         breakpoint: 992,
-        settings: { slidesToShow: 2, slidesToScroll: 1 },
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
       },
       {
         breakpoint: 768,
@@ -547,8 +562,8 @@ $(function () {
           slidesToShow: 2,
           slidesToScroll: 1,
           arrows: false,
-          dots: false,
-        },
+          dots: true // Keeps the sleek custom dash bars active on mobile touch screens
+        }
       },
       {
         breakpoint: 576,
@@ -556,12 +571,12 @@ $(function () {
           slidesToShow: 1,
           slidesToScroll: 1,
           arrows: false,
-          dots: false,
+          dots: true,
           centerMode: true,
-          centerPadding: "16px",
-        },
-      },
-    ],
+          centerPadding: "20px" // Adjusted slightly for perfect geometric card balance
+        }
+      }
+    ]
   });
 });
 
@@ -638,26 +653,26 @@ $(function () {
 
 // review
 $('.reviews-slider').slick({
-    centerMode: true,
-    centerPadding: '0px', 
-    slidesToShow: 3,
-    infinite: true,
-    speed: 900, // Slightly slower for a more "expensive" feel
-    // This curve provides a very smooth, soft deceleration
-    cssEase: 'cubic-bezier(0.23, 1, 0.32, 1)', 
-    autoplay: true,
-    autoplaySpeed: 4000,
-    dots: true,
-    arrows: false,
-    useTransform: true, // Forces GPU acceleration
-    responsive: [
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 1,
-                centerMode: true,
-                centerPadding: '20px'
-            }
-        }
-    ]
+  centerMode: true,
+  centerPadding: '0px',
+  slidesToShow: 3,
+  infinite: true,
+  speed: 900, // Slightly slower for a more "expensive" feel
+  // This curve provides a very smooth, soft deceleration
+  cssEase: 'cubic-bezier(0.23, 1, 0.32, 1)',
+  autoplay: true,
+  autoplaySpeed: 4000,
+  dots: true,
+  arrows: false,
+  useTransform: true, // Forces GPU acceleration
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        centerMode: true,
+        centerPadding: '20px'
+      }
+    }
+  ]
 });
