@@ -386,40 +386,50 @@ window.addEventListener("scroll", () => {
 syncNavbarState();
 setupPrivilegeCardForm();
 
-/* ── Featured Dishes Card Slider ──────────────────────────── */
+/* ==========================================================================
+   06. DISHES HIGHLIGHTS SLIDER INITIALIZATION
+   ========================================================================== */
 $(function () {
-  const $mcSlider = $("#mcSlider");
-  if (!$mcSlider.length) return;
+  const $mcSliderWrap = $(".mc-slider-wrap");
+  if (!$mcSliderWrap.length) return;
+
+  const $mcSlider = $mcSliderWrap.find("#mcSlider");
 
   $mcSlider.slick({
     slidesToShow: 4,
     slidesToScroll: 1,
     arrows: true,
-    dots: false,
+    dots: true,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2800,
     pauseOnHover: true,
-    pauseOnFocus: true,
-    speed: 420,
+    speed: 450,
     swipe: true,
-    touchThreshold: 10,
-    prevArrow: ".mc-nav-prev",
-    nextArrow: ".mc-nav-next",
+    touchThreshold: 12,
+    prevArrow: $mcSliderWrap.find(".mc-nav-prev"),
+    nextArrow: $mcSliderWrap.find(".mc-nav-next"),
+    appendDots: $mcSliderWrap.find(".mc-slider-dots"),
+    customPaging: function (slider, i) {
+      return (
+        '<button class="menu-dot" aria-label="Go to slide ' +
+        (i + 1) +
+        '"></button>'
+      );
+    },
     responsive: [
       {
         breakpoint: 1200,
-        settings: { slidesToShow: 3, slidesToScroll: 1 },
+        settings: { slidesToShow: 3 },
       },
       {
         breakpoint: 992,
-        settings: { slidesToShow: 2, slidesToScroll: 1 },
+        settings: { slidesToShow: 2 },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
           arrows: false,
           dots: true,
         },
@@ -428,11 +438,10 @@ $(function () {
         breakpoint: 576,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
           arrows: false,
-          dots: false,
+          dots: true,
           centerMode: true,
-          centerPadding: "16px",
+          centerPadding: "20px",
         },
       },
     ],
@@ -539,22 +548,26 @@ $(function () {
     appendDots: $menuSlider.find(".menu-slider-dots"),
     customPaging: function (slider, i) {
       // Formats slick dots into clean custom markup matching our CSS .menu-dot class
-      return '<button class="menu-dot" aria-label="Go to slide ' + (i + 1) + '"></button>';
+      return (
+        '<button class="menu-dot" aria-label="Go to slide ' +
+        (i + 1) +
+        '"></button>'
+      );
     },
     responsive: [
       {
         breakpoint: 1200,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1
-        }
+          slidesToScroll: 1,
+        },
       },
       {
         breakpoint: 992,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1
-        }
+          slidesToScroll: 1,
+        },
       },
       {
         breakpoint: 768,
@@ -562,8 +575,8 @@ $(function () {
           slidesToShow: 2,
           slidesToScroll: 1,
           arrows: false,
-          dots: true // Keeps the sleek custom dash bars active on mobile touch screens
-        }
+          dots: true, // Keeps the sleek custom dash bars active on mobile touch screens
+        },
       },
       {
         breakpoint: 576,
@@ -573,58 +586,71 @@ $(function () {
           arrows: false,
           dots: true,
           centerMode: true,
-          centerPadding: "20px" // Adjusted slightly for perfect geometric card balance
+          centerPadding: "20px", // Adjusted slightly for perfect geometric card balance
+        },
+      },
+    ],
+  });
+});
+
+/* ==========================================================================
+   07. WATCH US ON REELS HUB SLIDER INITIALIZATION (EXACT ICON MARKUP FIX)
+   ========================================================================== */
+$(function () {
+  const $reelsSlider = $("#reelsSlider");
+  if (!$reelsSlider.length) return;
+
+  $reelsSlider.slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    speed: 500,
+    swipe: true,
+    touchThreshold: 15,
+    
+    /* FIX: Changed from bi-arrow-left to bi-chevron-left inside the inner span 
+       to match your existing menu slider structure perfectly.
+    */
+    prevArrow: '<button type="button" class="slick-prev"><span class="menu-control-icon" aria-hidden="true"><i class="bi bi-chevron-left"></i></span></button>',
+    nextArrow: '<button type="button" class="slick-next"><span class="menu-control-icon" aria-hidden="true"><i class="bi bi-chevron-right"></i></span></button>',
+    
+    appendDots: $(".reels-section").find(".menu-slider-dots"), 
+    customPaging: function(slider, i) {
+      return '<button class="menu-dot" aria-label="Go to slide ' + (i + 1) + '"></button>';
+    },
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: { slidesToShow: 3 }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          arrows: false,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          dots: true,
+          centerMode: true,
+          centerPadding: "40px"
         }
       }
     ]
   });
 });
 
-/* ── Reels Slider — Slick Carousel ────────────────────────── */
-$(function () {
-  $("#reelsSlider").slick({
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    dots: false,
-    arrows: true,
-    infinite: true,
-    speed: 420,
-    swipe: true,
-    touchThreshold: 10,
-    prevArrow:
-      '<button class="slick-prev reels-slick-prev" aria-label="Previous reel">' +
-      '<span class="menu-control-icon"><i class="bi bi-chevron-left"></i></span>' +
-      "</button>",
-    nextArrow:
-      '<button class="slick-next reels-slick-next" aria-label="Next reel">' +
-      '<span class="menu-control-icon"><i class="bi bi-chevron-right"></i></span>' +
-      "</button>",
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: { slidesToShow: 2, dots: false },
-      },
-      {
-        breakpoint: 992,
-        settings: { slidesToShow: 2, arrows: false, dots: false },
-      },
-      {
-        breakpoint: 768,
-        settings: { slidesToShow: 1, arrows: false, dots: false },
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-          arrows: false,
-          dots: false,
-          centerMode: true,
-          centerPadding: "14px",
-        },
-      },
-    ],
-  });
-});
+
 
 /* ── Floating Action Button: WhatsApp ────────────────────── */
 (function () {
@@ -652,14 +678,14 @@ $(function () {
 })();
 
 // review
-$('.reviews-slider').slick({
+$(".reviews-slider").slick({
   centerMode: true,
-  centerPadding: '0px',
+  centerPadding: "0px",
   slidesToShow: 3,
   infinite: true,
   speed: 900, // Slightly slower for a more "expensive" feel
   // This curve provides a very smooth, soft deceleration
-  cssEase: 'cubic-bezier(0.23, 1, 0.32, 1)',
+  cssEase: "cubic-bezier(0.23, 1, 0.32, 1)",
   autoplay: true,
   autoplaySpeed: 4000,
   dots: true,
@@ -671,8 +697,8 @@ $('.reviews-slider').slick({
       settings: {
         slidesToShow: 1,
         centerMode: true,
-        centerPadding: '20px'
-      }
-    }
-  ]
+        centerPadding: "20px",
+      },
+    },
+  ],
 });
