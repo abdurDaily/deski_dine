@@ -616,7 +616,6 @@ h4,
   margin-bottom: 1.5rem;
 }
 
-
 /* ==========================================================================
    05. HOUSE SIGNATURES & MAIN MENU SLIDER (#menu) - GEOMETRIC EDITION
    ========================================================================== */
@@ -635,19 +634,19 @@ h4,
   text-transform: uppercase;
   font-weight: 700;
   font-size: 0.8rem;
-  color: #7F2430; /* Brand Burgundy */
-  background: #FCECD6; /* Brand Cream */
+  color: #7f2430; /* Brand Burgundy */
+  background: #fcecd6; /* Brand Cream */
   border: 1px solid rgba(127, 36, 48, 0.2);
   padding: 0.45rem 1.2rem;
   border-radius: 0 !important; /* Force completely square */
 }
 
 .menu-section .section-title {
-  color: #7F2430;
+  color: #7f2430;
   font-weight: 800;
   font-size: 2rem;
   letter-spacing: 1px;
-  font-family: 'stylish', sans-serif;
+  font-family: "stylish", sans-serif;
   position: relative;
   padding-left: 18px; /* Breathing space for the new left bar pseudo-accent */
   display: inline-block;
@@ -656,14 +655,14 @@ h4,
 
 /* Custom Geometric Left Bar Accent for Menu Header */
 .menu-section .section-title::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
   width: 5px;
   height: 85%;
-  background-color: #EF8B1F; /* Brand Orange left bar indicator */
+  background-color: #ef8b1f; /* Brand Orange left bar indicator */
   border-radius: 0 !important;
   box-shadow: 0 2px 8px rgba(239, 139, 31, 0.2);
 }
@@ -702,7 +701,7 @@ h4,
 /* --- Premium Clickable Card Engine --- */
 .menu-offer-card {
   text-decoration: none !important; /* Wipes link underline properties */
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid rgba(127, 36, 48, 0.12);
   border-radius: 0 !important; /* Enforces sharp 90-degree look */
   width: 100%;
@@ -712,14 +711,15 @@ h4,
   position: relative;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(127, 36, 48, 0.04);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.4s ease;
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.4s ease;
 }
 
 .menu-offer-card:hover {
   transform: translateY(-6px);
-  border-color: #7F2430;
+  border-color: #7f2430;
   box-shadow: 0 16px 32px rgba(127, 36, 48, 0.14);
 }
 
@@ -727,7 +727,7 @@ h4,
 .menu-offer-image-wrap {
   position: relative;
   overflow: hidden;
-  background-color: #7F2430;
+  background-color: #7f2430;
 }
 
 .menu-offer-image {
@@ -737,8 +737,9 @@ h4,
   object-fit: cover;
   display: block;
   border-radius: 0 !important;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-              opacity 0.4s ease;
+  transition:
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.4s ease;
 }
 
 .menu-offer-card:hover .menu-offer-image {
@@ -751,8 +752,8 @@ h4,
   position: absolute;
   top: 1rem;
   left: 1rem;
-  background-color: #7F2430; /* Solid Brand Burgundy */
-  color: #FCECD6; /* Brand Cream text */
+  background-color: #7f2430; /* Solid Brand Burgundy */
+  color: #fcecd6; /* Brand Cream text */
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -763,8 +764,8 @@ h4,
 }
 
 .menu-offer-badge--gold {
-  background-color: #EF8B1F; /* Brand Orange for premium picks */
-  color: #FFFFFF;
+  background-color: #ef8b1f; /* Brand Orange for premium picks */
+  color: #ffffff;
 }
 
 .menu-offer-available {
@@ -774,7 +775,12 @@ h4,
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  background: rgba(127, 36, 48, 0.85); /* Sophisticated tinted brand dark backdrop */
+  background: rgba(
+    127,
+    36,
+    48,
+    0.85
+  ); /* Sophisticated tinted brand dark backdrop */
   backdrop-filter: blur(4px);
   color: #6effa0;
   font-size: 0.65rem;
@@ -792,14 +798,14 @@ h4,
   display: flex;
   flex-direction: column;
   flex: 1; /* Automatically absorbs extra vertical space to keep footers perfectly aligned */
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .menu-offer-title {
   margin: 0 0 0.5rem 0;
   font-size: 1.2rem;
   font-weight: 800;
-  color: #7F2430;
+  color: #7f2430;
   text-transform: uppercase; /* Clean uniform grid feel */
   letter-spacing: 0.5px;
   line-height: 1.3;
@@ -815,7 +821,12 @@ h4,
 
 .menu-offer-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(127, 36, 48, 0.15), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(127, 36, 48, 0.15),
+    transparent
+  );
   margin-bottom: 1.2rem;
   margin-top: auto; /* Ensures the divider sits exactly above footer container regardless of text height */
 }
@@ -850,7 +861,7 @@ h4,
 .menu-offer-price {
   font-size: 1.35rem; /* Balanced optimization scale */
   font-weight: 800;
-  color: #EF8B1F; /* Highlight item cost with brand orange */
+  color: #ef8b1f; /* Highlight item cost with brand orange */
   line-height: 1.1;
   white-space: nowrap; /* Strictly prevents currency text strings from folding into two rows */
 }
@@ -862,8 +873,8 @@ h4,
   gap: 0.35rem;
   font-size: 0.72rem; /* Cleaned layout scaling rules */
   font-weight: 700;
-  color: #7F2430;
-  background: #FCECD6;
+  color: #7f2430;
+  background: #fcecd6;
   padding: 0.4rem 0.75rem;
   border-radius: 0 !important;
   white-space: nowrap; /* Forces serving text block variables securely on one line */
@@ -877,10 +888,10 @@ h4,
 
 .menu-offer-cart-btn {
   width: 100%;
-  border: 1px solid #7F2430;
+  border: 1px solid #7f2430;
   border-radius: 0 !important; /* Forcing sharp profile edges */
   background: transparent;
-  color: #7F2430;
+  color: #7f2430;
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -896,14 +907,14 @@ h4,
 
 /* Active action interactions inside the clickable link scope wrapper */
 .menu-offer-card:hover .menu-offer-cart-btn {
-  background-color: #7F2430;
-  color: #FFFFFF;
+  background-color: #7f2430;
+  color: #ffffff;
 }
 
 .menu-offer-cart-btn:hover {
-  background-color: #EF8B1F !important; /* Highlights completely orange when single item hovered */
-  border-color: #EF8B1F !important;
-  color: #FFFFFF !important;
+  background-color: #ef8b1f !important; /* Highlights completely orange when single item hovered */
+  border-color: #ef8b1f !important;
+  color: #ffffff !important;
 }
 
 /* --- Slider Navigation Arrows Layout --- */
@@ -914,31 +925,39 @@ h4,
   width: 50px;
   height: 50px;
   border-radius: 0 !important; /* Square navigation keys */
-  border: 1px solid #7F2430;
-  background: #FFFFFF;
+  border: 1px solid #7f2430;
+  background: #ffffff;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   z-index: 10;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #7F2430;
+  color: #7f2430;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .menu-slider-btn:hover {
-  background: #7F2430;
-  color: #FCECD6;
+  background: #7f2430;
+  color: #fcecd6;
   box-shadow: 0 8px 20px rgba(127, 36, 48, 0.2);
 }
 
-.menu-slider-prev { left: -1rem; }
-.menu-slider-next { right: -1rem; }
+.menu-slider-prev {
+  left: -1rem;
+}
+.menu-slider-next {
+  right: -1rem;
+}
 
 /* Hide arrows smoothly on mobile layouts to prioritize swipe interactions */
 @media (max-width: 768px) {
-  .menu-slider-btn { display: none !important; }
-  .menu-offer-card:hover { transform: translateY(-2px); } /* Dampen hover physics on touch viewports */
+  .menu-slider-btn {
+    display: none !important;
+  }
+  .menu-offer-card:hover {
+    transform: translateY(-2px);
+  } /* Dampen hover physics on touch viewports */
 }
 
 /* --- Dot Indicators Layout Matrix --- */
@@ -964,7 +983,7 @@ h4,
 }
 
 .menu-dot.active {
-  background: #EF8B1F;
+  background: #ef8b1f;
   width: 24px; /* Modern dynamic stretching bar animation */
 }
 
@@ -975,10 +994,10 @@ h4,
 }
 
 .menu-show-more-btn {
-  border: 2px solid #7F2430;
+  border: 2px solid #7f2430;
   border-radius: 0 !important;
   background: transparent;
-  color: #7F2430 !important;
+  color: #7f2430 !important;
   font-weight: 700;
   font-size: 0.95rem;
   letter-spacing: 2px;
@@ -997,7 +1016,7 @@ h4,
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #7F2430;
+  background-color: #7f2430;
   z-index: -1;
   transform: scaleX(0);
   transform-origin: right;
@@ -1005,17 +1024,13 @@ h4,
 }
 
 .menu-show-more-btn:hover {
-  color: #FCECD6 !important;
+  color: #fcecd6 !important;
 }
 
 .menu-show-more-btn:hover::before {
   transform: scaleX(1);
   transform-origin: left;
 }
-
-
-
-
 
 /* ==========================================================================
    06. FEATURED DISHES HIGHLIGHTS CAROUSEL (#dishes)
@@ -1369,9 +1384,6 @@ h4,
   transform-origin: left;
 }
 
-
-
-
 /* ==========================================================================
    07. WATCH US ON REELS HUB (#video) - ELITE SYSTEM UPGRADE
    ========================================================================== */
@@ -1383,7 +1395,7 @@ h4,
 
 /* --- Premium Layout Header Core --- */
 .reels-header-shell {
-  background: #FFF9EF; /* Brand soft warm canvas background */
+  background: #fff9ef; /* Brand soft warm canvas background */
   border: 1px solid rgba(127, 36, 48, 0.1);
   border-radius: 0 !important; /* Strict sharp geometric profiles */
   padding: 2.5rem;
@@ -1407,18 +1419,18 @@ h4,
   text-transform: uppercase;
   font-weight: 700;
   font-size: 0.8rem;
-  color: #7F2430; /* Brand Burgundy */
-  background: #FCECD6; /* Brand Cream */
+  color: #7f2430; /* Brand Burgundy */
+  background: #fcecd6; /* Brand Cream */
   border: 1px solid rgba(127, 36, 48, 0.2);
   padding: 0.45rem 1.2rem;
   border-radius: 0 !important;
 }
 
 .reels-header-shell .section-title {
-  color: #7F2430;
+  color: #7f2430;
   font-weight: 800;
   letter-spacing: 1px;
-  font-family: 'stylish', sans-serif;
+  font-family: "stylish", sans-serif;
   font-size: 2rem;
   position: relative;
   padding-left: 18px;
@@ -1428,14 +1440,14 @@ h4,
 
 /* Custom Geometric Left Bar Accent for Header Block */
 .reels-header-shell .section-title::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
   width: 5px;
   height: 85%;
-  background-color: #EF8B1F; /* Brand Orange left bar indicator */
+  background-color: #ef8b1f; /* Brand Orange left bar indicator */
   border-radius: 0 !important;
   box-shadow: 0 2px 8px rgba(239, 139, 31, 0.2);
 }
@@ -1449,10 +1461,10 @@ h4,
 
 /* --- Sharp Premium Follow Button Action --- */
 .reels-follow-btn {
-  border: 2px solid #7F2430;
+  border: 2px solid #7f2430;
   border-radius: 0 !important;
   background: transparent;
-  color: #7F2430 !important;
+  color: #7f2430 !important;
   font-weight: 700;
   font-size: 0.9rem;
   letter-spacing: 1.5px;
@@ -1470,13 +1482,13 @@ h4,
 }
 
 .reels-follow-btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #7F2430;
+  background-color: #7f2430;
   z-index: -1;
   transform: scaleX(0);
   transform-origin: right;
@@ -1484,7 +1496,7 @@ h4,
 }
 
 .reels-follow-btn:hover {
-  color: #FCECD6 !important;
+  color: #fcecd6 !important;
   box-shadow: 0 8px 24px rgba(127, 36, 48, 0.15);
 }
 
@@ -1520,15 +1532,16 @@ h4,
   border: none; /* Removed ugly block borders for a pure immersive full-bleed image look */
   border-radius: 0 !important;
   overflow: hidden;
-  background-color: #1E0B11; /* Extremely dark deep burgundy backdrop */
+  background-color: #1e0b11; /* Extremely dark deep burgundy backdrop */
   width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
   box-shadow: 0 10px 30px rgba(127, 36, 48, 0.06);
   /* Uses premium cubic-bezier curves for a cinematic physical feel */
-  transition: transform 0.5s cubic-bezier(0.25, 1, 0.3, 1),
-              box-shadow 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+  transition:
+    transform 0.5s cubic-bezier(0.25, 1, 0.3, 1),
+    box-shadow 0.5s cubic-bezier(0.25, 1, 0.3, 1);
 }
 
 .reel-card:hover {
@@ -1550,7 +1563,9 @@ h4,
   object-fit: cover;
   display: block;
   filter: grayscale(15%) brightness(95%); /* Soft premium lens tint for initial rest states */
-  transition: transform 0.8s cubic-bezier(0.25, 1, 0.3, 1), filter 0.4s ease;
+  transition:
+    transform 0.8s cubic-bezier(0.25, 1, 0.3, 1),
+    filter 0.4s ease;
 }
 
 .reel-card:hover .reel-card-thumb img {
@@ -1570,13 +1585,13 @@ h4,
 }
 
 .reel-progress-indicator::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #EF8B1F; /* Brand Orange progress bar fill color */
+  background-color: #ef8b1f; /* Brand Orange progress bar fill color */
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0s linear;
@@ -1608,7 +1623,12 @@ h4,
 }
 
 .reel-card:hover .reel-card-overlay {
-  background-color: rgba(127, 36, 48, 0.35); /* Soft, brand-tinted burgundy overlay on hover */
+  background-color: rgba(
+    127,
+    36,
+    48,
+    0.35
+  ); /* Soft, brand-tinted burgundy overlay on hover */
 }
 
 /* --- Premium Play Controller Icon --- */
@@ -1619,24 +1639,25 @@ h4,
   width: 60px;
   height: 60px;
   border-radius: 0 !important; /* Kept completely sharp and geometric */
-  background-color: #EF8B1F; /* Brand active signature orange */
-  color: #FFFFFF;
+  background-color: #ef8b1f; /* Brand active signature orange */
+  color: #ffffff;
   font-size: 1.75rem;
   box-shadow: 0 8px 24px rgba(239, 139, 31, 0.4);
   line-height: 1;
   padding-left: 5px; /* Optical center balancing compensation layout adjustment */
   transform: scale(0.85);
-  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), 
-              background-color 0.3s ease, 
-              color 0.3s ease,
-              box-shadow 0.3s ease;
+  transition:
+    transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 /* High-end playful micro-interaction mechanics on hover state activation loops */
 .reel-card:hover .reel-play-icon {
   transform: scale(1.15) rotate(180deg); /* Modern, fluid half-spin lift instead of a full 360 spin */
-  background-color: #FFFFFF;
-  color: #7F2430; /* Flipped vector icon graphics beautifully to your premium brand burgundy */
+  background-color: #ffffff;
+  color: #7f2430; /* Flipped vector icon graphics beautifully to your premium brand burgundy */
   box-shadow: 0 12px 28px rgba(255, 255, 255, 0.25);
 }
 
@@ -1650,11 +1671,12 @@ h4,
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 2px; /* Widened tracking spacing variable profile for luxury branding value */
-  color: #FCECD6; /* Premium Brand Cream Text */
+  color: #fcecd6; /* Premium Brand Cream Text */
   opacity: 0;
   transform: translateY(12px);
-  transition: opacity 0.35s cubic-bezier(0.25, 1, 0.3, 1), 
-              transform 0.35s cubic-bezier(0.25, 1, 0.3, 1);
+  transition:
+    opacity 0.35s cubic-bezier(0.25, 1, 0.3, 1),
+    transform 0.35s cubic-bezier(0.25, 1, 0.3, 1);
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
 
@@ -1672,9 +1694,9 @@ h4,
   width: 50px;
   height: 50px;
   border-radius: 0 !important; /* Square navigation buttons */
-  border: 1px solid #7F2430 !important;
-  background: #FFFFFF !important;
-  color: #7F2430 !important;
+  border: 1px solid #7f2430 !important;
+  background: #ffffff !important;
+  color: #7f2430 !important;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
   z-index: 10;
   cursor: pointer;
@@ -1687,20 +1709,27 @@ h4,
 
 .reels-slick-prev:hover,
 .reels-slick-next:hover {
-  background: #7F2430 !important;
-  color: #FCECD6 !important;
+  background: #7f2430 !important;
+  color: #fcecd6 !important;
   box-shadow: 0 8px 20px rgba(127, 36, 48, 0.18);
 }
 
-.reels-slick-prev { left: -1rem; }
-.reels-slick-next { right: -1rem; }
-
-@media (max-width: 992px) {
-  .reels-slick-prev, .reels-slick-next { display: none !important; } /* Focus entirely on hand swipes for smaller mobile screens */
-  .reel-card:hover { transform: translateY(-4px); } /* Dampen hover physics scale on touch environments */
+.reels-slick-prev {
+  left: -1rem;
+}
+.reels-slick-next {
+  right: -1rem;
 }
 
-
+@media (max-width: 992px) {
+  .reels-slick-prev,
+  .reels-slick-next {
+    display: none !important;
+  } /* Focus entirely on hand swipes for smaller mobile screens */
+  .reel-card:hover {
+    transform: translateY(-4px);
+  } /* Dampen hover physics scale on touch environments */
+}
 
 /* ==========================================================================
    07. WATCH US ON REELS HUB (#video) - SIDE ARROW ALIGNMENT FIXED
@@ -1715,24 +1744,19 @@ h4,
   padding: 0 30px; /* Creates explicit side gutters so the buttons don't cover your cards */
 }
 
-
-
-
-
-
-
-
 /* --- FIX: Universal Center Alignment Structure --- */
 .reels-slider-container-wrap .slick-prev,
 .reels-slider-container-wrap .slick-next {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%); /* Keeps buttons vertically centered on the cards */
+  transform: translateY(
+    -50%
+  ); /* Keeps buttons vertically centered on the cards */
   width: 50px;
   height: 50px;
-  background-color: #FFFFFF !important;
-  border: 1px solid #7F2430 !important; /* Brand Burgundy Frame */
-  color: #7F2430 !important;
+  background-color: #ffffff !important;
+  border: 1px solid #7f2430 !important; /* Brand Burgundy Frame */
+  color: #7f2430 !important;
   display: inline-flex !important;
   align-items: center;
   justify-content: center;
@@ -1744,8 +1768,12 @@ h4,
 }
 
 /* Horizontal Placement Overrides */
-.reels-slider-container-wrap .slick-prev { left: -25px; }
-.reels-slider-container-wrap .slick-next { right: -25px; }
+.reels-slider-container-wrap .slick-prev {
+  left: -25px;
+}
+.reels-slider-container-wrap .slick-next {
+  right: -25px;
+}
 
 /* Clear default text characters generated by Slick engine fallback text */
 .reels-slider-container-wrap .slick-prev::before,
@@ -1767,47 +1795,240 @@ h4,
 /* Hover Interactions matching other sliders */
 .reels-slider-container-wrap .slick-prev:hover,
 .reels-slider-container-wrap .slick-next:hover {
-  background-color: #7F2430 !important;
-  color: #FCECD6 !important; /* Brand Cream text on hover */
+  background-color: #7f2430 !important;
+  color: #fcecd6 !important; /* Brand Cream text on hover */
   box-shadow: 0 8px 24px rgba(127, 36, 48, 0.22);
 }
 
-
-
-
-
-
-
-
-
 /* ==========================================================================
-   08. DINING LEGACY & ABOUT FRAMEWORK (#about)
+   08. PREMIUM GEOMETRIC ABOUT SECTION (#about)
    ========================================================================== */
 
-.about-image {
+.about-section {
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* --- Content Typography Settings --- */
+.about-section .about-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #7f2430; /* Brand Burgundy */
+  background: #fcecd6; /* Brand Cream */
+  border: 1px solid rgba(127, 36, 48, 0.2);
+  padding: 0.45rem 1.2rem;
+  border-radius: 0 !important; /* Forces completely square profile */
+}
+
+.about-section .section-title {
+  color: #7f2430;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-family: "stylish", sans-serif; /* Your custom heading font */
+  font-size: 2.5rem;
+  position: relative;
+  padding-left: 18px;
+  display: inline-block;
+  line-height: 1.2;
+}
+
+/* Custom Geometric Left Bar Accent for Heading Component */
+.about-section .section-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 85%;
+  background-color: #ef8b1f; /* Brand Orange left bar indicator */
+  border-radius: 0 !important;
+  box-shadow: 0 2px 8px rgba(239, 139, 31, 0.2);
+}
+
+.about-section .about-lead {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #7f2430;
+  line-height: 1.6;
+}
+
+.about-section .about-paragraph {
+  color: #555555;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* --- Highlights Grid Elements --- */
+.about-section .about-feature-item {
+  background-color: #fff9ef; /* Warm layout tint backdrop */
+  border-left: 3px solid #ef8b1f; /* Sharp left accent orange anchor line */
+  padding: 0.8rem 1.2rem;
+  min-width: 220px;
+  flex: 1;
+}
+
+.about-section .feature-icon-box {
+  font-size: 1.3rem;
+  color: #7f2430;
+  display: flex;
+  align-items: center;
+}
+
+.about-section .feature-text {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #7f2430;
+}
+
+/* --- Elite Sharp CTA Button System --- */
+.about-section .about-explore-btn {
+  border: 2px solid #7f2430;
+  border-radius: 0 !important; /* Strict sharp profiles */
+  background: transparent;
+  color: #7f2430 !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  text-decoration: none !important;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-section .about-explore-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  border-radius: 1rem;
-  box-shadow: var(--card-shadow);
-}
-
-.badge-soft {
-  background: rgba(239, 139, 31, 0.16);
-  color: var(--brand-dark);
-  border: 1px solid rgba(127, 36, 48, 0.22);
-}
-
-.feature-card {
-  border: 1px solid rgba(127, 36, 48, 0.14);
-  border-radius: 1rem;
-  background: var(--bg-soft);
-  box-shadow: var(--card-shadow);
-  padding: 1.4rem;
   height: 100%;
+  background-color: #7f2430; /* Sliding fill layer */
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.feature-icon {
-  font-size: 1.2rem;
-  color: var(--brand-dark);
+.about-section .about-explore-btn:hover {
+  color: #fcecd6 !important; /* Changes text to brand cream on active hover states */
+  box-shadow: 0 8px 24px rgba(127, 36, 48, 0.15);
+}
+
+.about-section .about-explore-btn:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* --- Right Side: Immersive Media Layout Frame System --- */
+.about-media-frame {
+  padding: 20px;
+  z-index: 1;
+}
+
+/* Flat Geometric backdrop offset block shield */
+.about-shape-backdrop {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  height: 80%;
+  background-color: #fcecd6; /* Solid Brand Cream Back Block */
+  z-index: -1;
+  border: 1px solid rgba(127, 36, 48, 0.08);
+  transition: transform 0.5s ease;
+}
+
+.about-media-frame:hover .about-shape-backdrop {
+  transform: translate(
+    -10px,
+    10px
+  ); /* Conversational movement depth on hover sets */
+}
+
+/* Secure image containment box */
+.about-img-container {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Strictly square full-bleed footprint geometry profile */
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(127, 36, 48, 0.12);
+  box-shadow: 0 12px 32px rgba(127, 36, 48, 0.08);
+}
+
+.about-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-media-frame:hover .about-main-img {
+  transform: scale(1.05); /* Premium fluid slow lens zoom action */
+}
+
+/* --- Absolute Floating Experience Ribbon Label Block --- */
+.about-experience-badge {
+  position: absolute;
+  top: 10%;
+  right: -5px;
+  background-color: #7f2430; /* Rich solid brand burgundy */
+  padding: 1.5rem 1.2rem;
+  width: 140px;
+  box-shadow: 0 8px 24px rgba(24, 9, 13, 0.25);
+  z-index: 5;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-media-frame:hover .about-experience-badge {
+  transform: translateY(-5px); /* Micro lift feedback loop */
+}
+
+.about-experience-badge .exp-number {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #ef8b1f; /* Vivid dynamic brand orange numeric stats character text */
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.about-experience-badge .exp-text {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #fcecd6; /* Contrast brand cream subtitle copy labeling */
+  line-height: 1.3;
+}
+
+/* --- Responsive Layout Balancing Breakpoints --- */
+@media (max-width: 991px) {
+  .about-section .section-title {
+    font-size: 2.1rem;
+  }
+  .about-media-frame {
+    margin-top: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about-experience-badge {
+    top: auto;
+    bottom: 10%;
+  } /* Safer placement optimization for smaller mobile browser frames */
 }
 
 /* ==========================================================================
