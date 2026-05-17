@@ -175,7 +175,7 @@
           </li>
           <li class="nav-item">
             <a data-bs-dismiss="offcanvas" class="nav-link" href="#about"
-              >About</a
+              >About </a
             >
           </li>
           <!-- <li class="nav-item">
@@ -1420,81 +1420,83 @@
       </div>
     </div>
 
-    <div
-      class="offcanvas offcanvas-end cart-drawer"
-      tabindex="-1"
-      id="cartDrawer"
-      aria-labelledby="cartDrawerLabel"
-    >
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="cartDrawerLabel">Your Cart</h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
+
+    <!-- CART -->
+     <div class="offcanvas offcanvas-end cart-drawer" tabindex="-1" id="cartDrawer" aria-labelledby="cartDrawerLabel">
+  
+  <div class="offcanvas-header border-bottom">
+    <h5 class="offcanvas-title text-uppercase" id="cartDrawerLabel">
+      <i class="bi bi-bag-check me-2" aria-hidden="true"></i>Your Cart
+    </h5>
+    <button type="button" class="btn-close-custom" data-bs-dismiss="offcanvas" aria-label="Close">
+      <i class="bi bi-x-lg"></i>
+    </button>
+  </div>
+  
+  <div class="offcanvas-body d-flex flex-column">
+    <div id="cartDrawerItems" class="cart-drawer-items flex-grow-1">
+      
+      <article class="cart-item">
+        <div class="cart-item-image-wrap">
+          <img src="images/signature_menu/1.jpg" alt="Mutton Kacchi" class="cart-item-image" />
+        </div>
+        <div class="cart-item-body">
+          <div class="cart-item-header-row">
+            <h6 class="cart-item-title">Mutton Kacchi</h6>
+            <button class="cart-item-remove-btn" type="button" aria-label="Remove item">
+              <i class="bi bi-trash"></i>
+            </button>
+          </div>
+          <div class="cart-item-footer-row">
+            <div class="cart-qty-row">
+              <button class="qty-adjust-btn" type="button" aria-label="Decrease quantity">—</button>
+              <span class="cart-qty">1</span>
+              <button class="qty-adjust-btn" type="button" aria-label="Increase quantity">+</button>
+            </div>
+            <div class="cart-item-meta">৳ 420</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="cart-item">
+        <div class="cart-item-image-wrap">
+          <img src="images/signature_menu/4.jpg" alt="Kacchi Biryani" class="cart-item-image" />
+        </div>
+        <div class="cart-item-body">
+          <div class="cart-item-header-row">
+            <h6 class="cart-item-title">Kacchi Biryani</h6>
+            <button class="cart-item-remove-btn" type="button" aria-label="Remove item">
+              <i class="bi bi-trash"></i>
+            </button>
+          </div>
+          <div class="cart-item-footer-row">
+            <div class="cart-qty-row">
+              <button class="qty-adjust-btn" type="button" aria-label="Decrease quantity">—</button>
+              <span class="cart-qty">2</span>
+              <button class="qty-adjust-btn" type="button" aria-label="Increase quantity">+</button>
+            </div>
+            <div class="cart-item-meta">৳ 360</div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="cart-drawer-footer border-top pt-4 mt-auto">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <span class="cart-total-label text-uppercase">Subtotal</span>
+        <strong id="cartDrawerSubtotal" class="cart-total-value">৳ 1,140</strong>
       </div>
-      <div class="offcanvas-body d-flex flex-column">
-        <div id="cartDrawerItems" class="cart-drawer-items">
-          <p class="cart-empty mb-2">
-            Your cart is empty. Add dishes to get started.
-          </p>
-          <article class="cart-item">
-            <img
-              src="images/signature_menu/1.jpg"
-              alt="mutton kacchi"
-              class="cart-item-image"
-            />
-            <div class="cart-item-body">
-              <h6 class="cart-item-title">mutton kacchi</h6>
-              <div class="cart-item-meta">৳ 420</div>
-              <div class="cart-qty-row">
-                <button class="btn btn-sm btn-outline-secondary" type="button">
-                  -
-                </button>
-                <span class="cart-qty">1</span>
-                <button class="btn btn-sm btn-outline-secondary" type="button">
-                  +
-                </button>
-              </div>
-            </div>
-          </article>
-          <article class="cart-item">
-            <img
-              src="images/signature_menu/4.jpg"
-              alt="kacchi biryani"
-              class="cart-item-image"
-            />
-            <div class="cart-item-body">
-              <h6 class="cart-item-title">kacchi biryani</h6>
-              <div class="cart-item-meta">৳ 360</div>
-              <div class="cart-qty-row">
-                <button class="btn btn-sm btn-outline-secondary" type="button">
-                  -
-                </button>
-                <span class="cart-qty">2</span>
-                <button class="btn btn-sm btn-outline-secondary" type="button">
-                  +
-                </button>
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="cart-drawer-footer mt-auto">
-          <div class="d-flex justify-content-between align-items-center mb-3">
-            <span class="cart-total-label">Subtotal</span>
-            <strong id="cartDrawerSubtotal" class="cart-total-value"
-              >৳ 1140</strong
-            >
-          </div>
-          <div class="d-grid gap-2">
-            <a href="cart.html" class="btn cart-view-btn">View Cart</a>
-            <a href="checkout.html" class="btn cart-checkout-btn">Checkout</a>
-          </div>
-        </div>
+      <div class="d-grid gap-3">
+        <a href="cart.html" class="btn cart-view-btn">View Full Cart</a>
+        <a href="checkout.html" class="btn cart-checkout-btn">
+          <span>Proceed To Checkout <i class="bi bi-arrow-right ms-1"></i></span>
+        </a>
       </div>
     </div>
+    
+  </div>
+</div>
 
     <script src="app.js"></script>
   </body>
