@@ -3264,9 +3264,109 @@ footer[id],
 .testimonial-card,
 .contact-card {
   border: 1px solid rgba(127, 36, 48, 0.14);
-  border-radius: 1rem;
-  background: var(--bg-soft);
-  box-shadow: var(--card-shadow);
+  border-radius: 1.1rem;
+  background: linear-gradient(
+    180deg,
+    rgba(240, 172, 35, 0.08) 0%,
+    rgba(255, 255, 255, 1) 55%,
+    rgba(127, 36, 48, 0.04) 100%
+  );
+  box-shadow: 0 18px 45px rgba(127, 36, 48, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: radial-gradient(
+    circle at 20% 0%,
+    rgba(240, 172, 35, 0.22),
+    transparent 45%
+  );
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.contact-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-card h3 {
+  font-family: "Fraunces", serif;
+  color: #7f2430;
+  font-weight: 800;
+}
+
+.contact-info strong {
+  color: var(--brand-dark);
+}
+
+.contact-info a {
+  color: var(--brand);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  color: var(--brand-dark);
+  text-decoration: underline;
+}
+
+.contact-page .contact-card .form-label {
+  color: var(--brand-dark);
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.contact-page .contact-card .form-control,
+.contact-page .contact-card textarea {
+  border: 1px solid rgba(127, 36, 48, 0.22);
+  background: rgba(255, 255, 255, 0.78);
+  border-radius: 0.85rem;
+}
+
+.contact-page .contact-card .form-control:focus,
+.contact-page .contact-card textarea:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 0.25rem rgba(239, 139, 31, 0.22);
+  background: #ffffff;
+}
+
+.contact-page .contact-card textarea.form-control {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-page .btn-brand {
+  border-radius: 0.9rem !important;
+}
+
+.contact-page #contact-section {
+  position: relative;
+}
+
+.contact-page #contact-section .section-title {
+  color: #7f2430;
+  font-weight: 900;
+}
+
+.contact-page #contact-section .section-lead {
+  color: rgba(127, 36, 48, 0.78);
+}
+
+@media (max-width: 991.98px) {
+  .contact-page .contact-card {
+    border-radius: 1rem;
+  }
+
+  .contact-page .contact-card textarea.form-control {
+    min-height: 120px;
+  }
 }
 
 .menu-image {
