@@ -45,6 +45,12 @@ const syncSharedNavigationAndFooter = () => {
       otherHref: "index.html#home",
     },
     {
+      key: "about",
+      label: "About",
+      homeHref: "#about",
+      otherHref: "index.html#about",
+    },
+    {
       key: "menu",
       label: "Menu",
       homeHref: "menu.html",
@@ -63,11 +69,12 @@ const syncSharedNavigationAndFooter = () => {
       otherHref: "index.html#testimonials",
     },
     {
-      key: "about",
-      label: "About",
-      homeHref: "#about",
-      otherHref: "index.html#about",
-    },
+      key: "contact",
+      label: "Contact",
+      homeHref: "#contact",
+      otherHref: "index.html#contact",
+    }
+    
   ];
 
   const quickLinks = [
@@ -106,6 +113,12 @@ const syncSharedNavigationAndFooter = () => {
       homeHref: "#location",
       otherHref: "index.html#location",
     },
+    {
+      key: "contact",
+      label: "Contact",
+      homeHref: "#contact",
+      otherHref: "index.html#contact",
+    }
   ];
 
   const desktopNav = document.querySelector(".desktop-nav");

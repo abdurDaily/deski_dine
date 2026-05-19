@@ -38,12 +38,10 @@
       class="navbar py-0 desktop-navbar d-none d-lg-block sticky-top"
     >
       <div class="container px-4 px-xxl-5">
-        <a class="navbar-brand hero-logo" href="index.html#home">
-          <img
-            src="./images/logo.webp"
-            class="nav-logo-img"
-            alt="Restaurant logo"
-          />
+        <a class="navbar-brand" href="index.html#home">
+          <div class="logo-badge-wrapper">
+            <img src="./images/logo.webp" alt="Logo" class="nav-logo-img" />
+          </div>
         </a>
 
         <ul class="navbar-nav flex-row desktop-nav">
@@ -51,31 +49,35 @@
             <a class="nav-link" href="index.html#home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="menu.html">Menu</a>
+            <a class="nav-link" href="index.html#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="privilege-card.html"
-              >Privilege Card</a
-            >
+            <a class="nav-link" href="menu.html">Menu</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="index.html#testimonials">Reviews</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html#about">About</a>
+            <a class="nav-link" href="contact.html">Contact</a>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li> -->
         </ul>
 
         <div class="d-flex align-items-center">
           <a
-            href="menu.html"
-            class="hero-reserve-btn text-decoration-none"
-            aria-label="Go to menu"
-            >Order Now</a
+            href="#cartDrawer"
+            class="desktop-order-icon"
+            aria-label="Open cart"
+            data-bs-toggle="offcanvas"
+            role="button"
+            aria-controls="cartDrawer"
           >
+            <iconify-icon
+              class="desktop-order-symbol"
+              icon="solar:cart-large-2-outline"
+              aria-hidden="true"
+            ></iconify-icon>
+            <span class="desktop-order-qty" aria-label="0 items">0</span>
+          </a>
         </div>
       </div>
     </nav>
@@ -106,9 +108,21 @@
           />
         </a>
 
-        <a href="menu.html" class="mobile-reserve-btn" aria-label="Go to menu"
-          >order </a
+        <a
+          href="#cartDrawer"
+          class="mobile-order-icon"
+          aria-label="Open cart"
+          data-bs-toggle="offcanvas"
+          role="button"
+          aria-controls="cartDrawer"
         >
+          <iconify-icon
+            class="mobile-order-symbol"
+            icon="solar:cart-large-2-outline"
+            aria-hidden="true"
+          ></iconify-icon>
+          <span class="mobile-order-qty" aria-label="0 items">0</span>
+        </a>
       </div>
     </nav>
 
@@ -141,28 +155,6 @@
               class="nav-link"
               href="index.html#home"
               >Home</a
-            >
-          </li>
-          <li class="nav-item">
-            <a data-bs-dismiss="offcanvas" class="nav-link" href="menu.html"
-              >Menu</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              data-bs-dismiss="offcanvas"
-              class="nav-link"
-              href="privilege-card.html"
-              >Privilege Card</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              data-bs-dismiss="offcanvas"
-              class="nav-link"
-              href="index.html#testimonials"
-              >Reviews</a
-            >
           </li>
           <li class="nav-item">
             <a
@@ -170,13 +162,28 @@
               class="nav-link"
               href="index.html#about"
               >About</a
-            >
           </li>
-          <!-- <li class="nav-item">
-            <a data-bs-dismiss="offcanvas" class="nav-link" href="#contact"
+          <li class="nav-item">
+            <a
+              data-bs-dismiss="offcanvas"
+              class="nav-link"
+              href="menu.html"
+              >Menu</a
+          </li>
+          <li class="nav-item">
+            <a
+              data-bs-dismiss="offcanvas"
+              class="nav-link"
+              href="index.html#testimonials"
+              >Reviews</a
+          </li>
+          <li class="nav-item">
+            <a
+              data-bs-dismiss="offcanvas"
+              class="nav-link"
+              href="contact.html"
               >Contact</a
-            >
-          </li> -->
+          </li>
         </ul>
 
         <div class="side-footer mt-4 pt-3 border-top">
@@ -358,7 +365,25 @@
               </div>
             </div>
           </div>
-          <!-- /priv-panel -->
+
+          <section class="section-block py-5 membership-highlight">
+            <div class="container px-4 px-lg-5">
+              <div class="rounded-4 p-4 p-lg-5 bg-soft shadow-sm text-center">
+                <span class="badge badge-soft rounded-pill mb-3"
+                  >Want More?</span
+                >
+                <h2 class="section-title mb-3">Membership Card</h2>
+                <p class="section-lead mx-auto mb-4">
+                  Unlock an elevated dining experience with additional rewards,
+                  priority seating and member-only offers.
+                </p>
+                <a class="btn btn-brand btn-lg px-5" href="membership-card.html"
+                  >View Membership Card</a
+                >
+              </div>
+            </div>
+          </section>
+          <!-- /membership-highlight -->
         </div>
       </section>
 

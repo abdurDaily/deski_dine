@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Degchi Dine | Membership Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="membership-page">
+    <nav
+      id="desktopNavbar"
+      class="navbar py-0 desktop-navbar d-none d-lg-block sticky-top"
+    >
+      <div class="container px-4 px-xxl-5">
+        <a class="navbar-brand" href="index.html#home">
+          <div class="logo-badge-wrapper">
+            <img src="./images/logo.webp" alt="Logo" class="nav-logo-img" />
+          </div>
+        </a>
+
+        <ul class="navbar-nav flex-row desktop-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#testimonials">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center">
+          <a
+            href="#cartDrawer"
+            class="desktop-order-icon"
+            aria-label="Open cart"
+            data-bs-toggle="offcanvas"
+            role="button"
+            aria-controls="cartDrawer"
+          >
+            <iconify-icon
+              class="desktop-order-symbol"
+              icon="solar:cart-large-2-outline"
+              aria-hidden="true"
+            ></iconify-icon>
+            <span class="desktop-order-qty" aria-label="0 items">0</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <nav class="navbar py-0 navbar-light mobile-topbar d-lg-none sticky-top">
+      <div class="container-fluid px-3 px-sm-4">
+        <button
+          id="mobileMenuToggle"
+          class="navbar-toggler mobile-menu-toggle"
+          type="button"
+          aria-controls="mobileMenu"
+          aria-label="Open menu"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu"
+        >
+          <iconify-icon
+            class="mobile-menu-icon"
+            icon="ri:menu-2-line"
+            width="24"
+            height="24"
+            aria-hidden="true"
+          ></iconify-icon>
+        </button>
+
+        <a class="navbar-brand mobile-nav-brand" href="index.html#home">
+          <img
+            src="./images/logo.webp"
+            class="mobile-logo-img"
+            alt="Restaurant logo"
+          />
+        </a>
+
+        <a
+          href="#cartDrawer"
+          class="mobile-order-icon"
+          aria-label="Open cart"
+          data-bs-toggle="offcanvas"
+          role="button"
+          aria-controls="cartDrawer"
+        >
+          <iconify-icon
+            class="mobile-order-symbol"
+            icon="solar:cart-large-2-outline"
+            aria-hidden="true"
+          ></iconify-icon>
+          <span class="mobile-order-qty" aria-label="0 items">0</span>
+        </a>
+      </div>
+    </nav>
+
+    <div
+      class="offcanvas offcanvas-start mobile-sidebar"
+      tabindex="-1"
+      id="mobileMenu"
+      aria-labelledby="mobileMenuLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="mobileMenuLabel">
+          <img
+            src="./images/logo.webp"
+            class="offcanvas-logo-img"
+            alt="Restaurant logo"
+          />
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="nav flex-column side-nav">
+          <li class="nav-item">
+            <a
+              data-bs-dismiss="offcanvas"
+              class="nav-link"
+              href="index.html#home"
+              >Home</a
+          </li>
+          <li class="nav-item">
+            <a
+              data-bs-dismiss="offcanvas"
+              class="nav-link"
+              href="index.html#about"
+              >About</a
+          </li>
+          <li class="nav-item">
+            <a
+              data-bs-dismiss="offcanvas"
+              class="nav-link"
+              href="menu.html"
+              >Menu</a
+          </li>
+          <li class="nav-item">
+            <a
+              data-bs-dismiss="offcanvas"
+              class="nav-link"
+              href="index.html#testimonials"
+              >Reviews</a
+          </li>
+          <li class="nav-item">
+            <a
+              data-bs-dismiss="offcanvas"
+              class="nav-link"
+              href="contact.html"
+              >Contact</a
+          </li>
+        </ul>
+
+        <div class="side-footer mt-4 pt-3 border-top">
+          <p class="mb-1">
+            <i class="bi bi-geo-alt me-2"></i>Boropool Circle, Kaptan Villa,
+            Halishahar, Chittagong, Bangladesh
+          </p>
+          <p class="mb-1">
+            <i class="bi bi-clock me-2"></i>Mon-Sun: 5:00 PM - 11:30 PM
+          </p>
+          <p class="mb-0"><i class="bi bi-telephone me-2"></i>01898-795400</p>
+        </div>
+      </div>
+    </div>
+
+    <main class="main-content">
+      <section class="section-block py-5" id="membership">
+        <div class="container px-4 px-lg-5">
+          <div class="text-center mb-5 reveal">
+            <span class="badge badge-soft rounded-pill mb-3"
+              >Member Benefits</span
+            >
+            <h2 class="section-title">Membership Card</h2>
+            <p class="section-lead mx-auto">
+              Enjoy VIP treatment with a membership card built for our regular
+              guests and family diners.
+            </p>
+          </div>
+
+          <div class="row gx-4 gy-4 align-items-center">
+            <div class="col-lg-6">
+              <div class="card shadow-sm rounded-4 p-4 h-100 bg-white">
+                <div
+                  class="d-flex align-items-center justify-content-between mb-4"
+                >
+                  <div>
+                    <small class="text-uppercase text-muted">Membership</small>
+                    <h3 class="mt-2">Premium Guest Access</h3>
+                  </div>
+                  <span class="badge bg-warning text-dark">Trusted</span>
+                </div>
+                <ul class="list-unstyled membership-benefits mb-4">
+                  <li class="mb-3">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Welcome drink for every new member
+                  </li>
+                  <li class="mb-3">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Complimentary dessert on special nights
+                  </li>
+                  <li class="mb-3">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Member-only menu previews
+                  </li>
+                  <li class="mb-3">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Dedicated booking line for larger parties
+                  </li>
+                </ul>
+                <p class="mb-4">
+                  This card is perfect for guests who want a more personal,
+                  VIP-style dining experience with extra care and priority
+                  access.
+                </p>
+                <a href="privilege-card.html" class="btn btn-brand px-4"
+                  >View Privilege Card</a
+                >
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div
+                class="position-relative membership-hero rounded-4 overflow-hidden shadow-sm"
+              >
+                <img
+                  src="./images/privilege_card.png"
+                  alt="Membership card"
+                  class="w-100"
+                />
+                <div
+                  class="membership-banner position-absolute top-0 start-0 p-3 bg-white bg-opacity-90 rounded-end"
+                >
+                  <strong>Membership</strong>
+                </div>
+                <div
+                  class="position-absolute bottom-0 start-0 w-100 p-4 bg-black bg-opacity-60 text-white"
+                >
+                  <p class="mb-2">
+                    Enjoy stronger rewards and a more personalised dining
+                    journey.
+                  </p>
+                  <a
+                    href="privilege-card.html"
+                    class="btn btn-outline-light btn-sm"
+                    >Apply for Your Card</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row gx-4 gy-4 mt-5">
+            <div class="col-lg-4">
+              <div class="info-block p-4 rounded-4 bg-soft shadow-sm">
+                <h5>Priority Seating</h5>
+                <p class="mb-0">
+                  Reserve the best table during busy evenings before general
+                  booking opens.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="info-block p-4 rounded-4 bg-soft shadow-sm">
+                <h5>Rewards Every Visit</h5>
+                <p class="mb-0">
+                  Collect special offers, tasting menus, and invitation-only
+                  dining events.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="info-block p-4 rounded-4 bg-soft shadow-sm">
+                <h5>Member Support</h5>
+                <p class="mb-0">
+                  Get a direct line to our reservation desk and membership team.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="container px-4 px-lg-5">
+          <div class="row g-5">
+            <div class="col-lg-4 col-md-6">
+              <img
+                src="./images/logo.webp"
+                alt="Degchi Dine"
+                class="footer-logo mb-3"
+              />
+              <p class="footer-about">
+                Our membership connects guests with priority dining, seasonal
+                rewards, and a personalised hospitality experience.
+              </p>
+            </div>
+            <div class="col-lg-2 col-md-6 col-6">
+              <h6 class="footer-heading">Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="privilege-card.html">Card</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-6 col-md-12">
+              <h6 class="footer-heading">Contact</h6>
+              <p class="footer-about mb-4">
+                Want to upgrade your dining experience? Contact us to learn more
+                about our membership levels.
+              </p>
+              <p>
+                <i class="bi bi-telephone me-2"></i
+                ><a href="tel:+8801898795400">01898-795400</a>
+              </p>
+              <p>
+                <i class="bi bi-envelope me-2"></i
+                ><a href="mailto:info@degchidine.com">info@degchidine.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
