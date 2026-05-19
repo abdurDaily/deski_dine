@@ -53,14 +53,14 @@ const syncSharedNavigationAndFooter = () => {
     {
       key: "menu",
       label: "Menu",
-      homeHref: "menu.html",
-      otherHref: "menu.html",
+      homeHref: "complete-menu.html",
+      otherHref: "complete-menu.html",
     },
     {
       key: "privilege",
-      label: "Privilege Card",
-      homeHref: "privilege-card.html",
-      otherHref: "privilege-card.html",
+      label: "Card",
+      homeHref: "cards-page.html",
+      otherHref: "cards-page.html",
     },
     {
       key: "reviews",
@@ -71,10 +71,9 @@ const syncSharedNavigationAndFooter = () => {
     {
       key: "contact",
       label: "Contact",
-      homeHref: "#contact",
-      otherHref: "index.html#contact",
-    }
-    
+      homeHref: "contact.html",
+      otherHref: "contact.html",
+    },
   ];
 
   const quickLinks = [
@@ -84,41 +83,25 @@ const syncSharedNavigationAndFooter = () => {
       otherHref: "index.html#home",
     },
     {
-      label: "About Us",
+      label: "about",
       homeHref: "#about",
       otherHref: "index.html#about",
     },
     {
-      label: "Menu",
-      homeHref: "menu.html",
-      otherHref: "menu.html",
+      label: "menu",
+      homeHref: "complete-menu.html",
+      otherHref: "complete-menu.html",
     },
     {
-      label: "Privilege Card",
-      homeHref: "privilege-card.html",
-      otherHref: "privilege-card.html",
+      label: "card",
+      homeHref: "cards-page.html",
+      otherHref: "cards-page.html",
     },
     {
-      label: "Video",
-      homeHref: "#video",
-      otherHref: "index.html#video",
+      label: "contact",
+      homeHref: "contact.html",
+      otherHref: "contact.html",
     },
-    {
-      label: "Reviews",
-      homeHref: "#testimonials",
-      otherHref: "index.html#testimonials",
-    },
-    {
-      label: "Location",
-      homeHref: "#location",
-      otherHref: "index.html#location",
-    },
-    {
-      key: "contact",
-      label: "Contact",
-      homeHref: "#contact",
-      otherHref: "index.html#contact",
-    }
   ];
 
   const desktopNav = document.querySelector(".desktop-nav");
@@ -625,29 +608,35 @@ $(function () {
     speed: 500,
     swipe: true,
     touchThreshold: 15,
-    
+
     /* FIX: Changed from bi-arrow-left to bi-chevron-left inside the inner span 
        to match your existing menu slider structure perfectly.
     */
-    prevArrow: '<button type="button" class="slick-prev"><span class="menu-control-icon" aria-hidden="true"><i class="bi bi-chevron-left"></i></span></button>',
-    nextArrow: '<button type="button" class="slick-next"><span class="menu-control-icon" aria-hidden="true"><i class="bi bi-chevron-right"></i></span></button>',
-    
-    appendDots: $(".reels-section").find(".menu-slider-dots"), 
-    customPaging: function(slider, i) {
-      return '<button class="menu-dot" aria-label="Go to slide ' + (i + 1) + '"></button>';
+    prevArrow:
+      '<button type="button" class="slick-prev"><span class="menu-control-icon" aria-hidden="true"><i class="bi bi-chevron-left"></i></span></button>',
+    nextArrow:
+      '<button type="button" class="slick-next"><span class="menu-control-icon" aria-hidden="true"><i class="bi bi-chevron-right"></i></span></button>',
+
+    appendDots: $(".reels-section").find(".menu-slider-dots"),
+    customPaging: function (slider, i) {
+      return (
+        '<button class="menu-dot" aria-label="Go to slide ' +
+        (i + 1) +
+        '"></button>'
+      );
     },
     responsive: [
       {
         breakpoint: 1200,
-        settings: { slidesToShow: 3 }
+        settings: { slidesToShow: 3 },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
           arrows: false,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 480,
@@ -656,14 +645,12 @@ $(function () {
           arrows: false,
           dots: true,
           centerMode: true,
-          centerPadding: "40px"
-        }
-      }
-    ]
+          centerPadding: "40px",
+        },
+      },
+    ],
   });
 });
-
-
 
 /* ── Floating Action Button: WhatsApp ────────────────────── */
 (function () {

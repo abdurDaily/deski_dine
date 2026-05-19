@@ -1699,7 +1699,7 @@ h4,
   justify-content: center;
   width: 60px;
   height: 60px;
-  border-radius: 0 !important; /* Kept completely sharp and geometric */
+  border-radius: 50% !important; /* Kept completely sharp and geometric */
   background-color: #ef8b1f; /* Brand active signature orange */
   color: #ffffff;
   font-size: 1.75rem;

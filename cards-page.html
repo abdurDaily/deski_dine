@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Degchi Dine | Membership Cards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="hero-page">
+    <nav
+      id="desktopNavbar"
+      class="navbar py-0 desktop-navbar d-none d-lg-block sticky-top"
+    >
+      <div class="container px-4 px-xxl-5">
+        <a class="navbar-brand" href="index.html#home">
+          <div class="logo-badge-wrapper">
+            <img src="./images/logo.webp" alt="Logo" class="nav-logo-img" />
+          </div>
+        </a>
+
+        <ul class="navbar-nav flex-row desktop-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#testimonials">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center">
+          <a
+            href="#cartDrawer"
+            class="desktop-order-icon"
+            aria-label="Open cart"
+            data-bs-toggle="offcanvas"
+            role="button"
+            aria-controls="cartDrawer"
+          >
+            <iconify-icon
+              class="desktop-order-symbol"
+              icon="solar:cart-large-2-outline"
+              aria-hidden="true"
+            ></iconify-icon>
+            <span class="desktop-order-qty" aria-label="0 items">0</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <nav class="navbar py-0 navbar-light mobile-topbar d-lg-none sticky-top">
+      <div class="container-fluid px-3 px-sm-4">
+        <button
+          id="mobileMenuToggle"
+          class="navbar-toggler mobile-menu-toggle"
+          type="button"
+          aria-controls="mobileMenu"
+          aria-label="Open menu"
+        >
+          <iconify-icon
+            class="mobile-menu-icon"
+            icon="ri:menu-2-line"
+            width="24"
+            height="24"
+            aria-hidden="true"
+          ></iconify-icon>
+        </button>
+
+        <a class="navbar-brand mobile-nav-brand" href="index.html#home">
+          <img
+            src="./images/logo.webp"
+            class="mobile-logo-img"
+            alt="Restaurant logo"
+          />
+        </a>
+
+        <a
+          href="#cartDrawer"
+          class="mobile-order-icon"
+          aria-label="Open cart"
+          data-bs-toggle="offcanvas"
+          role="button"
+          aria-controls="cartDrawer"
+        >
+          <iconify-icon
+            class="mobile-order-symbol"
+            icon="solar:cart-large-2-outline"
+            aria-hidden="true"
+          ></iconify-icon>
+          <span class="mobile-order-qty" aria-label="0 items">0</span>
+        </a>
+      </div>
+    </nav>
+
+    <div
+      class="offcanvas offcanvas-start mobile-sidebar"
+      tabindex="-1"
+      id="mobileMenu"
+      aria-labelledby="mobileMenuLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="mobileMenuLabel">
+          <img
+            src="./images/logo.webp"
+            class="offcanvas-logo-img"
+            alt="Restaurant logo"
+          />
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="nav flex-column side-nav">
+          <li class="nav-item">
+            <a
+              data-bs-dismiss="offcanvas"
+              class="nav-link"
+              href="index.html#home"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              data-bs-dismiss="offcanvas"
+              class="nav-link"
+              href="index.html#about"
+              >About</a
+            >
+          </li>
+          <li class="nav-item">
+            <a data-bs-dismiss="offcanvas" class="nav-link" href="menu.html"
+              >Menu</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              data-bs-dismiss="offcanvas"
+              class="nav-link"
+              href="index.html#testimonials"
+              >Reviews</a
+            >
+          </li>
+          <li class="nav-item">
+            <a data-bs-dismiss="offcanvas" class="nav-link" href="contact.html"
+              >Contact</a
+            >
+          </li>
+        </ul>
+
+        <div class="side-footer mt-4 pt-3 border-top">
+          <p class="mb-1">
+            <i class="bi bi-geo-alt me-2"></i>Boropool Circle, Kaptan Villa,
+            Halishahar, Chittagong, Bangladesh
+          </p>
+          <p class="mb-1">
+            <i class="bi bi-clock me-2"></i>Mon-Sun: 5:00 PM - 11:30 PM
+          </p>
+          <p class="mb-0"><i class="bi bi-telephone me-2"></i>01898-795400</p>
+        </div>
+      </div>
+    </div>
+
+    <main class="main-content">
+      <section class="section-block py-5">
+        <div class="container px-4 px-lg-5">
+          <div class="text-center mb-5 reveal">
+            <span class="badge badge-soft rounded-pill mb-3">Cards</span>
+            <h2 class="section-title">Choose Your Card</h2>
+            <p class="section-lead mx-auto">
+              Two simple options — pick one and go to its page.
+            </p>
+          </div>
+
+          <div class="row g-4 align-items-stretch">
+            <div class="col-12 col-lg-6">
+              <a
+                href="privilege-card.html"
+                class="text-decoration-none"
+                aria-label="Go to Privilege Card page"
+              >
+                <div class="card shadow-sm rounded-4 p-0 h-100 overflow-hidden">
+                  <div class="position-relative">
+                    <img
+                      src="./images/privilege_card.png"
+                      alt="Privilege Card"
+                      class="w-100"
+                      style="height: 260px; object-fit: cover"
+                    />
+                    <div
+                      class="position-absolute top-0 start-0 p-3 bg-white bg-opacity-90 rounded-end"
+                    >
+                      <strong>Privilege</strong>
+                    </div>
+                  </div>
+                  <div class="p-4">
+                    <h3 class="mb-2">Privilege Card</h3>
+                    <p class="mb-0 text-muted">
+                      Discounts, priority seating, and special treats.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <a
+                href="membership-card.html"
+                class="text-decoration-none"
+                aria-label="Go to Membership Card page"
+              >
+                <div class="card shadow-sm rounded-4 p-0 h-100 overflow-hidden">
+                  <div class="position-relative">
+                    <img
+                      src="./images/privilege_card.png"
+                      alt="Membership Card"
+                      class="w-100"
+                      style="height: 260px; object-fit: cover"
+                    />
+                    <div
+                      class="position-absolute top-0 start-0 p-3 bg-white bg-opacity-90 rounded-end"
+                    >
+                      <strong>Membership</strong>
+                    </div>
+                  </div>
+                  <div class="p-4">
+                    <h3 class="mb-2">Membership Card</h3>
+                    <p class="mb-0 text-muted">
+                      VIP guest access and member benefits.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="container px-4 px-lg-5">
+          <div class="row g-5">
+            <div class="col-lg-4 col-md-6">
+              <img
+                src="./images/logo.webp"
+                alt="Degchi Dine"
+                class="footer-logo mb-3"
+              />
+              <p class="footer-about">
+                Choose the card that fits your dining style.
+              </p>
+            </div>
+
+            <div class="col-lg-2 col-md-6 col-6">
+              <h6 class="footer-heading">Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="cards-page.html">Cards</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-6">
+              <h6 class="footer-heading">Contact Us</h6>
+              <ul class="footer-links">
+                <li>
+                  <i class="bi bi-geo-alt me-2 text-brand"></i>Boropool Circle,
+                  Kaptan Villa, Halishahar, Chittagong, Bangladesh
+                </li>
+                <li>
+                  <i class="bi bi-telephone me-2 text-brand"></i>01898-795400
+                </li>
+                <li>
+                  <i class="bi bi-envelope me-2 text-brand"></i>
+                  degchidine@gmail.com
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <h6 class="footer-heading">Newsletter</h6>
+              <p class="footer-about">Stay updated with seasonal menus.</p>
+              <form class="footer-newsletter" onsubmit="return false;">
+                <input
+                  type="email"
+                  placeholder="Your email address"
+                  aria-label="Email for newsletter"
+                />
+                <button type="submit" aria-label="Subscribe">
+                  <i class="bi bi-send"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <div
+          class="container px-4 px-lg-5 d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2"
+        >
+          <p class="mb-0">&copy; 2026 Degchi Dine. All rights reserved.</p>
+          <div class="d-flex gap-3">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+/* Optional page-specific styles for cards-page.html */
+
+.cards-page-hero {
+  min-height: 20vh;
+}
